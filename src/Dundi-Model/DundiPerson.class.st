@@ -58,6 +58,12 @@ DundiPerson >> pov [
 	^ Color red
 ]
 
+{ #category : #stepping }
+DundiPerson >> step [
+
+	self randomWalk
+]
+
 { #category : #'star moving' }
 DundiPerson >> treeAmount [
 
