@@ -5,21 +5,27 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-DundiAbstractLandscapeCategory class >> fastGrowthRate [
+DundiAbstractLandscapeCategory class >> highCarryingCapacity [
 
 	^ 0.6
 ]
 
 { #category : #'as yet unclassified' }
-DundiAbstractLandscapeCategory class >> mediumGrowthRate [
+DundiAbstractLandscapeCategory class >> lowCarryingCapacity [
+
+	^ 0.1
+]
+
+{ #category : #'as yet unclassified' }
+DundiAbstractLandscapeCategory class >> mediumCarryingCapacity [
 
 	^ 0.3
 ]
 
 { #category : #'as yet unclassified' }
-DundiAbstractLandscapeCategory class >> slowGrowthRate [
+DundiAbstractLandscapeCategory class >> reproductionRate [
 
-	^ 0.1
+	^ 0.2 
 ]
 
 { #category : #accessing }
@@ -29,19 +35,25 @@ DundiAbstractLandscapeCategory >> color [
 ]
 
 { #category : #'as yet unclassified' }
-DundiAbstractLandscapeCategory >> grassGrowthRate [
+DundiAbstractLandscapeCategory >> fruitCarryingCapacity [
 
 	self subclassResponsibility 
 ]
 
 { #category : #'as yet unclassified' }
-DundiAbstractLandscapeCategory >> treeGrowthRate [
+DundiAbstractLandscapeCategory >> grassCarryingCapacity [
 
 	self subclassResponsibility 
 ]
 
 { #category : #'as yet unclassified' }
-DundiAbstractLandscapeCategory >> waterGrowthRate [
+DundiAbstractLandscapeCategory >> leafCarryingCapacity [
+
+	self subclassResponsibility 
+]
+
+{ #category : #'as yet unclassified' }
+DundiAbstractLandscapeCategory >> woodCarryingCapacity [
 
 	self subclassResponsibility 
 ]

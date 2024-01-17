@@ -11,19 +11,25 @@ DundiSeenoCategory >> color [
 ]
 
 { #category : #'as yet unclassified' }
-DundiSeenoCategory >> grassGrowthRate [
+DundiSeenoCategory >> fruitCarryingCapacity [
 
-	^ self class fastGrowthRate
+	^ self class lowCarryingCapacity
 ]
 
 { #category : #'as yet unclassified' }
-DundiSeenoCategory >> treeGrowthRate [
+DundiSeenoCategory >> grassCarryingCapacity [
 
-	^ self class slowGrowthRate
+	^ self class highCarryingCapacity
 ]
 
 { #category : #'as yet unclassified' }
-DundiSeenoCategory >> waterGrowthRate [
+DundiSeenoCategory >> leafCarryingCapacity [
 
-	^ self class slowGrowthRate
+	^ self class lowCarryingCapacity
+]
+
+{ #category : #'as yet unclassified' }
+DundiSeenoCategory >> woodCarryingCapacity [
+
+	^ self class lowCarryingCapacity
 ]

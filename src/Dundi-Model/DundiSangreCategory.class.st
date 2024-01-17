@@ -11,19 +11,25 @@ DundiSangreCategory >> color [
 ]
 
 { #category : #'as yet unclassified' }
-DundiSangreCategory >> grassGrowthRate [
+DundiSangreCategory >> fruitCarryingCapacity [
 
-	^ self class slowGrowthRate
+	^ self class lowCarryingCapacity
 ]
 
 { #category : #'as yet unclassified' }
-DundiSangreCategory >> treeGrowthRate [
+DundiSangreCategory >> grassCarryingCapacity [
 
-	^ self class fastGrowthRate
+	^ self class lowCarryingCapacity
 ]
 
 { #category : #'as yet unclassified' }
-DundiSangreCategory >> waterGrowthRate [
+DundiSangreCategory >> leafCarryingCapacity [
 
-	^ self class mediumGrowthRate
+	^ self class highCarryingCapacity
+]
+
+{ #category : #'as yet unclassified' }
+DundiSangreCategory >> woodCarryingCapacity [
+
+	^ self class highCarryingCapacity
 ]

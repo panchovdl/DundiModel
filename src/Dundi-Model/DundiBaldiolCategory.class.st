@@ -11,19 +11,25 @@ DundiBaldiolCategory >> color [
 ]
 
 { #category : #'as yet unclassified' }
-DundiBaldiolCategory >> grassGrowthRate [
+DundiBaldiolCategory >> fruitCarryingCapacity [
 
-	^ self class mediumGrowthRate
+	^ self class mediumCarryingCapacity
 ]
 
 { #category : #'as yet unclassified' }
-DundiBaldiolCategory >> treeGrowthRate [
+DundiBaldiolCategory >> grassCarryingCapacity [
 
-	^ self class mediumGrowthRate
+	^ self class mediumCarryingCapacity
 ]
 
 { #category : #'as yet unclassified' }
-DundiBaldiolCategory >> waterGrowthRate [
+DundiBaldiolCategory >> leafCarryingCapacity [
 
-	^ self class fastGrowthRate
+	^ self class mediumCarryingCapacity
+]
+
+{ #category : #'as yet unclassified' }
+DundiBaldiolCategory >> woodCarryingCapacity [
+
+	^ self class mediumCarryingCapacity
 ]

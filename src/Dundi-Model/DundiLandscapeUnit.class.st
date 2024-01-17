@@ -6,7 +6,6 @@ Class {
 		'waterAmount',
 		'grassAmount',
 		'category',
-		'isRestricted',
 		'state'
 	],
 	#category : #'Dundi-Model'
