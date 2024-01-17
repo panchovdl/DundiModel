@@ -69,7 +69,8 @@ DundiLandscapeUnit >> initializeRandomCategory [
 	blocks := { 
 		[ self makeBaldiol ] .
 		[ self makeSeeno ] .
-		[ self makeSangre ] }.
+		[ self makeSangre ].
+		[ self makeCaangol ] }.
 	
 	(Cormas selectRandomlyFrom: blocks) value
 ]
@@ -96,6 +97,12 @@ DundiLandscapeUnit >> leafAmount: anInteger [
 DundiLandscapeUnit >> makeBaldiol [
 
 	category := DundiBaldiolCategory new.
+]
+
+{ #category : #accessing }
+DundiLandscapeUnit >> makeCaangol [
+
+	category := DundiCaangolCategory new.
 ]
 
 { #category : #accessing }
