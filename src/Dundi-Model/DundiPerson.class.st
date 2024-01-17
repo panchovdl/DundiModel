@@ -202,6 +202,19 @@ Return value: <Integer>"
 ]
 
 { #category : #'star moving' }
+DundiPerson >> fruitAmount [
+
+	^ waterAmount
+]
+
+{ #category : #'star moving' }
+DundiPerson >> fruitAmount: anObject [
+
+	waterAmount := anObject
+
+]
+
+{ #category : #'star moving' }
 DundiPerson >> grassAmount [
 
 	^ grassAmount
@@ -986,19 +999,6 @@ DundiPerson >> step [
 	self randomWalk
 ]
 
-{ #category : #'star moving' }
-DundiPerson >> treeAmount [
-
-	^ treeAmount
-]
-
-{ #category : #'star moving' }
-DundiPerson >> treeAmount: anObject [
-
-	treeAmount := anObject
-
-]
-
 { #category : #moving }
 DundiPerson >> walkToMaxOf: aSymbol [
 	"Purpose: moves to the spatial entity in the direct neighbourhood (relative distance = 1) with the higher value for a given magnitude.
@@ -1050,14 +1050,14 @@ In case several possible destinations share the same maximum value, the tie is r
 ]
 
 { #category : #'star moving' }
-DundiPerson >> waterAmount [
+DundiPerson >> woodAmount [
 
-	^ waterAmount
+	^ treeAmount
 ]
 
 { #category : #'star moving' }
-DundiPerson >> waterAmount: anObject [
+DundiPerson >> woodAmount: anObject [
 
-	waterAmount := anObject
+	treeAmount := anObject
 
 ]

@@ -2,11 +2,12 @@ Class {
 	#name : #DundiLandscapeUnit,
 	#superclass : #CMSpatialEntityElement,
 	#instVars : [
-		'treeAmount',
-		'waterAmount',
 		'grassAmount',
 		'category',
-		'state'
+		'state',
+		'woodAmount',
+		'fruitAmount',
+		'leafAmount'
 	],
 	#category : #'Dundi-Model'
 }
@@ -27,6 +28,18 @@ DundiLandscapeUnit class >> maxTreeAmount [
 DundiLandscapeUnit class >> maxWaterAmount [
 
 	^ self
+]
+
+{ #category : #accessing }
+DundiLandscapeUnit >> fruitAmount [
+
+	^ fruitAmount
+]
+
+{ #category : #accessing }
+DundiLandscapeUnit >> fruitAmount: anInteger [
+
+	fruitAmount := anInteger
 ]
 
 { #category : #accessing }
@@ -65,6 +78,18 @@ DundiLandscapeUnit >> initializeRandomCategory [
 DundiLandscapeUnit >> isRestricted [
 
 	^ state = #restricted
+]
+
+{ #category : #accessing }
+DundiLandscapeUnit >> leafAmount [
+
+	^ leafAmount
+]
+
+{ #category : #accessing }
+DundiLandscapeUnit >> leafAmount: anInteger [
+
+	leafAmount := anInteger
 ]
 
 { #category : #accessing }
@@ -114,25 +139,13 @@ DundiLandscapeUnit >> povRestricted [
 ]
 
 { #category : #accessing }
-DundiLandscapeUnit >> treeAmount [
+DundiLandscapeUnit >> woodAmount [
 
-	^ treeAmount
+	^ woodAmount
 ]
 
 { #category : #accessing }
-DundiLandscapeUnit >> treeAmount: anInteger [
+DundiLandscapeUnit >> woodAmount: anInteger [
 
-	treeAmount := anInteger
-]
-
-{ #category : #accessing }
-DundiLandscapeUnit >> waterAmount [
-
-	^ waterAmount
-]
-
-{ #category : #accessing }
-DundiLandscapeUnit >> waterAmount: anInteger [
-
-	waterAmount := anInteger
+	woodAmount := anInteger
 ]
