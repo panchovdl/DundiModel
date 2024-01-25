@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-25T15:20:37.934Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="iLn_bVvaRnqmdvrcB9lA" version="22.1.21" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-01-25T16:16:50.090Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="2fRWrtQ7ed0-p7WJ-Qk4" version="22.1.21" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -834,7 +834,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="t8aIbzR3NN1FRr3DA47K" name="Page-2">
-    <mxGraphModel dx="1247" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1331" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1318,10 +1318,10 @@
           <mxGeometry x="645" y="1000" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-29" value="Resource carrier" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="1180" width="95" height="50" as="geometry" />
+          <mxGeometry x="430" y="1430" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-30" value="Camp" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="345" y="1320" width="95" height="50" as="geometry" />
+          <mxGeometry x="417" y="1610" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-31" value="Termite damage" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="970" width="95" height="50" as="geometry" />
@@ -1338,69 +1338,66 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-34" value="Cattle" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="565" y="1190" width="95" height="50" as="geometry" />
+          <mxGeometry x="565" y="1390" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-35" value="Stakeholder" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="255" y="1160" width="95" height="50" as="geometry" />
+          <mxGeometry x="550" y="1550" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-36" value="Space" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="1250" width="95" height="50" as="geometry" />
+          <mxGeometry x="417" y="1510" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-37" value="Tree" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="465" y="1270" width="95" height="50" as="geometry" />
+          <mxGeometry x="405" y="1320" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-38" value="Small ruminants" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="707" y="1170" width="95" height="50" as="geometry" />
+          <mxGeometry x="707" y="1350" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-39" value="Big ruminants" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="1290" width="95" height="50" as="geometry" />
+          <mxGeometry x="570" y="1490" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-40" value="Crop field" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="144.5" y="1200" width="95" height="50" as="geometry" />
+          <mxGeometry x="144.5" y="1450" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-41" value="Landscape Unit" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="167" y="1260" width="95" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="nevxt_5lheEZp7fxFW_T-42" value="wood" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="201.5" y="1380" width="95" height="50" as="geometry" />
+          <mxGeometry x="267" y="1533.19" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-44" value="Seeno" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="15" y="1250" width="95" height="50" as="geometry" />
+          <mxGeometry x="115" y="1523.19" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-45" value="Sangre" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="45" y="1310" width="95" height="50" as="geometry" />
+          <mxGeometry x="145" y="1583.19" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-46" value="Caangol" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="75" y="1370" width="95" height="50" as="geometry" />
+          <mxGeometry x="175" y="1643.19" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-47" value="Baldiol" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="1430" width="95" height="50" as="geometry" />
+          <mxGeometry x="220" y="1703.19" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-48" value="wood" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="605" y="1410" width="95" height="50" as="geometry" />
+          <mxGeometry x="640" y="1250" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-49" value="Fruits" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="455" y="1410" width="95" height="50" as="geometry" />
+          <mxGeometry x="612" y="1190" width="95" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="nevxt_5lheEZp7fxFW_T-50" value="Tree" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="353.5" y="1430" width="95" height="50" as="geometry" />
+        <mxCell id="nevxt_5lheEZp7fxFW_T-50" value="Leaf" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="492" y="1169" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-51" value="{Fruits, Leaves, wood}" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="448.5" y="1330" width="95" height="50" as="geometry" />
+          <mxGeometry x="470" y="1240" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-52" value="Meat" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="740" y="1260" width="65" height="30" as="geometry" />
+          <mxGeometry x="740" y="1460" width="65" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-53" value="Feces" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="675" y="1240" width="65" height="30" as="geometry" />
+          <mxGeometry x="665" y="1430" width="65" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-54" value="Milk" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="735" y="1320" width="60" height="30" as="geometry" />
+          <mxGeometry x="735" y="1520" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-55" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-38" target="nevxt_5lheEZp7fxFW_T-34">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="743" y="1169" as="sourcePoint" />
-            <mxPoint x="782" y="1349" as="targetPoint" />
+            <mxPoint x="743" y="1369" as="sourcePoint" />
+            <mxPoint x="782" y="1549" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-56" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-55">
@@ -1410,8 +1407,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-57" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-39" target="nevxt_5lheEZp7fxFW_T-34">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="717" y="1288" as="sourcePoint" />
-            <mxPoint x="679" y="1292" as="targetPoint" />
+            <mxPoint x="717" y="1488" as="sourcePoint" />
+            <mxPoint x="679" y="1492" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-58" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-57">
@@ -1419,13 +1416,10 @@
             <mxPoint y="5" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nevxt_5lheEZp7fxFW_T-59" value="Crop field" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="25" y="1169" width="95" height="50" as="geometry" />
-        </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-60" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-34" target="nevxt_5lheEZp7fxFW_T-29">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="683" y="1334" as="sourcePoint" />
-            <mxPoint x="658" y="1316" as="targetPoint" />
+            <mxPoint x="683" y="1584" as="sourcePoint" />
+            <mxPoint x="658" y="1566" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-61" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-60">
@@ -1435,8 +1429,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-62" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-37" target="nevxt_5lheEZp7fxFW_T-29">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="599" y="1277" as="sourcePoint" />
-            <mxPoint x="539" y="1243" as="targetPoint" />
+            <mxPoint x="599" y="1527" as="sourcePoint" />
+            <mxPoint x="539" y="1493" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-63" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-62">
@@ -1446,8 +1440,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-64" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-36" target="nevxt_5lheEZp7fxFW_T-29">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="609" y="1287" as="sourcePoint" />
-            <mxPoint x="549" y="1253" as="targetPoint" />
+            <mxPoint x="609" y="1537" as="sourcePoint" />
+            <mxPoint x="549" y="1503" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-65" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-64">
@@ -1457,8 +1451,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-66" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-35" target="nevxt_5lheEZp7fxFW_T-29">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="619" y="1297" as="sourcePoint" />
-            <mxPoint x="559" y="1263" as="targetPoint" />
+            <mxPoint x="619" y="1547" as="sourcePoint" />
+            <mxPoint x="559" y="1513" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-67" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-66">
@@ -1468,8 +1462,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-68" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-38" target="nevxt_5lheEZp7fxFW_T-52">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="173" y="824" as="sourcePoint" />
-            <mxPoint x="110" y="836" as="targetPoint" />
+            <mxPoint x="173" y="1024" as="sourcePoint" />
+            <mxPoint x="110" y="1036" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-69" value="Products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-68">
@@ -1479,8 +1473,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-71" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;exitX=0.998;exitY=0.416;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-39" target="nevxt_5lheEZp7fxFW_T-52">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="777" y="1260" as="sourcePoint" />
-            <mxPoint x="785" y="1300" as="targetPoint" />
+            <mxPoint x="777" y="1460" as="sourcePoint" />
+            <mxPoint x="785" y="1500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-72" value="Products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-71">
@@ -1490,8 +1484,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-73" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-38" target="nevxt_5lheEZp7fxFW_T-53">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="787" y="1270" as="sourcePoint" />
-            <mxPoint x="795" y="1310" as="targetPoint" />
+            <mxPoint x="787" y="1470" as="sourcePoint" />
+            <mxPoint x="795" y="1510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-74" value="Products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-73">
@@ -1501,8 +1495,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-75" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-39" target="nevxt_5lheEZp7fxFW_T-53">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="797" y="1280" as="sourcePoint" />
-            <mxPoint x="805" y="1320" as="targetPoint" />
+            <mxPoint x="797" y="1480" as="sourcePoint" />
+            <mxPoint x="805" y="1520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-76" value="Products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-75">
@@ -1512,8 +1506,8 @@
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-77" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-39" target="nevxt_5lheEZp7fxFW_T-54">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="807" y="1290" as="sourcePoint" />
-            <mxPoint x="815" y="1330" as="targetPoint" />
+            <mxPoint x="807" y="1490" as="sourcePoint" />
+            <mxPoint x="815" y="1530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-78" value="Products" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-77">
@@ -1528,7 +1522,7 @@
           <mxGeometry x="15" y="880" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-82" value="Integer" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="542" y="1250" width="53" height="20" as="geometry" />
+          <mxGeometry x="361" y="1405" width="53" height="20" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-83" value="Trigger" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="1000" width="95" height="50" as="geometry" />
@@ -1542,6 +1536,568 @@
         <mxCell id="nevxt_5lheEZp7fxFW_T-86" value="BushFire-appears" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-85">
           <mxGeometry x="-0.2872" y="-2" relative="1" as="geometry">
             <mxPoint x="-11" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-90" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-40" target="nevxt_5lheEZp7fxFW_T-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="334.82883173951905" y="1509.0011614099758" as="sourcePoint" />
+            <mxPoint x="541" y="1483.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-91" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-90">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-92" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-41" target="nevxt_5lheEZp7fxFW_T-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="1519.19" as="sourcePoint" />
+            <mxPoint x="455" y="1547.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-93" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-92">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-94" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-30" target="nevxt_5lheEZp7fxFW_T-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="355" y="1529.19" as="sourcePoint" />
+            <mxPoint x="465" y="1557.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-95" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-94">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-96" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-44" target="nevxt_5lheEZp7fxFW_T-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="372" y="1565.19" as="sourcePoint" />
+            <mxPoint x="330" y="1561.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-97" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-96">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-98" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-45" target="nevxt_5lheEZp7fxFW_T-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="1561.19" as="sourcePoint" />
+            <mxPoint x="277" y="1565.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-99" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-98">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-100" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-46" target="nevxt_5lheEZp7fxFW_T-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="1571.19" as="sourcePoint" />
+            <mxPoint x="287" y="1575.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-101" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-100">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-102" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-47" target="nevxt_5lheEZp7fxFW_T-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="1581.19" as="sourcePoint" />
+            <mxPoint x="297" y="1585.19" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-103" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-102">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-104" value="food" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1440" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-105" value="cattle feed" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="144.5" y="1420" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-106" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-37" target="nevxt_5lheEZp7fxFW_T-82">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="504" y="1567" as="sourcePoint" />
+            <mxPoint x="490" y="1490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-107" value="number" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-106">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-112" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-34" target="nevxt_5lheEZp7fxFW_T-82">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="586.3064885006829" y="1484.2365127259939" as="sourcePoint" />
+            <mxPoint x="565.0021284319307" y="1500.0021241736406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-113" value="number" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-112">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint x="2" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-114" value="owned" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="1320" width="71" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-115" value="not owned" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="296.25" y="1280" width="66.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-116" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-114" target="nevxt_5lheEZp7fxFW_T-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414.5" y="1190" as="sourcePoint" />
+            <mxPoint x="414.5" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-117" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-116">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-118" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-115" target="nevxt_5lheEZp7fxFW_T-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="1623" as="sourcePoint" />
+            <mxPoint x="456" y="1584" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-119" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-118">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-120" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-37" target="nevxt_5lheEZp7fxFW_T-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="316.5" y="1273" as="sourcePoint" />
+            <mxPoint x="382.5" y="1234" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-121" value="compound of" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-120">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-122" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-51" target="nevxt_5lheEZp7fxFW_T-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="436.5" y="1237" as="sourcePoint" />
+            <mxPoint x="461.5" y="1263" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-123" value="wood" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-122">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-124" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-51" target="nevxt_5lheEZp7fxFW_T-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="446.5" y="1247" as="sourcePoint" />
+            <mxPoint x="471.5" y="1273" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-125" value="fruit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-124">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-126" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-51" target="nevxt_5lheEZp7fxFW_T-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="456.5" y="1257" as="sourcePoint" />
+            <mxPoint x="481.5" y="1283" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-127" value="leaf" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-126">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-132" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;strokeColor=default;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-40" target="nevxt_5lheEZp7fxFW_T-82">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="596.3064885006829" y="1494.2365127259939" as="sourcePoint" />
+            <mxPoint x="575.0021284319307" y="1510.0021241736406" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="215" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-133" value="number" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-132">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint x="2" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-136" value="Agro-pastoralist" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1573.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-137" value="Pastor" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="652.5" y="1633.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-138" value="Water and Forestry agent" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1670" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-139" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-138" target="nevxt_5lheEZp7fxFW_T-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="481" y="1620" as="sourcePoint" />
+            <mxPoint x="491" y="1583" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-140" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-139">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-141" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-136" target="nevxt_5lheEZp7fxFW_T-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="491" y="1630" as="sourcePoint" />
+            <mxPoint x="501" y="1593" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-142" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-141">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-143" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-137" target="nevxt_5lheEZp7fxFW_T-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="501" y="1640" as="sourcePoint" />
+            <mxPoint x="511" y="1603" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-144" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-143">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-145" value="Settled" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="1729" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-146" value="Transhumant" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="725" y="1729" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-147" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-145" target="nevxt_5lheEZp7fxFW_T-137">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="684" y="1647" as="sourcePoint" />
+            <mxPoint x="633" y="1606" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-148" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-147">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-149" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-146" target="nevxt_5lheEZp7fxFW_T-137">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="694" y="1657" as="sourcePoint" />
+            <mxPoint x="643" y="1616" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-150" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-149">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-215" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-153" target="nevxt_5lheEZp7fxFW_T-178">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-239" value="compound of" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-215">
+          <mxGeometry x="-0.21" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-153" value="Space" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="467" y="1910" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-155" value="LandCover" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="372" y="2139.35" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-171" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-185" target="nevxt_5lheEZp7fxFW_T-155">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="2167.35" as="sourcePoint" />
+            <mxPoint x="382" y="2171.35" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-172" value="Sangre" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-171">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-178" value="{Water, Feces, Crop residus, Crop Products, Fertility, Grass}" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="197.5" y="1930" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-179" value="Unit" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="2043.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-180" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-179" target="nevxt_5lheEZp7fxFW_T-155">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="356" y="2095" as="sourcePoint" />
+            <mxPoint x="318" y="2042" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-181" value="land-cover" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-180">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-183" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-179" target="nevxt_5lheEZp7fxFW_T-153">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="2032.48" as="sourcePoint" />
+            <mxPoint x="490" y="1910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-184" value="Set&amp;lt;T&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-183">
+          <mxGeometry x="-0.5217" y="3" relative="1" as="geometry">
+            <mxPoint x="8" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-185" value="A" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="2330" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-186" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-185" target="nevxt_5lheEZp7fxFW_T-155">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="57.02030511288032" y="2200.0000000000005" as="sourcePoint" />
+            <mxPoint x="287.48" y="2139.35" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="2330" />
+              <mxPoint x="350" y="2170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-187" value="Seeno" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-186">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-188" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-185" target="nevxt_5lheEZp7fxFW_T-155">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="153" y="2230" as="sourcePoint" />
+            <mxPoint x="383" y="2180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="2330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-189" value="Caangol" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-188">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint x="1" y="-31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-190" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-185" target="nevxt_5lheEZp7fxFW_T-155">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="163" y="2240" as="sourcePoint" />
+            <mxPoint x="393" y="2190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="570" y="2330" />
+              <mxPoint x="570" y="2150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-191" value="Baldiol" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-190">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-192" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-185" target="nevxt_5lheEZp7fxFW_T-155">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="2343" as="sourcePoint" />
+            <mxPoint x="430" y="2199" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="2330" />
+              <mxPoint x="490" y="2180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-193" value="Camp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-192">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="33" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-194" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-185" target="nevxt_5lheEZp7fxFW_T-155">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="495" y="2365" as="sourcePoint" />
+            <mxPoint x="466" y="2190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="2330" />
+              <mxPoint x="530" y="2170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-195" value="Crop-field" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-194">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint x="-4" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-200" value="resource carriers" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="2093.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-201" value="Distance²" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="2093.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-202" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-179" target="nevxt_5lheEZp7fxFW_T-200">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="2340" as="sourcePoint" />
+            <mxPoint x="383" y="2180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="520" y="2100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-203" value="populations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-202">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-204" value="Distance" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="2043.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-205" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-179" target="nevxt_5lheEZp7fxFW_T-204">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="473" y="2102" as="sourcePoint" />
+            <mxPoint x="444" y="2151" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-206" value="surround" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-205">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-208" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-179" target="nevxt_5lheEZp7fxFW_T-201">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="441" y="2073" as="sourcePoint" />
+            <mxPoint x="330" y="2060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-209" value="surface" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-208">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-210" value="Feces" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="49.5" y="1993.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-211" value="Crop residus" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1920" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-212" value="&amp;nbsp;Fertility" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1860" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-213" value="Water" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="87.5" y="2060" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-214" value="Grass" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1850" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-222" value="Crop Product" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="321" y="1850" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-225" value="A" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="131.5" y="2150" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-227" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-225" target="nevxt_5lheEZp7fxFW_T-204">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="2078" as="sourcePoint" />
+            <mxPoint x="325" y="2078" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-228" value="Fence" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-227">
+          <mxGeometry x="0.0616" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-231" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-222" target="nevxt_5lheEZp7fxFW_T-178">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="1967" as="sourcePoint" />
+            <mxPoint x="377" y="1971" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-237" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-231">
+          <mxGeometry x="-0.3482" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-232" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-214" target="nevxt_5lheEZp7fxFW_T-178">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="357" y="1907" as="sourcePoint" />
+            <mxPoint x="324" y="1942" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-240" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-232">
+          <mxGeometry x="-0.3965" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-233" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-212" target="nevxt_5lheEZp7fxFW_T-178">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="367" y="1917" as="sourcePoint" />
+            <mxPoint x="334" y="1952" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-241" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-233">
+          <mxGeometry x="-0.0983" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-234" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-211" target="nevxt_5lheEZp7fxFW_T-178">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="198" y="1914" as="sourcePoint" />
+            <mxPoint x="246" y="1946" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-242" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-234">
+          <mxGeometry x="-0.1309" y="3" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-235" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-210" target="nevxt_5lheEZp7fxFW_T-178">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="208" y="1924" as="sourcePoint" />
+            <mxPoint x="256" y="1956" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-243" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-235">
+          <mxGeometry x="-0.1044" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-236" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-213" target="nevxt_5lheEZp7fxFW_T-178">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="149" y="2016" as="sourcePoint" />
+            <mxPoint x="223" y="1995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-244" value="Is" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-236">
+          <mxGeometry x="0.0176" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-245" value="Space" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="1870" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-246" value="Zone" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1993.19" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-247" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-153" target="nevxt_5lheEZp7fxFW_T-245">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="494" y="2053" as="sourcePoint" />
+            <mxPoint x="518" y="1970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-248" value="Set&amp;lt;T&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-247">
+          <mxGeometry x="-0.5217" y="3" relative="1" as="geometry">
+            <mxPoint x="8" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-249" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-246" target="nevxt_5lheEZp7fxFW_T-245">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="504" y="2063" as="sourcePoint" />
+            <mxPoint x="528" y="1980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-250" value="Set&amp;lt;T&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-249">
+          <mxGeometry x="-0.5217" y="3" relative="1" as="geometry">
+            <mxPoint x="8" y="8" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
