@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-25T15:11:23.137Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="pDwOeO65pwUlYw7Me3dI" version="22.1.21" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-01-25T15:19:42.468Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="fZTH4IgzlvpNjyacDPQX" version="22.1.21" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1276,7 +1276,7 @@
           <mxGeometry x="226.5" y="930" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-12" value="Droughts" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="321.5" y="960" width="95" height="50" as="geometry" />
+          <mxGeometry x="321.5" y="990" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-13" value="Overgrazing" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="460" y="910" width="95" height="50" as="geometry" />
@@ -1531,10 +1531,32 @@
           <mxGeometry x="542" y="1250" width="53" height="20" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-83" value="Abandonned Firecamps" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="106.5" y="960" width="95" height="50" as="geometry" />
+          <mxGeometry x="72" y="980" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nevxt_5lheEZp7fxFW_T-84" value="Cigarets" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="190" y="1010" width="95" height="50" as="geometry" />
+          <mxGeometry x="190" y="1020" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-85" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-11" target="nevxt_5lheEZp7fxFW_T-83">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="598" y="772" as="sourcePoint" />
+            <mxPoint x="697" y="738" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-86" value="trigger" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-85">
+          <mxGeometry x="-0.2872" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-88" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="nevxt_5lheEZp7fxFW_T-11" target="nevxt_5lheEZp7fxFW_T-84">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="243" y="978" as="sourcePoint" />
+            <mxPoint x="170" y="1002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nevxt_5lheEZp7fxFW_T-89" value="trigger" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nevxt_5lheEZp7fxFW_T-88">
+          <mxGeometry x="-0.2872" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
