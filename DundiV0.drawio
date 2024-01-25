@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-25T14:11:37.522Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="Jt_fkopiPaAzcG9uM0Ra" version="22.1.21" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-01-25T14:26:55.144Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="j8jOdWuuzZBJKNh9HcS0" version="22.1.21" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -68,20 +68,20 @@
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Gj214TnAQ4UsBlxBKr0H-20" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Gj214TnAQ4UsBlxBKr0H-19" vertex="1">
-          <mxGeometry y="26" width="160" height="8" as="geometry" />
-        </mxCell>
         <mxCell id="t7xW0_Q7et7aiPYMoJ1h-4" value="&lt;div&gt;grassConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-19">
-          <mxGeometry y="34" width="160" height="30" as="geometry" />
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-3" value="&lt;div&gt;fruitsConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-19">
-          <mxGeometry y="64" width="160" height="30" as="geometry" />
+        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-1" value="&lt;div&gt;woodConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-19">
+          <mxGeometry y="56" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="t7xW0_Q7et7aiPYMoJ1h-2" value="&lt;div&gt;leavesConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-19">
-          <mxGeometry y="94" width="160" height="30" as="geometry" />
+          <mxGeometry y="86" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-1" value="&lt;div&gt;consumeWood&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-19">
-          <mxGeometry y="124" width="160" height="30" as="geometry" />
+        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-3" value="&lt;div&gt;fruitsConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-19">
+          <mxGeometry y="116" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Gj214TnAQ4UsBlxBKr0H-20" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Gj214TnAQ4UsBlxBKr0H-19" vertex="1">
+          <mxGeometry y="146" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="Gj214TnAQ4UsBlxBKr0H-21" value="cultivateCrops()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="Gj214TnAQ4UsBlxBKr0H-19" vertex="1">
           <mxGeometry y="154" width="160" height="30" as="geometry" />
@@ -93,24 +93,24 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Gj214TnAQ4UsBlxBKr0H-25" value="Pastor" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="420" y="660" width="160" height="244" as="geometry">
+          <mxGeometry x="420" y="660" width="160" height="160" as="geometry">
             <mxRectangle x="340" y="380" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-9" value="&lt;div&gt;grassConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-12" value="&lt;div&gt;fruitsConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
+          <mxGeometry y="56" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-11" value="&lt;div&gt;leavesConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
+          <mxGeometry y="86" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-10" value="&lt;div&gt;woodConsumptionRatio&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
+          <mxGeometry y="116" width="160" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="Gj214TnAQ4UsBlxBKr0H-26" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Gj214TnAQ4UsBlxBKr0H-25" vertex="1">
-          <mxGeometry y="26" width="160" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-5" value="&lt;div&gt;consumeGrass()&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
-          <mxGeometry y="34" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-8" value="&lt;div&gt;consumeWood()&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
-          <mxGeometry y="64" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-7" value="&lt;div&gt;consumeLeaves()&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
-          <mxGeometry y="94" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="t7xW0_Q7et7aiPYMoJ1h-6" value="&lt;div&gt;consumeFruits()&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Gj214TnAQ4UsBlxBKr0H-25">
-          <mxGeometry y="124" width="160" height="30" as="geometry" />
+          <mxGeometry y="146" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="Gj214TnAQ4UsBlxBKr0H-30" value="" style="endArrow=block;endSize=10;endFill=0;shadow=0;strokeWidth=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Gj214TnAQ4UsBlxBKr0H-25" target="Gj214TnAQ4UsBlxBKr0H-0" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -834,7 +834,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="t8aIbzR3NN1FRr3DA47K" name="Page-2">
-    <mxGraphModel dx="351" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1062" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
