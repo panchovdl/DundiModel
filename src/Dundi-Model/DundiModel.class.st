@@ -163,7 +163,8 @@ DundiModel >> initializeRestrictedArea [
 { #category : #control }
 DundiModel >> step: t [
 	
-	self thePersons do: #step
+	self 	thePersons do: #step.
+	self	theLandscapeUnits do: #step.
 ]
 
 { #category : #accessing }

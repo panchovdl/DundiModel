@@ -145,6 +145,12 @@ DundiLandscapeUnit >> povRestricted [
 		ifFalse: [ Color veryVeryLightGray ]
 ]
 
+{ #category : #stepping }
+DundiLandscapeUnit >> step [
+
+	self DundiAbstractLandscapeCategory logisticGrowth 
+]
+
 { #category : #accessing }
 DundiLandscapeUnit >> woodAmount [
 

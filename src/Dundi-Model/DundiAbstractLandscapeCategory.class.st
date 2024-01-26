@@ -1,25 +1,28 @@
 Class {
 	#name : #DundiAbstractLandscapeCategory,
 	#superclass : #Object,
+	#instVars : [
+		'logisticGrowth'
+	],
 	#category : #'Dundi-Model'
 }
 
 { #category : #'as yet unclassified' }
 DundiAbstractLandscapeCategory class >> highCarryingCapacity [
 
-	^ 0.6
+	^ 10
 ]
 
 { #category : #'as yet unclassified' }
 DundiAbstractLandscapeCategory class >> lowCarryingCapacity [
 
-	^ 0.1
+	^ 2
 ]
 
 { #category : #'as yet unclassified' }
 DundiAbstractLandscapeCategory class >> mediumCarryingCapacity [
 
-	^ 0.3
+	^ 5
 ]
 
 { #category : #'as yet unclassified' }
@@ -50,6 +53,15 @@ DundiAbstractLandscapeCategory >> grassCarryingCapacity [
 DundiAbstractLandscapeCategory >> leafCarryingCapacity [
 
 	self subclassResponsibility 
+]
+
+{ #category : #growth }
+DundiAbstractLandscapeCategory >> logisticGrowth [
+
+	super 	fruitAmount: (Cormas logisticGrowth: super fruitAmount r: self class reproductionRate K: self subclassResponsibility fruitCarryingCapacity);
+			grassAmount: (Cormas logisticGrowth: self grassAmount r: self class reproductionRate K: self subclassResponsibility grassCarryingCapacity);
+			leafAmount: (Cormas logisticGrowth: self leafAmount r: self class reproductionRate K: self subclassResponsibility leafCarryingCapacity);
+			woodAmount: (Cormas logisticGrowth: self woodAmount r: self class reproductionRate K: self subclassResponsibility woodCarryingCapacity)
 ]
 
 { #category : #'as yet unclassified' }
