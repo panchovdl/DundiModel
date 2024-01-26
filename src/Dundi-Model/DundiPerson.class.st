@@ -90,7 +90,7 @@ DundiPerson >> leafAmount: anObject [
 { #category : #'star moving' }
 DundiPerson >> pov [
 
-	^ Color red
+	^ Color red. 
 ]
 
 { #category : #stepping }
