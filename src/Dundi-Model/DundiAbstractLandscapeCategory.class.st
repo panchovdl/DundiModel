@@ -55,15 +55,6 @@ DundiAbstractLandscapeCategory >> leafCarryingCapacity [
 	self subclassResponsibility 
 ]
 
-{ #category : #growth }
-DundiAbstractLandscapeCategory >> logisticGrowth [
-
-	super 	fruitAmount: (Cormas logisticGrowth: super fruitAmount r: self class reproductionRate K: self subclassResponsibility fruitCarryingCapacity);
-			grassAmount: (Cormas logisticGrowth: self grassAmount r: self class reproductionRate K: self subclassResponsibility grassCarryingCapacity);
-			leafAmount: (Cormas logisticGrowth: self leafAmount r: self class reproductionRate K: self subclassResponsibility leafCarryingCapacity);
-			woodAmount: (Cormas logisticGrowth: self woodAmount r: self class reproductionRate K: self subclassResponsibility woodCarryingCapacity)
-]
-
 { #category : #'as yet unclassified' }
 DundiAbstractLandscapeCategory >> woodCarryingCapacity [
 

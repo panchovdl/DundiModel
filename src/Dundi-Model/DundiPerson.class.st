@@ -4,26 +4,26 @@ Class {
 	#traits : 'TCMLocated',
 	#classTraits : 'TCMLocated classTrait',
 	#instVars : [
-		'carryingCapacity',
 		'currentCharge',
 		'fruitAmount',
 		'leafAmount',
 		'woodAmount',
-		'grassAmount'
+		'grassAmount',
+		'basketSize'
 	],
 	#category : #'Dundi-Model'
 }
 
-{ #category : #'star moving' }
-DundiPerson >> carryingCapacity [
+{ #category : #accessing }
+DundiPerson >> basketSize [
 
-	^ carryingCapacity
+	^ basketSize
 ]
 
-{ #category : #'star moving' }
-DundiPerson >> carryingCapacity: anObject [
+{ #category : #accessing }
+DundiPerson >> basketSize: anObject [
 
-	carryingCapacity := anObject
+	basketSize := anObject
 ]
 
 { #category : #accessing }
@@ -68,7 +68,7 @@ DundiPerson >> grassAmount: anObject [
 DundiPerson >> initialize [
 
 	super initialize.
-	carryingCapacity := 100.
+	basketSize := 100.
 	fruitAmount := OrderedCollection new.
 	woodAmount := OrderedCollection new.
 	grassAmount := OrderedCollection new.

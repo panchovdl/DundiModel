@@ -13,24 +13,6 @@ Class {
 }
 
 { #category : #accessing }
-DundiLandscapeUnit class >> maxGrassAmount [
-
-	^ self
-]
-
-{ #category : #accessing }
-DundiLandscapeUnit class >> maxTreeAmount [
-
-	^ self
-]
-
-{ #category : #accessing }
-DundiLandscapeUnit class >> maxWaterAmount [
-
-	^ self
-]
-
-{ #category : #accessing }
 DundiLandscapeUnit >> fruitAmount [
 
 	^ fruitAmount
@@ -59,6 +41,10 @@ DundiLandscapeUnit >> initialize [
 
 	super initialize.
 	category := DundiBaldiolCategory new.
+	self 	grassAmount: (Cormas randomIntegerFrom: 1 to: 10);
+		 	leafAmount: (Cormas randomIntegerFrom: 1 to: 10);
+			woodAmount: (Cormas randomIntegerFrom: 1 to: 10);
+			fruitAmount: (Cormas randomIntegerFrom: 1 to: 10).
 ]
 
 { #category : #initialization }
@@ -91,6 +77,15 @@ DundiLandscapeUnit >> leafAmount [
 DundiLandscapeUnit >> leafAmount: anInteger [
 
 	leafAmount := anInteger
+]
+
+{ #category : #growth }
+DundiLandscapeUnit >> logisticGrowth [
+
+	self 	fruitAmount: (Cormas logisticGrowth: self fruitAmount r: category class reproductionRate K: category fruitCarryingCapacity);
+			grassAmount: (Cormas logisticGrowth: self grassAmount r: category class reproductionRate K: category grassCarryingCapacity);
+			leafAmount: (Cormas logisticGrowth: self leafAmount r: category class reproductionRate K: category leafCarryingCapacity);
+			woodAmount: (Cormas logisticGrowth: self woodAmount r: category class reproductionRate K: category woodCarryingCapacity)
 ]
 
 { #category : #accessing }
@@ -126,7 +121,11 @@ DundiLandscapeUnit >> makeSeeno [
 { #category : #pov }
 DundiLandscapeUnit >> povCategory [
 
-	^ category color
+		^ self
+		povAttribute: #grassAmount
+		min: 0
+		max: 10
+		color: category color
 ]
 
 { #category : #pov }
@@ -134,7 +133,7 @@ DundiLandscapeUnit >> povCategoryAndRestricted [
 
 	^ self isRestricted
 		ifTrue: [ Color gray ]
-		ifFalse: [ category color ]
+		ifFalse: [ self povCategory ]
 ]
 
 { #category : #pov }
@@ -148,7 +147,7 @@ DundiLandscapeUnit >> povRestricted [
 { #category : #stepping }
 DundiLandscapeUnit >> step [
 
-	self DundiAbstractLandscapeCategory logisticGrowth 
+	self logisticGrowth 
 ]
 
 { #category : #accessing }
