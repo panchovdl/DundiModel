@@ -6,7 +6,8 @@ Class {
 		'theLandscapeUnits',
 		'numberOfPersons',
 		'numberOfRows',
-		'numberOfColumns'
+		'numberOfColumns',
+		'theCattles'
 	],
 	#category : #'Dundi-Model'
 }
@@ -130,6 +131,8 @@ DundiModel >> initialize [
 
 	thePersons := OrderedCollection new.
 	theLandscapeUnits := OrderedCollection new.
+	theCattles := OrderedCollection new.
+	
 
 ]
 
@@ -165,6 +168,18 @@ DundiModel >> step: t [
 	
 	self 	thePersons do: #step.
 	self	theLandscapeUnits do: #step.
+]
+
+{ #category : #accessing }
+DundiModel >> theCattles [
+
+	^ theCattles
+]
+
+{ #category : #accessing }
+DundiModel >> theCattles: anObject [
+
+	theCattles := anObject
 ]
 
 { #category : #accessing }
