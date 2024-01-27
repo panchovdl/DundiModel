@@ -178,6 +178,7 @@ DundiModel >> step: t [
 { #category : #accessing }
 DundiModel >> theCattles [
 
+	<getterFor: #DundiCattle>
 	^ theCattles
 ]
 
