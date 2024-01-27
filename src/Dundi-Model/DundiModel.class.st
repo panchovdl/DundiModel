@@ -7,7 +7,8 @@ Class {
 		'numberOfPersons',
 		'numberOfRows',
 		'numberOfColumns',
-		'theCattles'
+		'theCattles',
+		'numberOfCattles'
 	],
 	#category : #'Dundi-Model'
 }
@@ -112,10 +113,13 @@ DundiModel >> init [
 	
 	self
 		createN: numberOfPersons 
-		randomlyLocatedEntities: DundiPerson.
+		randomlyLocatedEntities: DundiPerson;
 
+		createN: numberOfCattles 
+		randomlyLocatedEntities: DundiCattle.
 	self
 		displayPov: #pov of: DundiPerson ;
+		displayPov: #pov of: DundiCattle ;
 		displayPov: #povCategoryAndRestricted of: DundiLandscapeUnit .
 
 ]
@@ -126,6 +130,7 @@ DundiModel >> initialize [
 	super initialize.
 
 	numberOfPersons := 10.
+	numberOfCattles := 10.
 	numberOfRows := 30.
 	numberOfColumns := 30.
 
