@@ -90,3 +90,13 @@ DundiCattle >> pov [
 
 	^ #rectangle
 ]
+
+{ #category : #biology }
+DundiCattle >> step [
+
+	self
+		consumeEnergy;
+		move;
+		eat.
+
+]
