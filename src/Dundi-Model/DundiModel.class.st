@@ -2,11 +2,13 @@ Class {
 	#name : #DundiModel,
 	#superclass : #CMAbstractModel,
 	#instVars : [
-		'thePersons',
 		'theLandscapeUnits',
-		'numberOfPersons',
+		'numberOfCattles',
+		'numberOfHumans',
 		'numberOfRows',
-		'numberOfColumns'
+		'numberOfColumns',
+		'theCattles',
+		'theHumans'
 	],
 	#category : #'Dundi-Model'
 }
@@ -110,12 +112,16 @@ DundiModel >> init [
 	self initializeLandscapeCategory.
 	
 	self
-		createN: numberOfPersons 
-		randomlyLocatedEntities: DundiPerson.
+		createN: numberOfCattles
+		randomlyLocatedEntities: DundiCattle.
+		
+	self
+		createN: numberOfHumans 
+		randomlyLocatedEntities: DundiHuman.
 
 	self
-		displayPov: #pov of: DundiPerson ;
-		displayPov: #povCategoryAndRestricted of: DundiLandscapeUnit .
+		displayPov: #pov of: DundiAgent ;
+		displayPov: #povCategoryAndRestricted of: DundiLandscapeUnit.
 
 ]
 
@@ -124,13 +130,14 @@ DundiModel >> initialize [
 
 	super initialize.
 
-	numberOfPersons := 10.
+	numberOfCattles := 10.
+	numberOfHumans := 10.
 	numberOfRows := 30.
 	numberOfColumns := 30.
 
-	thePersons := OrderedCollection new.
+	theCattles := OrderedCollection new.
 	theLandscapeUnits := OrderedCollection new.
-
+	theHumans := OrderedCollection new.
 ]
 
 { #category : #initialization }
@@ -163,8 +170,34 @@ DundiModel >> initializeRestrictedArea [
 { #category : #control }
 DundiModel >> step: t [
 	
-	self 	thePersons do: #step.
+	self 	theAgents do: #step.
 	self	theLandscapeUnits do: #step.
+]
+
+{ #category : #accessing }
+DundiModel >> theCattles [ 
+
+	<getterFor: #DundiCattle>
+	^ theCattles
+]
+
+{ #category : #accessing }
+DundiModel >> theCattles: anObject [
+
+	theCattles := anObject
+]
+
+{ #category : #accessing }
+DundiModel >> theHumans [ 
+
+	<getterFor: #DundiHuman>
+	^ theHumans
+]
+
+{ #category : #accessing }
+DundiModel >> theHumans: anObject [
+
+	theHumans := anObject
 ]
 
 { #category : #accessing }
@@ -175,8 +208,7 @@ DundiModel >> theLandscapeUnits [
 ]
 
 { #category : #accessing }
-DundiModel >> thePersons [
+DundiModel >> theLandscapeUnits: anObject [
 
-	<getterFor: #DundiPerson>
-	^ thePersons
+	theLandscapeUnits := anObject
 ]
