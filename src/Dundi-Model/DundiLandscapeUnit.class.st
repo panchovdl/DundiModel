@@ -42,7 +42,7 @@ DundiLandscapeUnit >> initialize [
 	super initialize.
 	category := DundiBaldiolCategory new.
 	self 	grassAmount: (Cormas randomIntegerFrom: 1 to: 10);
-		 	leafAmount: (Cormas randomIntegerFrom: 1 to: 10);
+		 	leafCharget: (Cormas randomIntegerFrom: 1 to: 10);
 			woodAmount: (Cormas randomIntegerFrom: 1 to: 10);
 			fruitAmount: (Cormas randomIntegerFrom: 1 to: 10).
 ]
@@ -85,7 +85,7 @@ DundiLandscapeUnit >> logisticGrowth [
 	self 	fruitAmount: (Cormas logisticGrowth: self fruitAmount r: category class reproductionRate K: category fruitCarryingCapacity);
 			grassAmount: (Cormas logisticGrowth: self grassAmount r: category class reproductionRate K: category grassCarryingCapacity);
 			leafAmount: (Cormas logisticGrowth: self leafAmount r: category class reproductionRate K: category leafCarryingCapacity);
-			woodAmount: (Cormas logisticGrowth: self woodAmount r: category class reproductionRate K: category woodCarryingCapacity)
+			woodAmount: (Cormas logisticGrowth: self woodCharge r: category class reproductionRate K: category woodCarryingCapacity)
 ]
 
 { #category : #accessing }
