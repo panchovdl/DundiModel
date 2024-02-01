@@ -4,67 +4,41 @@ Class {
 	#traits : 'TCMLocated',
 	#classTraits : 'TCMLocated classTrait',
 	#instVars : [
-		'currentCharge',
-		'basketSize',
-		'fruitCharge',
-		'grassCharge',
-		'leafCharge',
-		'woodCharge',
-		'maxWoodCharge',
-		'maxFruitCharge',
-		'maxLeafCharge',
-		'maxGrassCharge'
+		'maxWoodAmount',
+		'maxFruitAmount',
+		'maxLeafAmount',
+		'maxGrassAmount',
+		'fruitAmount',
+		'grassAmount',
+		'leafAmount',
+		'woodAmount'
 	],
 	#category : #'Dundi-Model'
 }
 
 { #category : #accessing }
-DundiAgent >> basketSize [
+DundiAgent >> fruitAmount [
 
-	^ basketSize
+	^ fruitAmount
 ]
 
 { #category : #accessing }
-DundiAgent >> basketSize: anObject [
+DundiAgent >> fruitAmount: anObject [
 
-	basketSize := anObject
+	fruitAmount := anObject
+
 ]
 
 { #category : #accessing }
-DundiAgent >> currentCharge [ 
+DundiAgent >> grassAmount [
 
-	^ currentCharge
+	^ grassAmount
 ]
 
 { #category : #accessing }
-DundiAgent >> currentCharge: anObject [
+DundiAgent >> grassAmount: anObject [
 
-	currentCharge := anObject
-]
-
-{ #category : #'star moving' }
-DundiAgent >> fruitCharge [
-
-	^ fruitCharge
-]
-
-{ #category : #'star moving' }
-DundiAgent >> fruitCharge: anObject [
-
-	fruitCharge := anObject
-
-]
-
-{ #category : #'star moving' }
-DundiAgent >> grassCharge [
-
-	^ grassCharge
-]
-
-{ #category : #'star moving' }
-DundiAgent >> grassCharge: anObject [
-
-	grassCharge := anObject
+	grassAmount := anObject
 
 ]
 
@@ -72,31 +46,27 @@ DundiAgent >> grassCharge: anObject [
 DundiAgent >> initialize [
 
 	super initialize.
-	basketSize := maxWoodCharge + maxFruitCharge + maxLeafCharge + maxGrassCharge.
-	maxWoodCharge := 25.
-	maxFruitCharge := 25.
-	maxLeafCharge := 25.
-	maxGrassCharge := 25.
+	maxWoodAmount := 25.
+	maxFruitAmount := 25.
+	maxLeafAmount := 25.
+	maxGrassAmount := 25.
 	
-	currentCharge := OrderedCollection new.
-	currentCharge := fruitCharge + woodCharge + grassCharge + leafCharge.
-	
-	woodCharge := OrderedCollection new.
-	grassCharge := OrderedCollection new.
-	leafCharge := OrderedCollection new.
-	fruitCharge := OrderedCollection.
+	woodAmount := 0.
+	grassAmount := 0.
+	leafAmount := 0.
+	fruitAmount := 0.
 ]
 
-{ #category : #'star moving' }
-DundiAgent >> leafCharge [
+{ #category : #accessing }
+DundiAgent >> leafAmount [
 
-	^ leafCharge
+	^ leafAmount
 ]
 
-{ #category : #'star moving' }
-DundiAgent >> leafCharge: anObject [
+{ #category : #accessing }
+DundiAgent >> leafAmount: anObject [
 
-	leafCharge := anObject 
+	leafAmount := anObject 
 ]
 
 { #category : #'as yet unclassified' }
@@ -130,15 +100,15 @@ DundiAgent >> step [
 	self randomWalk
 ]
 
-{ #category : #'star moving' }
-DundiAgent >> woodCharge [
+{ #category : #accessing }
+DundiAgent >> woodAmount [
 
-	^ woodCharge 
+	^ woodAmount 
 ]
 
-{ #category : #'star moving' }
-DundiAgent >> woodCharge: anObject [
+{ #category : #accessing }
+DundiAgent >> woodAmount: anObject [
 
-	woodCharge := anObject
+	woodAmount := anObject
 
 ]
