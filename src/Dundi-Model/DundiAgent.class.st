@@ -16,6 +16,25 @@ Class {
 	#category : #'Dundi-Model'
 }
 
+{ #category : #'as yet unclassified' }
+DundiAgent >> collectGrass [
+
+	| whatIWantToCollect whatICanCollect collectedQuantity |
+	patch ifNil: [ ^ nil ].
+	
+	"cannot collect mor than the space than left in agent max grass amount (maxGrassAmount)"
+	whatIWantToCollect := self grassConsumptionRatio min: (maxGrassAmount - grassAmount ).
+	
+	"Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow"
+	whatICanCollect := self patch grassAmount - 1.
+	
+	collectedQuantity := whatICanCollect min:  whatIWantToCollect.
+
+	
+	self grassAmount: self grassAmount + collectedQuantity.
+	self patch grassAmount: self patch grassAmount - collectedQuantity
+]
+
 { #category : #accessing }
 DundiAgent >> fruitAmount [
 
@@ -40,6 +59,12 @@ DundiAgent >> grassAmount: anObject [
 
 	grassAmount := anObject
 
+]
+
+{ #category : #'as yet unclassified' }
+DundiAgent >> grassConsumptionRatio [
+
+	self subclassResponsibility 
 ]
 
 { #category : #'star moving' }
@@ -97,7 +122,9 @@ DundiAgent >> pov [
 { #category : #stepping }
 DundiAgent >> step [
 
-	self randomWalk
+	self 
+		randomWalk;
+		collectGrass.
 ]
 
 { #category : #accessing }
