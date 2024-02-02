@@ -28,7 +28,7 @@ DundiAbstractLandscapeCategory class >> mediumCarryingCapacity [
 { #category : #'as yet unclassified' }
 DundiAbstractLandscapeCategory class >> reproductionRate [
 
-	^ 0.2 
+	^ 0.01
 ]
 
 { #category : #accessing }

@@ -13,7 +13,7 @@ DundiHuman >> fruitConsumptionRatio [
 { #category : #'as yet unclassified' }
 DundiHuman >> grassConsumptionRatio [
 
-	^ 5
+	^ 15
 ]
 
 { #category : #'as yet unclassified' }
