@@ -103,11 +103,14 @@ DundiAgent >> collectWood [
 { #category : #'as yet unclassified' }
 DundiAgent >> consumeResources [
 
+
 	self 
-		leafAmount: self leafAmount - self leafConsumptionRatio;
+		leafAmount: self leafAmount  - self leafConsumptionRatio;
 		woodAmount: self woodAmount - self woodConsumptionRatio;
 		fruitAmount: self fruitAmount - self fruitConsumptionRatio;
 		grassAmount: self grassAmount - self grassConsumptionRatio 
+		
+		
 
 ]
 
@@ -171,7 +174,7 @@ DundiAgent >> initialize [
 	maxGrassAmount := 25.
 	
 	woodAmount := 0.
-	grassAmount := 0.
+	grassAmount := 1.
 	leafAmount := 0.
 	fruitAmount := 0.
 	distancePerception := 25.
@@ -208,7 +211,7 @@ DundiAgent >> moveToMaxOfGrass [
 		^ self ].
 	
 	maxGrassLocation := (candidatePatches collect: [ :each | each grassAmount ]) max.
-	targetPatch := candidatePatches detect: [ :each | each grassAmount = maxGrassAmount ].
+	targetPatch := candidatePatches detect: [ :each | each grassAmount = maxGrassLocation ].
 	
 	self moveTo: targetPatch.
 ]
@@ -229,6 +232,9 @@ DundiAgent >> step [
 		collectWood;
 		collectFruit;
 		consumeResources.
+		
+	 self grassAmount <= 0
+		ifTrue: [ self moveS ]
 ]
 
 { #category : #accessing }

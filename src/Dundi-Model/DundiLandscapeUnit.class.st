@@ -41,10 +41,10 @@ DundiLandscapeUnit >> initialize [
 
 	super initialize.
 	category := DundiBaldiolCategory new.
-	self 	grassAmount: (Cormas randomIntegerFrom: 1 to: 10);
-		 	leafAmount: (Cormas randomIntegerFrom: 1 to: 10);
-			woodAmount: (Cormas randomIntegerFrom: 1 to: 10);
-			fruitAmount: (Cormas randomIntegerFrom: 1 to: 10).
+	self 	grassAmount: (Cormas randomIntegerFrom: 1 to: 20);
+		 	leafAmount: (Cormas randomIntegerFrom: 1 to: 20);
+			woodAmount: (Cormas randomIntegerFrom: 1 to: 20);
+			fruitAmount: (Cormas randomIntegerFrom: 1 to: 20).
 ]
 
 { #category : #initialization }
