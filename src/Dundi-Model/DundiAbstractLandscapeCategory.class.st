@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+DundiAbstractLandscapeCategory class >> growthRatio [
+
+	^ 0.01
+]
+
+{ #category : #'as yet unclassified' }
 DundiAbstractLandscapeCategory class >> highCarryingCapacity [
 
 	^ 10
@@ -23,12 +29,6 @@ DundiAbstractLandscapeCategory class >> lowCarryingCapacity [
 DundiAbstractLandscapeCategory class >> mediumCarryingCapacity [
 
 	^ 5
-]
-
-{ #category : #'as yet unclassified' }
-DundiAbstractLandscapeCategory class >> reproductionRate [
-
-	^ 0.01
 ]
 
 { #category : #accessing }

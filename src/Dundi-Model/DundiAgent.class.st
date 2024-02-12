@@ -26,7 +26,7 @@ DundiAgent >> collect [
 	patch ifNil: [ ^ nil ].
 	
 	"Parcourir toutes les ressources que l'agent peut collecter"
-	resourceAmount keysDo: [ :resourceName |
+	resourceAmount collectAsSet: [ :resourceName |
 		
 		"Déterminer ce que l'agent veut collecter pour la ressource spécifiée"
 		whatIWantToCollect := self determineWhatToCollectForResource: resourceName.
@@ -44,15 +44,15 @@ DundiAgent >> collect [
 
 { #category : #'as yet unclassified' }
 DundiAgent >> collectFruit [
-
+"
 	| whatIWantToCollect whatICanCollect collectedQuantity |
 	patch ifNil: [ ^ nil ].
 	
-	"cannot collect more than the space which left in agent max grass amount (maxGrassAmount)"
+	""cannot collect more than the space which left in agent max grass amount (maxGrassAmount)""
 	whatIWantToCollect := self fruitConsumptionRatio min: (maxFruitAmount - fruitAmount).
 								
 	
-	"Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow"
+	""Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow""
 	whatICanCollect := self patch fruitAmount - 1.
 
 	
@@ -60,40 +60,40 @@ DundiAgent >> collectFruit [
 
 	
 	self fruitAmount: self fruitAmount + collectedQuantity.
-	self patch fruitAmount: self patch fruitAmount - collectedQuantity
+	self patch fruitAmount: self patch fruitAmount - collectedQuantity"
 ]
 
 { #category : #'as yet unclassified' }
 DundiAgent >> collectGrass [
-
+"
 	| whatIWantToCollect whatICanCollect collectedQuantity |
 	patch ifNil: [ ^ nil ].
 	
-	"cannot collect more than the space which left in agent max grass amount (maxGrassAmount)"
+	""cannot collect more than the space which left in agent max grass amount (maxGrassAmount)""
 	whatIWantToCollect := self grassConsumptionRatio min: (maxGrassAmount - grassAmount).
 	
 	
-	"Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow"
+	""Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow""
 	whatICanCollect := self patch grassAmount - 1.
 	
 	collectedQuantity := whatICanCollect min: whatIWantToCollect.
 
 	
 	self grassAmount: self grassAmount + collectedQuantity.
-	self patch grassAmount: self patch grassAmount - collectedQuantity
+	self patch grassAmount: self patch grassAmount - collectedQuantity"
 ]
 
 { #category : #'as yet unclassified' }
 DundiAgent >> collectLeaves [
-
+"
 	| whatIWantToCollect whatICanCollect collectedQuantity |
 	patch ifNil: [ ^ nil ].
 	
-	"cannot collect more than the space which left in agent max grass amount (maxGrassAmount)"
+	""cannot collect more than the space which left in agent max grass amount (maxGrassAmount)""
 	whatIWantToCollect := self leafConsumptionRatio min: (maxLeafAmount - leafAmount).
 								
 	
-	"Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow"
+	""Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow""
 	whatICanCollect := self patch leafAmount - 1.
 
 	
@@ -101,20 +101,20 @@ DundiAgent >> collectLeaves [
 
 	
 	self leafAmount: self leafAmount + collectedQuantity.
-	self patch leafAmount: self patch leafAmount - collectedQuantity
+	self patch leafAmount: self patch leafAmount - collectedQuantity"
 ]
 
 { #category : #'as yet unclassified' }
 DundiAgent >> collectWood [
-
+"
 	| whatIWantToCollect whatICanCollect collectedQuantity |
 	patch ifNil: [ ^ nil ].
 	
-	"cannot collect more than the space which left in agent max grass amount (maxGrassAmount)"
+	""cannot collect more than the space which left in agent max grass amount (maxGrassAmount)""
 	whatIWantToCollect := self woodConsumptionRatio min: (maxWoodAmount - woodAmount).
 								
 	
-	"Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow"
+	""Cannot collect more grass than there is in a patch and patch needs at least 1 amount to regrow""
 	whatICanCollect := self patch woodAmount - 1.
 
 	
@@ -122,7 +122,7 @@ DundiAgent >> collectWood [
 
 	
 	self woodAmount: self woodAmount + collectedQuantity.
-	self patch woodAmount: self patch woodAmount - collectedQuantity
+	self patch woodAmount: self patch woodAmount - collectedQuantity"
 ]
 
 { #category : #'as yet unclassified' }
@@ -130,10 +130,10 @@ DundiAgent >> consumeResources [
 
 
 	self 
-		leafAmount: self leafAmount  - self leafConsumptionRatio;
-		woodAmount: self woodAmount - self woodConsumptionRatio;
-		fruitAmount: self fruitAmount - self fruitConsumptionRatio;
-		grassAmount: self grassAmount - self grassConsumptionRatio 
+		leafAmount: self leafAmount  - self subclassResponsibility ;
+		woodAmount: self woodAmount - self subclassResponsibility;
+		fruitAmount: self fruitAmount - self subclassResponsibility;
+		grassAmount: self grassAmount - self subclassResponsibility. 
 		
 		
 
@@ -142,48 +142,55 @@ DundiAgent >> consumeResources [
 { #category : #'as yet unclassified' }
 DundiAgent >> determineNeededResourceFrom: aPatch [
 
-	| neededResource |
-    "Implémentez la logique appropriée pour déterminer la ressource nécessaire"
-    neededResource := self subclassResponsibility.  "Exemple: l'agent a besoin d'herbe"
 
-    ^ neededResource
+^ self subclassResponsibility .
+
+
+" | neededResource |
+    ""Implémentez la logique appropriée pour déterminer la ressource nécessaire""
+    neededResource := self subclassResponsibility.  ""Exemple: l'agent a besoin d'herbe""
+
+    ^ neededResource"
 ]
 
 { #category : #'as yet unclassified' }
 DundiAgent >> determineWhatICanCollectForResource: resourceName [
 
  | maxAmountCollectable |
-	maxAmountCollectable := 0.
 
+	maxAmountCollectable  := 0.
+	
 	"Sélectionner la méthode spécifique à la ressource"
-	resourceName = 'grass' ifTrue: [ maxAmountCollectable := self patch grassAmount - 1 ].
-	resourceName = 'fruit' ifTrue: [ maxAmountCollectable := self patch fruitAmount - 1 ].
-	resourceName = 'wood' ifTrue: [ maxAmountCollectable := self patch woodAmount - 1. ].
-	resourceName = 'leaf' ifTrue: [ maxAmountCollectable := self patch leafAmount - 1. ].
+	resourceName = 'grassAmount' ifTrue: [ maxAmountCollectable  := self patch grassAmount - 1 ].
+	resourceName = 'fruitAmount' ifTrue: [ maxAmountCollectable  := self patch fruitAmount - 1 ].
+	resourceName = 'woodAmount' ifTrue: [ maxAmountCollectable  := self patch woodAmount - 1. ].
+	resourceName = 'leafAmount' ifTrue: [ maxAmountCollectable  := self patch leafAmount - 1. ].
 	
 
 	"Ajoutez des conditions pour d'autres ressources si nécessaire"
 
-	^ maxAmountCollectable 
+	^ maxAmountCollectable
 ]
 
 { #category : #'as yet unclassified' }
 DundiAgent >> determineWhatToCollectForResource: resourceName [
 
 	
-	| maxAmountToCollect |
-	maxAmountToCollect := 0.
+	|  maxAmountToCollect |
+
+		maxAmountToCollect := 0.
 
 	"Sélectionner la méthode spécifique à la ressource"
-	resourceName = 'grass' ifTrue: [ maxAmountToCollect:= self grassConsumptionRatio min: (maxGrassAmount  - grassAmount). ].
-	resourceName = 'fruit' ifTrue: [ maxAmountToCollect := self fruitConsumptionRatio min: (maxFruitAmount - fruitAmount). ].
-	resourceName = 'wood' ifTrue: [ maxAmountToCollect := self woodConsumptionRatio min: (maxWoodAmount - woodAmount). ].
-	resourceName = 'leaf' ifTrue: [ maxAmountToCollect := self leafConsumptionRatio min: (maxLeafAmount - leafAmount). ].
+	resourceName = 'grassAmount' ifTrue: [ maxAmountToCollect := self grassConsumptionRatio min: (maxGrassAmount  - grassAmount). ].	
+	resourceName = 'fruitAmount' ifTrue: [ maxAmountToCollect := self fruitConsumptionRatio min: (maxFruitAmount - fruitAmount). ].
+	resourceName = 'woodAmount' ifTrue: [ maxAmountToCollect := self woodConsumptionRatio min: (maxWoodAmount - woodAmount). ].
+	resourceName = 'leafAmount' ifTrue: [ maxAmountToCollect := self leafConsumptionRatio min: (maxLeafAmount - leafAmount). ].
 	
 
 	"Ajoutez des conditions pour d'autres ressources si nécessaire"
 
-	^ maxAmountToCollect 
+	
+	 ^ maxAmountToCollect 
 ]
 
 { #category : #accessing }
@@ -205,18 +212,20 @@ DundiAgent >> findPatchWithMostNeededResource [
     maxResourcePatch := nil.
     maxResourceAmount := 0.
 	
-	candidatePatches := self patch neighbourhoodAndSelf.
+	candidatePatches := self patch withinRangeIndex: distancePerception.
 	
-	candidatePatches do: [ :neighbor |
+	candidatePatches do: [ :cell |
         | resourceName neededAmount availableAmount |
-        resourceName := self determineNeededResourceFrom: neighbor.
+        resourceName := self determineNeededResourceFrom: cell.
         neededAmount := self determineWhatToCollectForResource: resourceName.
-        availableAmount := neighbor getResource: resourceName.
+        availableAmount := cell getResource: resourceName.
 
         "Vérifier si ce voisin a plus de ressources nécessaires"
         (availableAmount - neededAmount) > maxResourceAmount ifTrue: [
             maxResourceAmount := availableAmount - neededAmount.
-            maxResourcePatch := neighbor ] ].
+            maxResourcePatch := cell  ] ].
+
+
 
     ^ maxResourcePatch
 
@@ -326,6 +335,54 @@ DundiAgent >> leafAmount: anObject [
 DundiAgent >> leafConsumptionRatio [
 
 	self subclassResponsibility 
+]
+
+{ #category : #accessing }
+DundiAgent >> maxFruitAmount [
+
+	^ maxFruitAmount
+]
+
+{ #category : #accessing }
+DundiAgent >> maxFruitAmount: anObject [
+
+	maxFruitAmount := anObject
+]
+
+{ #category : #accessing }
+DundiAgent >> maxGrassAmount [
+
+	^ maxGrassAmount
+]
+
+{ #category : #accessing }
+DundiAgent >> maxGrassAmount: anObject [
+
+	maxGrassAmount := anObject
+]
+
+{ #category : #accessing }
+DundiAgent >> maxLeafAmount [
+
+	^ maxLeafAmount
+]
+
+{ #category : #accessing }
+DundiAgent >> maxLeafAmount: anObject [
+
+	maxLeafAmount := anObject
+]
+
+{ #category : #accessing }
+DundiAgent >> maxWoodAmount [
+
+	^ maxWoodAmount
+]
+
+{ #category : #accessing }
+DundiAgent >> maxWoodAmount: anObject [
+
+	maxWoodAmount := anObject
 ]
 
 { #category : #'as yet unclassified' }

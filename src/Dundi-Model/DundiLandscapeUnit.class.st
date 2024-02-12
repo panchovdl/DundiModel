@@ -82,10 +82,10 @@ DundiLandscapeUnit >> leafAmount: anInteger [
 { #category : #growth }
 DundiLandscapeUnit >> logisticGrowth [
 
-	self 	fruitAmount: (Cormas logisticGrowth: self fruitAmount r: category class reproductionRate K: category fruitCarryingCapacity);
-			grassAmount: (Cormas logisticGrowth: self grassAmount r: category class reproductionRate K: category grassCarryingCapacity);
-			leafAmount: (Cormas logisticGrowth: self leafAmount r: category class reproductionRate K: category leafCarryingCapacity);
-			woodAmount: (Cormas logisticGrowth: self woodAmount r: category class reproductionRate K: category woodCarryingCapacity)
+	self 	fruitAmount: (Cormas logisticGrowth: self fruitAmount r: category class growthRatio K: category fruitCarryingCapacity);
+			grassAmount: (Cormas logisticGrowth: self grassAmount r: category class growthRatio K: category grassCarryingCapacity);
+			leafAmount: (Cormas logisticGrowth: self leafAmount r: category class growthRatio K: category leafCarryingCapacity);
+			woodAmount: (Cormas logisticGrowth: self woodAmount r: category class growthRatio K: category woodCarryingCapacity)
 ]
 
 { #category : #'setting category' }
