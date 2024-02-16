@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-16T13:31:47.883Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="cpd_WxyPj0h18xOjQnCk" version="23.1.4" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2024-02-16T13:39:41.441Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="Ws2je0VljH9VK_SskOBO" version="23.1.4" type="github" pages="7">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1969" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2680,7 +2680,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Yw-X3uU3t0INpGLV5SJW" name="Page-6">
-    <mxGraphModel dx="1620" dy="851" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1579" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2985,7 +2985,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="b7wU4CfStpp9M5i8yZ8a-16" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-590" y="776" width="50" height="50" as="geometry" />
+          <mxGeometry x="-584" y="810" width="50" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b7wU4CfStpp9M5i8yZ8a-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qV8ooc2tRhKepCK5706e-26" target="b7wU4CfStpp9M5i8yZ8a-16">
           <mxGeometry relative="1" as="geometry">
@@ -3010,16 +3010,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="b7wU4CfStpp9M5i8yZ8a-21" value="SaignerArbres" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-490" y="746" width="132" height="40" as="geometry" />
+          <mxGeometry x="-524.47" y="780" width="132" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="b7wU4CfStpp9M5i8yZ8a-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b7wU4CfStpp9M5i8yZ8a-11" target="b7wU4CfStpp9M5i8yZ8a-21">
+        <mxCell id="b7wU4CfStpp9M5i8yZ8a-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b7wU4CfStpp9M5i8yZ8a-11" target="6pdegY5k0jy7g9A0533G-12">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-460" y="746" as="sourcePoint" />
             <mxPoint x="-460" y="808" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-460" y="780" />
-              <mxPoint x="-460" y="780" />
-            </Array>
+            <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="b7wU4CfStpp9M5i8yZ8a-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b7wU4CfStpp9M5i8yZ8a-21" target="qV8ooc2tRhKepCK5706e-39">
@@ -3027,7 +3024,7 @@
             <mxPoint x="-575" y="840" as="sourcePoint" />
             <mxPoint x="-584" y="880" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-302" y="770" />
+              <mxPoint x="-302" y="800" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -3041,7 +3038,7 @@
             <mxPoint x="-429" y="870" as="sourcePoint" />
             <mxPoint x="-438" y="910" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-250" y="801" />
+              <mxPoint x="-250" y="840" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -3235,6 +3232,33 @@
               <mxPoint x="-820" y="870" />
               <mxPoint x="-820" y="348" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6pdegY5k0jy7g9A0533G-12" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-488.47" y="691" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6pdegY5k0jy7g9A0533G-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6pdegY5k0jy7g9A0533G-12" target="qV8ooc2tRhKepCK5706e-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-412.56" y="686" as="sourcePoint" />
+            <mxPoint x="-370.56" y="716" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6pdegY5k0jy7g9A0533G-14" value="[arbreOwned = bleed]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6pdegY5k0jy7g9A0533G-13">
+          <mxGeometry x="-0.282" y="-2" relative="1" as="geometry">
+            <mxPoint x="19" y="-33" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6pdegY5k0jy7g9A0533G-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6pdegY5k0jy7g9A0533G-12" target="b7wU4CfStpp9M5i8yZ8a-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-490" y="666" as="sourcePoint" />
+            <mxPoint x="-448" y="696" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6pdegY5k0jy7g9A0533G-17" value="[duunguSaison = True]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6pdegY5k0jy7g9A0533G-15">
+          <mxGeometry x="-0.6131" y="2" relative="1" as="geometry">
+            <mxPoint x="-2" y="11" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
