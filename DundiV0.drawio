@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-16T16:44:47.426Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="cATFsyX7axJnl7cOTv4G" version="23.1.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2024-02-16T16:47:16.552Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="Oo-s-W21AK-GOjD6jR9w" version="23.1.4" type="github" pages="6">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1969" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2463,7 +2463,7 @@
         <mxCell id="TcL6OLyI1boboTasFQHe-38" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-416" y="550" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="TcL6OLyI1boboTasFQHe-43" value="&lt;div&gt;[campNeedsWood = True]&lt;/div&gt;&lt;div&gt;[self woodAmount&amp;lt;5]&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="TcL6OLyI1boboTasFQHe-43" value="&lt;div&gt;[campNeedsWood = True]&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-611.5" y="120" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="SYMA_MAzpzKL9f8w9trC-1" value="VérificationPropriétaire" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
@@ -2683,7 +2683,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Yw-X3uU3t0INpGLV5SJW" name="Page-6">
-    <mxGraphModel dx="2283" dy="666" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4547" dy="1702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
