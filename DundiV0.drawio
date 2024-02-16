@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-16T16:42:54.832Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="dkhA4bVHKfky5XNZWfrV" version="23.1.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2024-02-16T16:44:47.426Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="cATFsyX7axJnl7cOTv4G" version="23.1.4" type="github" pages="6">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1969" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2367,11 +2367,12 @@
             <mxPoint y="40" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TcL6OLyI1boboTasFQHe-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="TcL6OLyI1boboTasFQHe-5" target="eJsIYl81qW4mKSsPFZlk-1" edge="1">
+        <mxCell id="TcL6OLyI1boboTasFQHe-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="TcL6OLyI1boboTasFQHe-5" target="SYMA_MAzpzKL9f8w9trC-1" edge="1">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-560" y="250" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-645" y="283" />
-              <mxPoint x="-645" y="250" />
+              <mxPoint x="-660" y="300" />
+              <mxPoint x="-660" y="300" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2381,7 +2382,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="TcL6OLyI1boboTasFQHe-5" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-800" y="258" width="70" height="50" as="geometry" />
+          <mxGeometry x="-800" y="275" width="70" height="50" as="geometry" />
         </mxCell>
         <mxCell id="TcL6OLyI1boboTasFQHe-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="TcL6OLyI1boboTasFQHe-7" target="TcL6OLyI1boboTasFQHe-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -2644,42 +2645,6 @@
         </mxCell>
         <mxCell id="qvgXe-4xwuQnnCu-PXAb-1" value="&lt;h1&gt;Activity Diagram - wood collection&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Explain the process for collecting wood in trees&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-430" y="10" width="420" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="eJsIYl81qW4mKSsPFZlk-1" value="VerificationStatut" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-560" y="218" width="136" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="eJsIYl81qW4mKSsPFZlk-4" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-333.5" y="208" width="50" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="eJsIYl81qW4mKSsPFZlk-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="eJsIYl81qW4mKSsPFZlk-1" target="eJsIYl81qW4mKSsPFZlk-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-349" y="320" as="sourcePoint" />
-            <mxPoint x="-194" y="190" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-400" y="230" />
-              <mxPoint x="-400" y="230" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="eJsIYl81qW4mKSsPFZlk-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="eJsIYl81qW4mKSsPFZlk-4" target="TcL6OLyI1boboTasFQHe-15">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-298" y="390" as="sourcePoint" />
-            <mxPoint x="-381" y="400" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-220" y="230" />
-              <mxPoint x="-220" y="500" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="eJsIYl81qW4mKSsPFZlk-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="eJsIYl81qW4mKSsPFZlk-4" target="SYMA_MAzpzKL9f8w9trC-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-276" y="240" as="sourcePoint" />
-            <mxPoint x="-330" y="510" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-308" y="270" />
-              <mxPoint x="-520" y="270" />
-            </Array>
-          </mxGeometry>
         </mxCell>
         <mxCell id="kLLwicDY5rSpb1sak7xo-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kLLwicDY5rSpb1sak7xo-1" target="TcL6OLyI1boboTasFQHe-16">
           <mxGeometry relative="1" as="geometry">
