@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-29T14:33:24.299Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="6cylSY4tdQuIAz0S3ff_" version="23.1.8" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2024-02-29T14:34:43.786Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="DD_yZZVjGUp_4FsU3lxo" version="23.1.8" type="github" pages="6">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Dundi_simplest">
     <mxGraphModel dx="2391" dy="1133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2368,7 +2368,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="BNcpyIeB1zOsUfz4UHSC" name="wood_collect">
-    <mxGraphModel dx="2501" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3871" dy="1442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2720,9 +2720,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="bAVQgQc4e1UrFvx3BqKO-18" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bAVQgQc4e1UrFvx3BqKO-17">
+        <mxCell id="bAVQgQc4e1UrFvx3BqKO-18" value="[typeCell = &quot;Sangre&quot; OR &quot;Caangol&quot;]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bAVQgQc4e1UrFvx3BqKO-17">
           <mxGeometry x="-0.4921" y="4" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-32" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="bAVQgQc4e1UrFvx3BqKO-2" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -2731,7 +2731,7 @@
         <mxCell id="bAVQgQc4e1UrFvx3BqKO-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bAVQgQc4e1UrFvx3BqKO-4" target="bAVQgQc4e1UrFvx3BqKO-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bAVQgQc4e1UrFvx3BqKO-4" value="ScanCellAround" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="bAVQgQc4e1UrFvx3BqKO-4" value="ScanCellConnues" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-390" y="230" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="bAVQgQc4e1UrFvx3BqKO-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bAVQgQc4e1UrFvx3BqKO-7" target="bAVQgQc4e1UrFvx3BqKO-11">
