@@ -4,12 +4,6 @@ Class {
 	#category : #'Dundi-Model'
 }
 
-{ #category : #stepping }
-DundiHuman >> conditionForDying [ 
-
-	^ self fruitAmount <=0.
-]
-
 { #category : #'as yet unclassified' }
 DundiHuman >> fruitConsumptionRatio [
 

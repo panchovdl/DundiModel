@@ -23,6 +23,12 @@ DundiCaangolCategory >> grassCarryingCapacity [
 ]
 
 { #category : #'as yet unclassified' }
+DundiCaangolCategory >> leafCarryingCapacity [ 
+
+	^ self class highCarryingCapacity
+]
+
+{ #category : #'as yet unclassified' }
 DundiCaangolCategory >> woodCarryingCapacity [ 
 
 	^ self class highCarryingCapacity

@@ -4,12 +4,6 @@ Class {
 	#category : #'Dundi-Model'
 }
 
-{ #category : #stepping }
-DundiCattle >> conditionForDying [ 
-
-	^ self grassAmount <= 0.
-]
-
 { #category : #'as yet unclassified' }
 DundiCattle >> fruitConsumptionRatio [ 
 

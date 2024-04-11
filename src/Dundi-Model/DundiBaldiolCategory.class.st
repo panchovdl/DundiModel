@@ -11,6 +11,12 @@ DundiBaldiolCategory >> color [
 ]
 
 { #category : #'as yet unclassified' }
+DundiBaldiolCategory >> fruitCarryingCapacity [
+
+	^ self class mediumCarryingCapacity
+]
+
+{ #category : #'as yet unclassified' }
 DundiBaldiolCategory >> grassCarryingCapacity [
 
 	^ self class mediumCarryingCapacity

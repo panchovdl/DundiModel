@@ -11,6 +11,12 @@ DundiSeenoCategory >> color [
 ]
 
 { #category : #'as yet unclassified' }
+DundiSeenoCategory >> fruitCarryingCapacity [
+
+	^ self class lowCarryingCapacity
+]
+
+{ #category : #'as yet unclassified' }
 DundiSeenoCategory >> grassCarryingCapacity [
 
 	^ self class highCarryingCapacity
