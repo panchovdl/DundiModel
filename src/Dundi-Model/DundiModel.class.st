@@ -109,7 +109,7 @@ DundiModel >> init [
 		closed: true.
 		
 	self initializeRestrictedArea.
-	self initializeLandscapeCategory.
+	self initializeLandUnitCategory.
 	
 	self
 		createN: numberOfCattles
@@ -141,7 +141,7 @@ DundiModel >> initialize [
 ]
 
 { #category : #initialization }
-DundiModel >> initializeLandscapeCategory [
+DundiModel >> initializeLandUnitCategory [
 
 	| matrixCellValue modelCell |
 
@@ -162,7 +162,7 @@ DundiModel >> initializeRestrictedArea [
 
 	1 to: numberOfRows do: [ :i | 
 		1 to: numberOfColumns do: [ :j |
-			((self gridRestrictedMatrix at: i) at: j) = 1 ifTrue: [ 
+			((self gridParkMatrix at: i) at: j) = 1 ifTrue: [ 
 				(self pickCellAt: j@i) makeRestricted ] ] ]
 
 ]

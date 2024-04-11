@@ -26,7 +26,7 @@ DundiAgent >> collect [
 	patch ifNil: [ ^ nil ].
 	
 	"Parcourir toutes les ressources que l'agent peut collecter"
-	resourceAmount collectAsSet: [ :resourceName |
+	resourceAmount do: [ :resourceName |
 		
 		"Déterminer ce que l'agent veut collecter pour la ressource spécifiée"
 		whatIWantToCollect := self determineWhatToCollectForResource: resourceName.
@@ -125,17 +125,24 @@ DundiAgent >> collectWood [
 	self patch woodAmount: self patch woodAmount - collectedQuantity"
 ]
 
+{ #category : #stepping }
+DundiAgent >> conditionForDying [
+	
+	self subclassResponsibility
+]
+
 { #category : #'as yet unclassified' }
 DundiAgent >> consumeResources [
 
+"it consumes the amount of resource as soon there is enough to consume. When it is not enough, it will consume what it has and then stop consuming"
 
 	self 
-		leafAmount: self leafAmount  - self subclassResponsibility ;
-		woodAmount: self woodAmount - self subclassResponsibility;
-		fruitAmount: self fruitAmount - self subclassResponsibility;
-		grassAmount: self grassAmount - self subclassResponsibility. 
+		leafAmount: self leafAmount  - (self leafConsumptionRatio min: self leafAmount) ;
+		woodAmount: self woodAmount - (self woodConsumptionRatio min: self woodAmount);
+		fruitAmount: self fruitAmount - (self fruitConsumptionRatio min: self fruitAmount);
+		grassAmount: self grassAmount - (self grassConsumptionRatio min: self grassAmount). 
 		
-		
+	
 
 ]
 
@@ -212,7 +219,7 @@ DundiAgent >> findPatchWithMostNeededResource [
     maxResourcePatch := nil.
     maxResourceAmount := 0.
 	
-	candidatePatches := self patch withinRangeIndex: distancePerception.
+	candidatePatches := self patch neighbourhoodAndSelf.
 	
 	candidatePatches do: [ :cell |
         | resourceName neededAmount availableAmount |
@@ -312,10 +319,10 @@ DundiAgent >> initialize [
 	maxGrassAmount := 25.
 	
 	resourceAmount := OrderedCollection new.
-	woodAmount := 0.
-	grassAmount := 1.
-	leafAmount := 0.
-	fruitAmount := 0.
+	woodAmount := 10.
+	grassAmount := 10.
+	leafAmount := 10.
+	fruitAmount := 10.
 	distancePerception := 25.
 ]
 
@@ -446,14 +453,11 @@ DundiAgent >> step [
 
 	self 
 		moveToMaxOfGrass;
-		collectGrass;
-		collectLeaves;
-		collectWood;
-		collectFruit;
+		collect;
 		consumeResources.
 		
-	 self grassAmount <= 0
-		ifTrue: [ self moveS ]
+	 self conditionForDying
+			ifTrue: [ self die ]
 ]
 
 { #category : #'as yet unclassified' }
