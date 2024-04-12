@@ -9,3 +9,9 @@ Caangol class >> maxTrees [
 
 	^ 10000
 ]
+
+{ #category : #accessing }
+Caangol >> color [
+
+	^ Color paleGreen
+]

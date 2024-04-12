@@ -34,6 +34,7 @@ LandUnit >> initTreeCover [
 { #category : #initialization }
 LandUnit >> initialize [
 
+	super initialize.
 	parkRestriction := false.
 ]
 
@@ -49,12 +50,6 @@ LandUnit >> initializeRandomSoil [
 		[ self makeCaangol ] }.
 	
 	(Cormas selectRandomlyFrom: blocks) value
-]
-
-{ #category : #testing }
-LandUnit >> isDead [ 
-
- ^ false
 ]
 
 { #category : #testing }
@@ -120,11 +115,7 @@ LandUnit >> povRestricted [
 { #category : #pov }
 LandUnit >> povSoil [
 
-		^ self
-		povAttribute: #grass
-		min: 0
-		max: 10
-		color: soil color
+	^ soil color
 ]
 
 { #category : #pov }

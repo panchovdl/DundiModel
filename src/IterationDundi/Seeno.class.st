@@ -9,3 +9,9 @@ Seeno class >> maxTrees [
 
 	^ 5000
 ]
+
+{ #category : #accessing }
+Seeno >> color [
+
+	^ Color yellow
+]

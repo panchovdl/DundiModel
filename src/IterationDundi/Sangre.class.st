@@ -9,3 +9,9 @@ Sangre class >> maxTrees [
 
 	^ 15000
 ]
+
+{ #category : #accessing }
+Sangre >> color [
+
+	^ (Color red mixed: 0.1 with: Color brown) quiteBlacker quiteBlacker
+]
