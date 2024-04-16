@@ -145,7 +145,7 @@ LandscapeDundi >> initialize [
 
 	super initialize.
 
-	numberOfHerds := 200.
+	numberOfHerds := 20.
 	numberOfFoyres := 150.
 	numberOfRows := 30.
 	numberOfColumns := 30.

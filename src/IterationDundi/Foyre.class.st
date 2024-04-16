@@ -3,7 +3,9 @@ Class {
 	#superclass : #GroupOfLivings,
 	#instVars : [
 		'woodAmount',
-		'woodBasketSize'
+		'woodBasketSize',
+		'camp',
+		'herds'
 	],
 	#classVars : [
 		'distancePerception'

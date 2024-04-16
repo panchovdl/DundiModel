@@ -37,7 +37,7 @@ Herd >> corporalCondition: anObject [
 { #category : #'as yet unclassified' }
 Herd >> dailyBurnCorporalCondition [
 
-	self class dailyNeedsPerHead * number
+	self corporalCondition: (0 max: self corporalCondition - self class dailyNeedsPerHead)
 ]
 
 { #category : #'as yet unclassified' }
@@ -52,7 +52,7 @@ Herd >> dailyConsume [
 	
 	self patch grassCover removeAmountOfGrass: quantity.
 	
-	self corporalCondition: (self class maxCorporalCondition min: (self corporalCondition + quantity)).
+	self corporalCondition: (self class maxCorporalCondition min: ((self corporalCondition + quantity))/number).
 ]
 
 { #category : #'as yet unclassified' }

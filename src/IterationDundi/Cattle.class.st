@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 Cattle class >> dailyNeedsPerHead [ 
 
-	^ 120
+	^ 3.6 "kg DM/TLU calculé sur la moyenne des consommation sur l'année"
 ]
 
 { #category : #'as yet unclassified' }
@@ -19,5 +19,6 @@ Cattle class >> maxCorporalCondition [
 { #category : #'as yet unclassified' }
 Cattle >> dailyMove [
 
-	self randomWalk  
+	self randomWalk.
+	super dailyMove.
 ]
