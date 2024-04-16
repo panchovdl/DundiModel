@@ -198,7 +198,7 @@ LandscapeDundi >> step: t [
 		
 	season := season nextSeason.
 	
-	self 	theAgents do: #step.
+	self 	theAgents do: #dailyStep.
 	self	theLandUnits do: #step.
 	
 ]

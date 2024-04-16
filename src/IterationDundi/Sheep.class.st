@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Sheep class >> DaylyNeedsPerHead [ 
+Sheep class >> dailyNeedsPerHead [ 
 
 
 	^ 17

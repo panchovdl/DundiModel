@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Cattle class >> DaylyNeedsPerHead [ 
+Cattle class >> dailyNeedsPerHead [ 
 
 	^ 120
 ]
@@ -14,4 +14,10 @@ Cattle class >> DaylyNeedsPerHead [
 Cattle class >> maxCorporalCondition [
 
 	^ 10.
+]
+
+{ #category : #'as yet unclassified' }
+Cattle >> dailyMove [
+
+	self randomWalk  
 ]
