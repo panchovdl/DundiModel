@@ -2,7 +2,8 @@ Class {
 	#name : #Herd,
 	#superclass : #GroupOfLivings,
 	#instVars : [
-		'heads'
+		'heads',
+		'corporalCondition'
 	],
 	#classVars : [
 		'monthlyNeedsPerHeadBySeason'
@@ -18,19 +19,25 @@ Herd class >> monthlyNeedsPerHeadBySeason [
 
 { #category : #'as yet unclassified' }
 Herd >> consume [
-	"The forager eats a quatity of biomass of its current location. The quantity depends on the harvestRate: a proportion of biomass (50% or 99% according to forager type)"
 	
 	| quantity |
 	patch ifNil: [ ^ nil ].
 	
-	quantity := self patch grass * self class harvestRate.
+	quantity := self patch grassCover amountOfGrass * self class harvestRate.
+	
+	self patch grassCover removeAmountOfGrass: quantity. 
 	
 	self corporalCondition: self corporalCondition + quantity.
-	self patch grass: self patch grass - quantity
 ]
 
-{ #category : #'as yet unclassified' }
-Herd >> updateCorporalCondition [
+{ #category : #accessing }
+Herd >> corporalCondition [
 
-	self corporalCondition: self subclassResponsibility corporalCondition - self class monthlyNeedsPerHeadBySeason 
+	^ corporalCondition
+]
+
+{ #category : #accessing }
+Herd >> corporalCondition: anObject [
+
+	corporalCondition := anObject
 ]

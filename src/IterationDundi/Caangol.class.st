@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #accessing }
+Caangol class >> maxGrass [
+
+	^ 20
+]
+
+{ #category : #accessing }
 Caangol class >> maxTrees [
 
 	^ 10000

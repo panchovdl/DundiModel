@@ -9,19 +9,13 @@ Class {
 		'numberOfFoyres',
 		'theFoyres',
 		'theHerds',
-		'seasonCounter',
+		'season',
 		'theCattles',
 		'theSheeps',
 		'theTreeCovers'
 	],
 	#category : #IterationDundi
 }
-
-{ #category : #stepping }
-LandscapeDundi >> changeSeason [
-
-
-]
 
 { #category : #'accessing - spatial grid' }
 LandscapeDundi >> gridParkMatrix [
@@ -162,6 +156,8 @@ LandscapeDundi >> initialize [
 	theSheeps := OrderedCollection new.
 	theCattles := OrderedCollection new.
 	theTreeCovers := OrderedCollection new.
+	
+	season := NduunguSeason new.
 ]
 
 { #category : #initialization }
@@ -191,14 +187,16 @@ LandscapeDundi >> initializeSoil [
 
 ]
 
+{ #category : #accessing }
+LandscapeDundi >> season [
+
+	^ season
+]
+
 { #category : #control }
 LandscapeDundi >> step: t [
 		
-	seasonCounter := seasonCounter + 1.
-	
-	seasonCounter = 90 ifTrue: [ 
-		self changeSeason.
-		seasonCounter := 0].
+	season := season nextSeason.
 	
 	self 	theAgents do: #step.
 	self	theLandUnits do: #step.

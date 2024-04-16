@@ -18,13 +18,13 @@ Foyre class >> distancePerception [
 ]
 
 { #category : #'as yet unclassified' }
+Foyre >> collectWood [
+]
+
+{ #category : #'as yet unclassified' }
 Foyre >> comeBack [
 ]
 
 { #category : #'as yet unclassified' }
 Foyre >> manageHerds [
-]
-
-{ #category : #'as yet unclassified' }
-Foyre >> recoltWood [
 ]

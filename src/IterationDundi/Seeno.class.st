@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #accessing }
+Seeno class >> maxGrass [
+
+	^ 100
+]
+
+{ #category : #accessing }
 Seeno class >> maxTrees [
 
 	^ 5000

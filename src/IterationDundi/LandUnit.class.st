@@ -5,21 +5,27 @@ Class {
 		'soil',
 		'parkRestriction',
 		'treeCover',
-		'grass'
+		'grassCover'
 	],
 	#category : #IterationDundi
 }
 
 { #category : #accessing }
-LandUnit >> grass [
+LandUnit >> grassAmount [
 
-	^ grass
+	^ grassCover amountOfGrass 
 ]
 
 { #category : #accessing }
-LandUnit >> grass: anObject [
+LandUnit >> grassCover [
 
-	grass := anObject
+	^ grassCover 
+]
+
+{ #category : #'as yet unclassified' }
+LandUnit >> grassGrowthRate [ 
+
+	^ cormasModel season grassGrowthRate 
 ]
 
 { #category : #initialization }
@@ -36,6 +42,7 @@ LandUnit >> initialize [
 
 	super initialize.
 	parkRestriction := false.
+	grassCover := GrassCover for: self.
 ]
 
 { #category : #initialization }
@@ -92,6 +99,12 @@ LandUnit >> makeSeeno [
 	soil landUnit: self.
 ]
 
+{ #category : #'as yet unclassified' }
+LandUnit >> maxGrassAmount [ 
+
+	^ soil class maxGrass 
+]
+
 { #category : #accessing }
 LandUnit >> parkRestriction [
 
@@ -102,6 +115,26 @@ LandUnit >> parkRestriction [
 LandUnit >> parkRestriction: anObject [
 
 	parkRestriction := anObject
+]
+
+{ #category : #pov }
+LandUnit >> povGrassCover [
+
+	^ self
+		povAttribute: #grassAmount
+		min: 0
+		max: self maxGrassAmount 
+		color: Color green
+]
+
+{ #category : #pov }
+LandUnit >> povGrassCoverSoilType [
+
+	^ self
+		povAttribute: #grassAmount
+		min: 0
+		max: self maxGrassAmount 
+		color: soil color 
 ]
 
 { #category : #pov }
@@ -141,8 +174,7 @@ LandUnit >> soil: anObject [
 { #category : #stepping }
 LandUnit >> step [
 
-	self growPlants.
-	self monthlyResetHerdingMemory.
+	grassCover growGrass.
 ]
 
 { #category : #accessing }

@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #accessing }
+Sangre class >> maxGrass [
+
+	^ 10
+]
+
+{ #category : #accessing }
 Sangre class >> maxTrees [
 
 	^ 15000
