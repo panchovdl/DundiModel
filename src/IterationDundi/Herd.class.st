@@ -2,19 +2,24 @@ Class {
 	#name : #Herd,
 	#superclass : #GroupOfLivings,
 	#instVars : [
-		'heads',
 		'corporalCondition'
 	],
 	#classVars : [
-		'monthlyNeedsPerHeadBySeason'
+		'DaylyNeedsPerHead'
 	],
 	#category : #IterationDundi
 }
 
 { #category : #'as yet unclassified' }
-Herd class >> monthlyNeedsPerHeadBySeason [
+Herd class >> DaylyNeedsPerHead [
 
 	self subclassResponsibility 
+]
+
+{ #category : #'as yet unclassified' }
+Herd class >> maxCorporalCondition [
+
+	self subclassResponsibility. 
 ]
 
 { #category : #'as yet unclassified' }
@@ -40,4 +45,12 @@ Herd >> corporalCondition [
 Herd >> corporalCondition: anObject [
 
 	corporalCondition := anObject
+]
+
+{ #category : #initialization }
+Herd >> initialize [ 
+
+	super initialize.
+	
+	corporalCondition := self class maxCorporalCondition / 2.
 ]

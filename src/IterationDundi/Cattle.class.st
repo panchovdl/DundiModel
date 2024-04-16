@@ -5,7 +5,13 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Cattle class >> monthlyNeedsPerHeadBySeason [ 
+Cattle class >> DaylyNeedsPerHead [ 
 
 	^ 120
+]
+
+{ #category : #'as yet unclassified' }
+Cattle class >> maxCorporalCondition [
+
+	^ 10.
 ]

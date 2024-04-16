@@ -116,11 +116,11 @@ LandscapeDundi >> init [
 	self initializeParkStatus.
 	self initTreeCover.
 	
-		"
-	self
-		createN: numberOfHerds
-		randomlyLocatedEntities: Herd.
 		
+	self
+		createN: numberOfHerds/2
+		randomlyLocatedEntities: Cattle.
+"		
 	self
 		createN: numberOfFoyres 
 		randomlyLocatedEntities: Foyre.

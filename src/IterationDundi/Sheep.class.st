@@ -5,8 +5,14 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Sheep class >> monthlyNeedsPerHeadBySeason [ 
+Sheep class >> DaylyNeedsPerHead [ 
 
 
 	^ 17
+]
+
+{ #category : #'as yet unclassified' }
+Sheep class >> maxCorporalCondition [
+
+	^ 5.
 ]

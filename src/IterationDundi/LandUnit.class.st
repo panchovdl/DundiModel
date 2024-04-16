@@ -99,10 +99,16 @@ LandUnit >> makeSeeno [
 	soil landUnit: self.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 LandUnit >> maxGrassAmount [ 
 
-	^ soil class maxGrass 
+	^ soil class maxGrass. 
+]
+
+{ #category : #'as yet unclassified' }
+LandUnit >> maxGrassPotential [ 
+
+	^ (AbstractSoil allSubclasses collect: #maxGrass) max. 
 ]
 
 { #category : #accessing }
@@ -120,10 +126,13 @@ LandUnit >> parkRestriction: anObject [
 { #category : #pov }
 LandUnit >> povGrassCover [
 
+
+	"self grassAmount = 0 ifTrue:[ ^ self povSoil ]."
+	
 	^ self
 		povAttribute: #grassAmount
 		min: 0
-		max: self maxGrassAmount 
+		max: self  maxGrassPotential 
 		color: Color green
 ]
 
@@ -133,7 +142,7 @@ LandUnit >> povGrassCoverSoilType [
 	^ self
 		povAttribute: #grassAmount
 		min: 0
-		max: self maxGrassAmount 
+		max: self maxGrassPotential 
 		color: soil color 
 ]
 

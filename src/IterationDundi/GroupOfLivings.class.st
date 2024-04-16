@@ -4,7 +4,7 @@ Class {
 	#traits : 'TCMLocated',
 	#classTraits : 'TCMLocated classTrait',
 	#instVars : [
-		'consumptionRatio'
+		'number'
 	],
 	#category : #IterationDundi
 }
