@@ -23,7 +23,7 @@ LandscapeDundi >> createCamps [
 
 	"create 3 camps around Caangol soil"
 
-	| potentialCells targetCell numCamps |
+	"| potentialCells targetCell numCamps |
 	numCamps := 0.
 	self getCaangols shuffled do: [ :c | 
 		numCamps >= 3 ifTrue: [ ^ self ].
@@ -33,17 +33,16 @@ LandscapeDundi >> createCamps [
 			targetCell := Cormas selectRandomlyFrom: potentialCells.
 			targetCell camp: Camp new.
 			targetCell camp landUnit: targetCell.
-			numCamps := numCamps + 1 ] ]
-]
-
-{ #category : #'accessing - spatial grid' }
-LandscapeDundi >> getCaangols [
-
-"returns all cells with soil type is caangol"
+			numCamps := numCamps + 1 ] ]"
 	
-	^ theLandUnits select: [ :c | c soil class = Caangol ].
+	| potentialCampSites |
 	
-
+	potentialCampSites := theLandUnits select: [ :each | each isPotentialCampSite ].
+	
+	(potentialCampSites shuffled first: 3) do: [ :each |
+		each createCamp ].
+	
+	
 ]
 
 { #category : #'accessing - spatial grid' }

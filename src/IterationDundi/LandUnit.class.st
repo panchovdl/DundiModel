@@ -23,6 +23,13 @@ LandUnit >> camp: anObject [
 	camp := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+LandUnit >> createCamp [
+	
+	camp := Camp new.
+	camp landUnit: self. 
+]
+
 { #category : #accessing }
 LandUnit >> grassAmount [
 
@@ -70,6 +77,13 @@ LandUnit >> initializeRandomSoil [
 		[ self makeCaangol ] }.
 	
 	(Cormas selectRandomlyFrom: blocks) value
+]
+
+{ #category : #testing }
+LandUnit >> isPotentialCampSite [
+
+	^ soil isCaangol not and: [ 
+		  self neighbourhood anySatisfy: [ :each | each soil isCaangol ] ]
 ]
 
 { #category : #testing }
@@ -163,6 +177,12 @@ LandUnit >> povGrassCoverSoilType [
 		min: 0
 		max: self maxGrassPotential 
 		color: soil color 
+]
+
+{ #category : #pov }
+LandUnit >> povPotentialCampSites [
+
+	^ self isPotentialCampSite ifTrue: [ Color white ] ifFalse: [ Color black ]. 
 ]
 
 { #category : #pov }

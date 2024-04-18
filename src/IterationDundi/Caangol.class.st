@@ -21,3 +21,9 @@ Caangol >> color [
 
 	^ Color paleGreen
 ]
+
+{ #category : #testing }
+Caangol >> isCaangol [ 
+
+	^ true
+]

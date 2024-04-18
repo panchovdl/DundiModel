@@ -21,3 +21,9 @@ Sangre >> color [
 
 	^ (Color red mixed: 0.1 with: Color brown) quiteBlacker quiteBlacker
 ]
+
+{ #category : #testing }
+Sangre >> isSangre [ 
+
+	^ true
+]

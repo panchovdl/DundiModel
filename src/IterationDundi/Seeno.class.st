@@ -21,3 +21,9 @@ Seeno >> color [
 
 	^ Color yellow
 ]
+
+{ #category : #testing }
+Seeno >> isSeeno [ 
+
+	^ true
+]

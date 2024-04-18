@@ -21,3 +21,9 @@ Baldiol >> color [
 
 	^ Color green quiteBlacker quiteBlacker quiteBlacker quiteBlacker
 ]
+
+{ #category : #testing }
+Baldiol >> isBaldiol [ 
+
+	^ true
+]

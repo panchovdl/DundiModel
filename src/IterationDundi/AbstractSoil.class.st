@@ -30,6 +30,30 @@ AbstractSoil >> initialize [
 	soilDegradation := 0.
 ]
 
+{ #category : #testing }
+AbstractSoil >> isBaldiol [
+
+	^ false
+]
+
+{ #category : #testing }
+AbstractSoil >> isCaangol [
+
+	^ false
+]
+
+{ #category : #testing }
+AbstractSoil >> isSangre [
+
+	^ false
+]
+
+{ #category : #testing }
+AbstractSoil >> isSeeno [
+
+	^ false
+]
+
 { #category : #accessing }
 AbstractSoil >> landUnit [
 
