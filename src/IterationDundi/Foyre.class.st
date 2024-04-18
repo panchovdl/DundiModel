@@ -5,7 +5,8 @@ Class {
 		'woodAmount',
 		'woodBasketSize',
 		'camp',
-		'herds'
+		'sheepHerd',
+		'cattleHerd'
 	],
 	#classVars : [
 		'distancePerception'
@@ -13,20 +14,67 @@ Class {
 	#category : #IterationDundi
 }
 
+{ #category : #'as yet unclassified' }
+Foyre class >> camp: aCamp numberOfPeople: aNumberOfPeople numberOfSheep: aNumberOfSheep numberOfCattle: aNumberOfCattle [
+
+	| foyre |
+	foyre := self new.
+	foyre camp: aCamp.
+	foyre size: aNumberOfPeople.
+	foyre sheepHerd size: aNumberOfSheep.
+	foyre cattleHerd size: aNumberOfCattle.
+	^ foyre.
+]
+
 { #category : #accessing }
 Foyre class >> distancePerception [
 
 	^ distancePerception ifNil: [ distancePerception := 3 ]
 ]
 
-{ #category : #'as yet unclassified' }
-Foyre >> collectWood [
+{ #category : #accessing }
+Foyre >> camp [
+
+	^ camp
 ]
 
-{ #category : #'as yet unclassified' }
-Foyre >> comeBack [
+{ #category : #accessing }
+Foyre >> camp: anObject [
+
+	camp := anObject.
+	cattleHerd camp: camp.
+	sheepHerd camp: camp.
 ]
 
-{ #category : #'as yet unclassified' }
-Foyre >> manageHerds [
+{ #category : #accessing }
+Foyre >> cattleHerd [
+
+	^ cattleHerd
+]
+
+{ #category : #testing }
+Foyre >> hasCattle [
+
+	^ cattleHerd isNotEmpty.
+]
+
+{ #category : #testing }
+Foyre >> hasSheep [
+
+	^ sheepHerd isNotEmpty.
+]
+
+{ #category : #initialization }
+Foyre >> initialize [ 
+
+	super initialize. 
+	
+	cattleHerd := Cattle new.
+	sheepHerd := Sheep new.
+]
+
+{ #category : #accessing }
+Foyre >> sheepHerd [
+
+	^ sheepHerd
 ]

@@ -5,10 +5,17 @@ Class {
 		'woodQuantity',
 		'woodNeeds',
 		'inhabitants',
-		'landUnit'
+		'landUnit',
+		'name'
 	],
 	#category : #IterationDundi
 }
+
+{ #category : #'instance creation' }
+Camp class >> named: aString [
+
+	^ self new name: aString; yourself. 
+]
 
 { #category : #accessing }
 Camp >> inhabitants [
@@ -42,6 +49,28 @@ Camp >> landUnit [
 Camp >> landUnit: anObject [
 
 	landUnit := anObject
+]
+
+{ #category : #accessing }
+Camp >> name [
+
+	^ name
+]
+
+{ #category : #accessing }
+Camp >> name: anObject [
+
+	name := anObject.
+]
+
+{ #category : #printing }
+Camp >> printOn: aStream [
+
+	aStream
+		nextPutAll: self className;
+		nextPutAll: ' (';
+		nextPutAll: name;
+		nextPutAll: ')'
 ]
 
 { #category : #accessing }

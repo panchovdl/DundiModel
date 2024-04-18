@@ -67,13 +67,15 @@ Herd >> dailyConsume [
 	| quantity |
 	patch ifNil: [ ^ nil ].
 	
+	size = 0 ifTrue: [ ^ nil ].
+	
 	self dailyBurnCorporalCondition. 
 	
-	quantity := self patch grassCover amountOfGrass min: (self class dailyNeedsPerHead * number).
+	quantity := self patch grassCover amountOfGrass min: (self class dailyNeedsPerHead * size).
 	
 	self patch grassCover removeAmountOfGrass: quantity.
 	
-	self corporalCondition: (self class maxCorporalCondition min: ((self corporalCondition + quantity))/number).
+	self corporalCondition: (self class maxCorporalCondition min: ((self corporalCondition + quantity))/size).
 ]
 
 { #category : #'as yet unclassified' }
@@ -96,7 +98,7 @@ Herd >> initialize [
 	
 	corporalCondition := self class maxCorporalCondition / 2.
 	
-	number := Cormas randomIntegerFrom: 5 to: 20. 
+	size :=0. 
 ]
 
 { #category : #testing }
