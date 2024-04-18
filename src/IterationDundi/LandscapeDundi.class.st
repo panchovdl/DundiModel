@@ -13,7 +13,7 @@ Class {
 		'theCattles',
 		'theSheeps',
 		'theTreeCovers',
-		'theCamps'
+		'camps'
 	],
 	#category : #IterationDundi
 }
@@ -39,8 +39,11 @@ LandscapeDundi >> createCamps [
 	
 	potentialCampSites := theLandUnits select: [ :each | each isPotentialCampSite ].
 	
-	(potentialCampSites shuffled first: 3) do: [ :each |
-		each createCamp ].
+	camps := (potentialCampSites shuffled first: 3) collect: [ :each |
+		each createCamp.
+	 	each camp].
+	
+	
 	
 	
 ]
@@ -150,6 +153,8 @@ LandscapeDundi >> init [
 		createN: numberOfHerds/2
 		randomlyLocatedEntities: Cattle.
 		
+	theCattles do: [ :each | each camp: camps atRandom ].
+		
 
 		
 "		
@@ -177,7 +182,7 @@ LandscapeDundi >> initialize [
 
 	super initialize.
 
-	numberOfHerds := 20.
+	numberOfHerds := 100.
 	numberOfFoyres := 150.
 	numberOfRows := 30.
 	numberOfColumns := 30.
@@ -188,7 +193,7 @@ LandscapeDundi >> initialize [
 	theSheeps := OrderedCollection new.
 	theCattles := OrderedCollection new.
 	theTreeCovers := OrderedCollection new.
-	theCamps := OrderedCollection new.
+	camps := OrderedCollection new.
 	
 	season := NduunguSeason new.
 ]

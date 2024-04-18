@@ -2,7 +2,8 @@ Class {
 	#name : #Herd,
 	#superclass : #GroupOfLivings,
 	#instVars : [
-		'corporalCondition'
+		'corporalCondition',
+		'camp'
 	],
 	#classVars : [
 		'dailyNeedsPerHead'
@@ -20,6 +21,26 @@ Herd class >> dailyNeedsPerHead [
 Herd class >> maxCorporalCondition [
 
 	self subclassResponsibility. 
+]
+
+{ #category : #'as yet unclassified' }
+Herd >> acceptableDistanceFromCamp [
+
+"number of cell away from camp the Herd can travel"
+
+	self subclassResponsibility 
+]
+
+{ #category : #accessing }
+Herd >> camp [
+
+	^ camp
+]
+
+{ #category : #accessing }
+Herd >> camp: anObject [
+
+	camp := anObject
 ]
 
 { #category : #accessing }
@@ -76,4 +97,10 @@ Herd >> initialize [
 	corporalCondition := self class maxCorporalCondition / 2.
 	
 	number := Cormas randomIntegerFrom: 5 to: 20. 
+]
+
+{ #category : #testing }
+Herd >> isNotTooFarFromCamp: aCell [
+
+	^ (aCell distanceTo: camp landUnit) <= self acceptableDistanceFromCamp. 
 ]

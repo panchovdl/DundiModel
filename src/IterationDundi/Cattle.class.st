@@ -17,8 +17,17 @@ Cattle class >> maxCorporalCondition [
 ]
 
 { #category : #'as yet unclassified' }
+Cattle >> acceptableDistanceFromCamp [
+
+"number of cell away from camp the Herd can travel"
+
+	^ 10
+]
+
+{ #category : #'as yet unclassified' }
 Cattle >> dailyMove [
 
-	self randomWalkConstrainedBy: [ :c | c isRestricted not].
+	self randomWalkConstrainedBy: [ :cell | cell isRestricted not and: [ 
+			self isNotTooFarFromCamp: cell ] ].
 	self rememberSpace.
 ]
