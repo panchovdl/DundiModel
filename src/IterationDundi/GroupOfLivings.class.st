@@ -10,16 +10,16 @@ Class {
 	#category : #IterationDundi
 }
 
-{ #category : #'as yet unclassified' }
-GroupOfLivings >> dailyMove [
-
-	knownSpace add: self patch. 
-]
-
 { #category : #initialization }
 GroupOfLivings >> initialize [ 
 
 	super initialize.
 	
 	knownSpace := IndexedSet new.
+]
+
+{ #category : #moving }
+GroupOfLivings >> rememberSpace [
+
+	knownSpace add: self patch. 
 ]

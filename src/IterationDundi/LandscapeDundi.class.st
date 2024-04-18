@@ -12,10 +12,39 @@ Class {
 		'season',
 		'theCattles',
 		'theSheeps',
-		'theTreeCovers'
+		'theTreeCovers',
+		'theCamps'
 	],
 	#category : #IterationDundi
 }
+
+{ #category : #initialization }
+LandscapeDundi >> createCamps [
+
+	"create 3 camps around Caangol soil"
+
+	| potentialCells targetCell numCamps |
+	numCamps := 0.
+	self getCaangols shuffled do: [ :c | 
+		numCamps >= 3 ifTrue: [ ^ self ].
+		potentialCells := c neighbourhood select: [ :n | 
+			                  n soil class ~= Caangol and: [ n camp isNil ] ].
+		potentialCells isEmpty ifFalse: [ 
+			targetCell := Cormas selectRandomlyFrom: potentialCells.
+			targetCell camp: Camp new.
+			targetCell camp landUnit: targetCell.
+			numCamps := numCamps + 1 ] ]
+]
+
+{ #category : #'accessing - spatial grid' }
+LandscapeDundi >> getCaangols [
+
+"returns all cells with soil type is caangol"
+	
+	^ theLandUnits select: [ :c | c soil class = Caangol ].
+	
+
+]
 
 { #category : #'accessing - spatial grid' }
 LandscapeDundi >> gridParkMatrix [
@@ -116,10 +145,14 @@ LandscapeDundi >> init [
 	self initializeParkStatus.
 	self initTreeCover.
 	
-		
+	self createCamps.
+			
 	self
 		createN: numberOfHerds/2
 		randomlyLocatedEntities: Cattle.
+		
+
+		
 "		
 	self
 		createN: numberOfFoyres 
@@ -156,6 +189,7 @@ LandscapeDundi >> initialize [
 	theSheeps := OrderedCollection new.
 	theCattles := OrderedCollection new.
 	theTreeCovers := OrderedCollection new.
+	theCamps := OrderedCollection new.
 	
 	season := NduunguSeason new.
 ]

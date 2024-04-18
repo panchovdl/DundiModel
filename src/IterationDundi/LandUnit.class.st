@@ -5,10 +5,23 @@ Class {
 		'soil',
 		'parkRestriction',
 		'treeCover',
-		'grassCover'
+		'grassCover',
+		'camp'
 	],
 	#category : #IterationDundi
 }
+
+{ #category : #accessing }
+LandUnit >> camp [
+
+	^ camp
+]
+
+{ #category : #accessing }
+LandUnit >> camp: anObject [
+
+	camp := anObject
+]
 
 { #category : #accessing }
 LandUnit >> grassAmount [
@@ -121,6 +134,12 @@ LandUnit >> parkRestriction [
 LandUnit >> parkRestriction: anObject [
 
 	parkRestriction := anObject
+]
+
+{ #category : #pov }
+LandUnit >> povCamp [
+
+	^ camp ifNil: [ self povSoilAndRestricted ] ifNotNil: [ Color black ]
 ]
 
 { #category : #pov }

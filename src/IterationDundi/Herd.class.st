@@ -5,7 +5,7 @@ Class {
 		'corporalCondition'
 	],
 	#classVars : [
-		'DaylyNeedsPerHead'
+		'dailyNeedsPerHead'
 	],
 	#category : #IterationDundi
 }

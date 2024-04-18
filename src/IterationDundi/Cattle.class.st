@@ -19,6 +19,6 @@ Cattle class >> maxCorporalCondition [
 { #category : #'as yet unclassified' }
 Cattle >> dailyMove [
 
-	self randomWalk.
-	super dailyMove.
+	self randomWalkConstrainedBy: [ :c | c isRestricted not].
+	self rememberSpace.
 ]
