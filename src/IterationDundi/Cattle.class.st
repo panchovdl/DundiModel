@@ -24,10 +24,8 @@ Cattle >> acceptableDistanceFromCamp [
 	^ 10
 ]
 
-{ #category : #'as yet unclassified' }
-Cattle >> dailyMove [
+{ #category : #pov }
+Cattle >> pov [
 
-	self randomWalkConstrainedBy: [ :cell | cell isRestricted not and: [ 
-			self isNotTooFarFromCamp: cell ] ].
-	self rememberSpace.
+	^ Color brown
 ]

@@ -5,47 +5,83 @@ Class {
 		'numberOfRows',
 		'numberOfColumns',
 		'theLandUnits',
-		'numberOfHerds',
-		'numberOfFoyres',
-		'theFoyres',
-		'theHerds',
 		'season',
-		'theCattles',
-		'theSheeps',
 		'theTreeCovers',
-		'camps'
+		'camps',
+		'theCattleHerds',
+		'theSheepHerds',
+		'theFoyres'
 	],
 	#category : #IterationDundi
 }
 
 { #category : #initialization }
 LandscapeDundi >> createCamps [
-
-	"create 3 camps around Caangol soil"
-
-	"| potentialCells targetCell numCamps |
-	numCamps := 0.
-	self getCaangols shuffled do: [ :c | 
-		numCamps >= 3 ifTrue: [ ^ self ].
-		potentialCells := c neighbourhood select: [ :n | 
-			                  n soil class ~= Caangol and: [ n camp isNil ] ].
-		potentialCells isEmpty ifFalse: [ 
-			targetCell := Cormas selectRandomlyFrom: potentialCells.
-			targetCell camp: Camp new.
-			targetCell camp landUnit: targetCell.
-			numCamps := numCamps + 1 ] ]"
 	
-	| potentialCampSites |
+	| potentialCampSites campSites campNames numberOfCamps campSite |
+	
+	
+	campNames := #('wendou Namari' 'Thiafaly' 'Sorro').
+	numberOfCamps := campNames size.
 	
 	potentialCampSites := theLandUnits select: [ :each | each isPotentialCampSite ].
+	campSites := potentialCampSites shuffled first: numberOfCamps.
 	
-	camps := (potentialCampSites shuffled first: 3) collect: [ :each |
-		each createCamp.
-	 	each camp].
+	camps := ( 1 to: numberOfCamps) collect: [ :i |
+		campSite := campSites at: i.
+		campSite createCampNamed: (campNames at: i).
+	 	campSite camp ].
 	
 	
 	
 	
+]
+
+{ #category : #initialization }
+LandscapeDundi >> createFoyres [
+
+	theFoyres := { 
+		          (Foyre
+			           camp: camps first
+			           numberOfPeople: 4
+			           numberOfSheep: 10
+			           numberOfCattle: 5).
+
+		          (Foyre
+			           camp: camps first
+			           numberOfPeople: 3
+			           numberOfSheep: 15
+			           numberOfCattle: 4).
+
+		          (Foyre
+			           camp: camps first
+			           numberOfPeople: 6
+			           numberOfSheep: 13
+			           numberOfCattle: 2).
+
+		          (Foyre
+			           camp: camps second
+			           numberOfPeople: 5
+			           numberOfSheep: 16
+			           numberOfCattle: 7).
+
+		          (Foyre
+			           camp: camps second
+			           numberOfPeople: 3
+			           numberOfSheep: 9
+			           numberOfCattle: 0).
+
+		          (Foyre
+			           camp: camps third
+			           numberOfPeople: 6
+			           numberOfSheep: 0
+			           numberOfCattle: 3).
+
+		          (Foyre
+			           camp: camps third
+			           numberOfPeople: 3
+			           numberOfSheep: 5
+			           numberOfCattle: 10) } 
 ]
 
 { #category : #'accessing - spatial grid' }
@@ -148,20 +184,11 @@ LandscapeDundi >> init [
 	self initTreeCover.
 	
 	self createCamps.
-			
-	self
-		createN: numberOfHerds/2
-		randomlyLocatedEntities: Cattle.
-		
-	theCattles do: [ :each | each camp: camps atRandom ].
-		
+	self createFoyres.
+	
+	theCattleHerds := theFoyres collect: [ :foyre | foyre cattleHerd ].
+	theSheepHerds := theFoyres collect: [ :foyre | foyre sheepHerd ].
 
-		
-"		
-	self
-		createN: numberOfFoyres 
-		randomlyLocatedEntities: Foyre.
-"
 	self
 		displayPov: #povSoil of: LandUnit;
 		displayPov: #pov of: GroupOfLivings .
@@ -182,16 +209,13 @@ LandscapeDundi >> initialize [
 
 	super initialize.
 
-	numberOfHerds := 100.
-	numberOfFoyres := 150.
 	numberOfRows := 30.
 	numberOfColumns := 30.
 
 	theLandUnits := OrderedCollection new.
+	theCattleHerds := OrderedCollection new.
+	theSheepHerds := OrderedCollection new.
 	theFoyres := OrderedCollection new.
-	theHerds := OrderedCollection new.
-	theSheeps := OrderedCollection new.
-	theCattles := OrderedCollection new.
 	theTreeCovers := OrderedCollection new.
 	camps := OrderedCollection new.
 	
@@ -236,22 +260,17 @@ LandscapeDundi >> step: t [
 		
 	season := season nextSeason.
 	
-	self 	theAgents do: #dailyStep.
-	self	theLandUnits do: #step.
+	theCattleHerds do: #dailyStep.
+	theSheepHerds do: #dailyStep.
+	theLandUnits do: #step.
 	
 ]
 
 { #category : #accessing }
-LandscapeDundi >> theCattles [
+LandscapeDundi >> theCattleHerds [
 
 	<getterFor: #Cattle>
-	^ theCattles
-]
-
-{ #category : #accessing }
-LandscapeDundi >> theCattles: anObject [
-
-	theCattles := anObject
+	^ theCattleHerds
 ]
 
 { #category : #accessing }
@@ -259,25 +278,6 @@ LandscapeDundi >> theFoyres [
 
 	<getterFor: #Foyre>
 	^ theFoyres
-]
-
-{ #category : #accessing }
-LandscapeDundi >> theFoyres: anObject [
-
-	theFoyres := anObject
-]
-
-{ #category : #accessing }
-LandscapeDundi >> theHerds [
-
-	<getterFor: #Herd>
-	^ theHerds
-]
-
-{ #category : #accessing }
-LandscapeDundi >> theHerds: anObject [
-
-	theHerds := anObject
 ]
 
 { #category : #accessing }
@@ -294,16 +294,10 @@ LandscapeDundi >> theLandUnits: anObject [
 ]
 
 { #category : #accessing }
-LandscapeDundi >> theSheeps [
+LandscapeDundi >> theSheepHerds [
 
 	<getterFor: #Sheep>
-	^ theSheeps
-]
-
-{ #category : #accessing }
-LandscapeDundi >> theSheeps: anObject [
-
-	theSheeps := anObject
+	^ theSheepHerds
 ]
 
 { #category : #accessing }

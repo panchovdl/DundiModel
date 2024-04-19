@@ -81,7 +81,9 @@ Herd >> dailyConsume [
 { #category : #'as yet unclassified' }
 Herd >> dailyMove [
 
-	self subclassResponsibility. 
+	self randomWalkConstrainedBy: [ :cell | cell isRestricted not and: [ 
+			self isNotTooFarFromCamp: cell ] ].
+	self rememberSpace.
 ]
 
 { #category : #'as yet unclassified' }

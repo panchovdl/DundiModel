@@ -37,6 +37,7 @@ Camp >> initialize [
 	woodQuantity := 0.
 	woodNeeds := 100.
 	inhabitants := OrderedCollection new.
+	name := 'no name'.
 ]
 
 { #category : #accessing }

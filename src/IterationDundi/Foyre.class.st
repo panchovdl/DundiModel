@@ -44,6 +44,7 @@ Foyre >> camp: anObject [
 	camp := anObject.
 	cattleHerd camp: camp.
 	sheepHerd camp: camp.
+	self moveHerdsToCamp.
 ]
 
 { #category : #accessing }
@@ -71,6 +72,13 @@ Foyre >> initialize [
 	
 	cattleHerd := Cattle new.
 	sheepHerd := Sheep new.
+]
+
+{ #category : #initialization }
+Foyre >> moveHerdsToCamp [
+
+	sheepHerd moveTo: camp landUnit.
+	cattleHerd moveTo: camp landUnit.
 ]
 
 { #category : #accessing }

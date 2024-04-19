@@ -24,9 +24,9 @@ LandUnit >> camp: anObject [
 ]
 
 { #category : #'as yet unclassified' }
-LandUnit >> createCamp [
+LandUnit >> createCampNamed: aString [
 	
-	camp := Camp new.
+	camp := Camp named: aString.
 	camp landUnit: self. 
 ]
 
