@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 NduunguSeason >> durationOfSeason [
 
-	^ 4.
+	^ 30.
 ]
 
 { #category : #'as yet unclassified' }

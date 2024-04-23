@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 CeetceldeSeason >> durationOfSeason [
 
- ^ 5
+ ^ 20
 ]
 
 { #category : #'as yet unclassified' }

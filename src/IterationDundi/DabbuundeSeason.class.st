@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 DabbuundeSeason >> durationOfSeason [
 
-	^ 8.
+	^ 60.
 ]
 
 { #category : #'as yet unclassified' }
@@ -19,5 +19,5 @@ DabbuundeSeason >> followingSeason [
 { #category : #'as yet unclassified' }
 DabbuundeSeason >> grassGrowthRate [ 
 
-	^ 0.1
+	^ 0.001
 ]

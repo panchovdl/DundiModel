@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 Sangre class >> maxGrass [
 
-	^ 10
+	^ 90000
 ]
 
 { #category : #accessing }

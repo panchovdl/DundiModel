@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 Seeno class >> maxGrass [
 
-	^ 100
+	^ 200000
 ]
 
 { #category : #accessing }

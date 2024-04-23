@@ -49,6 +49,12 @@ LandUnit >> grassGrowthRate [
 ]
 
 { #category : #initialization }
+LandUnit >> initGrass [ 
+
+	grassCover initGrass
+]
+
+{ #category : #initialization }
 LandUnit >> initTreeCover [
 
 	|tc|

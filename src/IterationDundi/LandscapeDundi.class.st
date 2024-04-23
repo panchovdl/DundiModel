@@ -15,6 +15,26 @@ Class {
 	#category : #IterationDundi
 }
 
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_averageGrass [
+  ^ (Color r: 1.0 g: 0.6480938416422287 b: 0.0 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_totalGrass [
+  ^ (Color r: 0.0 g: 1.0 b: 0.18866080156402737 alpha: 1.0)
+]
+
+{ #category : #probes }
+LandscapeDundi >> averageGrass [
+
+	<probe> 
+
+	^ Cormas average: (self theLandUnits collect: [ :each | each grassCover amountOfGrass])
+
+
+]
+
 { #category : #initialization }
 LandscapeDundi >> createCamps [
 	
@@ -44,44 +64,44 @@ LandscapeDundi >> createFoyres [
 		          (Foyre
 			           camp: camps first
 			           numberOfPeople: 4
-			           numberOfSheep: 10
-			           numberOfCattle: 5).
+			           numberOfSheep: 400
+			           numberOfCattle: 50).
 
 		          (Foyre
 			           camp: camps first
 			           numberOfPeople: 3
-			           numberOfSheep: 15
-			           numberOfCattle: 4).
+			           numberOfSheep: 150
+			           numberOfCattle: 40).
 
 		          (Foyre
 			           camp: camps first
 			           numberOfPeople: 6
-			           numberOfSheep: 13
-			           numberOfCattle: 2).
+			           numberOfSheep: 1300
+			           numberOfCattle: 280).
 
 		          (Foyre
 			           camp: camps second
 			           numberOfPeople: 5
-			           numberOfSheep: 16
-			           numberOfCattle: 7).
+			           numberOfSheep: 160
+			           numberOfCattle: 75).
 
 		          (Foyre
 			           camp: camps second
 			           numberOfPeople: 3
-			           numberOfSheep: 9
-			           numberOfCattle: 0).
+			           numberOfSheep: 900
+			           numberOfCattle: 80).
 
 		          (Foyre
 			           camp: camps third
 			           numberOfPeople: 6
-			           numberOfSheep: 0
-			           numberOfCattle: 3).
+			           numberOfSheep: 5000
+			           numberOfCattle: 500).
 
 		          (Foyre
 			           camp: camps third
 			           numberOfPeople: 3
-			           numberOfSheep: 5
-			           numberOfCattle: 10) } 
+			           numberOfSheep: 500
+			           numberOfCattle: 300) } 
 ]
 
 { #category : #'accessing - spatial grid' }
@@ -133,36 +153,36 @@ LandscapeDundi >> gridSoilMatrix [
 	| matrix |
 	
 	matrix := #(
-		(2 2 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0)
-		(2 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 2 2 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 2 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+		(2 2 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 3 0 0 0 0 0 0 0 0)
+		(2 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 3 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 3 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 3 3 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 2 2 0 0 0 3 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 2 0 0 3 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 2 0 3 3 3 0 0 0 0 0 0 0)
+		(3 3 3 3 3 0 0 0 0 0 0 0 0 0 0 2 2 2 0 3 3 0 0 0 0 0 0 0 0 0)
+		(3 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 2 3 3 3 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 3 3 3 3 3 3 3 3 3 3 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 3 3 3 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 0 3 3 0 0 0 3 3 3 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 0 3 3 3 3 0 0 0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0)
+		(0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 0)
+		(0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 3 0 0 0 0 0 0)
+		(0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 3 0 0 0 0 0)
+		(0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0)
+		(0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 3 3 0 0 0)
+		(0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0)
 		(0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
 		(0 0 0 0 0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
 		(0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-		(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)).
+		(0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)).
 		
 	"(matrix size = numberOfRows and: [ matrix allSatisfy: [ :row | row size = numberOfColumns ] ])
 		ifFalse: [ self error: 'Matrix has the wrong dimensions' ]."
@@ -182,7 +202,7 @@ LandscapeDundi >> init [
 	self initializeSoil.
 	self initializeParkStatus.
 	self initTreeCover.
-	
+	self initGrass.
 	self createCamps.
 	self createFoyres.
 	
@@ -193,6 +213,14 @@ LandscapeDundi >> init [
 		displayPov: #povSoil of: LandUnit;
 		displayPov: #pov of: GroupOfLivings .
 		
+
+]
+
+{ #category : #initialization }
+LandscapeDundi >> initGrass [
+
+	self theLandUnits do: [ 
+			:c | c initGrass ]
 
 ]
 
@@ -311,4 +339,14 @@ LandscapeDundi >> theTreeCovers [
 LandscapeDundi >> theTreeCovers: anObject [
 
 	theTreeCovers := anObject
+]
+
+{ #category : #probes }
+LandscapeDundi >> totalGrass [
+
+	<probe> 
+
+	^ Cormas sum: (self theLandUnits collect: [ :each | each grassCover amountOfGrass])
+
+
 ]

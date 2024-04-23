@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 Caangol class >> maxGrass [
 
-	^ 20
+	^ 120000
 ]
 
 { #category : #accessing }
