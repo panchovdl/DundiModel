@@ -86,7 +86,7 @@ LandscapeDundi >> createCamps [
 	| potentialCampSites campSites campNames numberOfCamps campSite |
 	
 	
-	campNames := #('wendou Namari' 'Thiafaly' 'Sorro' 'Velingara' 'wendou ilo' 'Nieloumol' 'Koki').
+	campNames := #('wendou Namari' 'Thiafaly' 'Sorro' 'Velingara' 'wendou ilo' 'Nieloumol' 'Koki' 'yoyo' 'kali' 'majdi' 'oui' 'non' 'echelle' 'magie' 'noire' 'blanche' 'henry' ' nene' 'wendou ilo' 'saldaw' 'touba velingara').
 	numberOfCamps := campNames size.
 	
 	potentialCampSites := theLandUnits select: [ :each | each isPotentialCampSite ].
@@ -198,6 +198,295 @@ LandscapeDundi >> createFoyres [
 			
 					  (Foyre
 			           camp: camps sixth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+						(Foyre
+			           camp: camps seventh 
+			           numberOfPeople: 4
+			           numberOfSheep: 400
+			           numberOfCattle: 500).
+
+		          (Foyre
+			           camp: camps seventh
+			           numberOfPeople: 3
+			           numberOfSheep: 1500
+			           numberOfCattle: 150).
+
+		          (Foyre
+			           camp: camps eighth 
+			           numberOfPeople: 6
+			           numberOfSheep: 1300
+			           numberOfCattle: 280).
+
+		          (Foyre
+			           camp: camps eighth 
+			           numberOfPeople: 5
+			           numberOfSheep: 160
+			           numberOfCattle: 275).
+
+		          (Foyre
+			           camp: camps eighth
+			           numberOfPeople: 3
+			           numberOfSheep: 900
+			           numberOfCattle: 600).
+
+		          (Foyre
+			           camp: camps ninth 
+			           numberOfPeople: 6
+			           numberOfSheep: 5000
+			           numberOfCattle: 500).
+
+		          (Foyre
+			           camp: camps ninth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300). 
+			
+			  (Foyre
+			           camp: camps ninth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps tenth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+			  (Foyre
+			           camp: camps eleventh 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps fifth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps eleventh 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps twelveth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps twelveth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps thirteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps thirteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					    (Foyre
+							
+			           camp: camps fourteenth 
+			           numberOfPeople: 4
+			           numberOfSheep: 400
+			           numberOfCattle: 500).
+
+		          (Foyre
+			           camp: camps fourteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 1500
+			           numberOfCattle: 150).
+
+		          (Foyre
+			           camp: camps fifteenth 
+			           numberOfPeople: 6
+			           numberOfSheep: 1300
+			           numberOfCattle: 280).
+
+		          (Foyre
+			           camp: camps fifteenth 
+			           numberOfPeople: 5
+			           numberOfSheep: 160
+			           numberOfCattle: 275).
+
+		          (Foyre
+			           camp: camps sixteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 900
+			           numberOfCattle: 600).
+
+		          (Foyre
+			           camp: camps third
+			           numberOfPeople: 6
+			           numberOfSheep: 5000
+			           numberOfCattle: 500).
+
+		          (Foyre
+			           camp: camps sixteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300). 
+			
+			  (Foyre
+			           camp: camps seventeenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps seventeenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+			  (Foyre
+			           camp: camps seventeenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps eighteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps eighteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps nineteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps nineteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps twentith 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps twentith 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+						(Foyre
+			           camp: camps twentith 
+			           numberOfPeople: 4
+			           numberOfSheep: 400
+			           numberOfCattle: 500).
+
+		          (Foyre
+			           camp: camps twentyFirst 
+			           numberOfPeople: 3
+			           numberOfSheep: 1500
+			           numberOfCattle: 150).
+
+		          (Foyre
+			           camp: camps twentyFirst  
+			           numberOfPeople: 6
+			           numberOfSheep: 1300
+			           numberOfCattle: 280).
+
+		          (Foyre
+			           camp: camps twentyFirst  
+			           numberOfPeople: 5
+			           numberOfSheep: 160
+			           numberOfCattle: 275).
+
+		          (Foyre
+			           camp: camps eighth
+			           numberOfPeople: 3
+			           numberOfSheep: 900
+			           numberOfCattle: 600).
+
+		          (Foyre
+			           camp: camps ninth 
+			           numberOfPeople: 6
+			           numberOfSheep: 5000
+			           numberOfCattle: 500).
+
+		          (Foyre
+			           camp: camps ninth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300). 
+			
+			  (Foyre
+			           camp: camps ninth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps tenth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+			  (Foyre
+			           camp: camps eleventh 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps fifth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps eleventh 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps twelveth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps twelveth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps thirteenth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps thirteenth 
 			           numberOfPeople: 3
 			           numberOfSheep: 500
 			           numberOfCattle: 300) } 
