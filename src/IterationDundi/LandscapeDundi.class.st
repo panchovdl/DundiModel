@@ -8,8 +8,8 @@ Class {
 		'season',
 		'theTreeCovers',
 		'camps',
-		'theCattleHerds',
-		'theSheepHerds',
+		'theCattles',
+		'theSheeps',
 		'theFoyres'
 	],
 	#category : #IterationDundi
@@ -18,6 +18,21 @@ Class {
 { #category : #'- probes' }
 LandscapeDundi class >> colorOfProbe_averageGrass [
   ^ (Color r: 1.0 g: 0.6480938416422287 b: 0.0 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_cc_Cattle [
+  ^ (Color r: 0.5405669599217986 g: 0.364613880742913 b: 0.13294232649071358 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_cc_Sheep [
+  ^ (Color r: 0.3626588465298143 g: 0.7223851417399805 b: 0.8377321603128055 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_corporalCondition [
+  ^ (Color r: 0.08993157380254155 g: 0.08993157380254155 b: 0.520039100684262 alpha: 1.0)
 ]
 
 { #category : #'- probes' }
@@ -31,6 +46,36 @@ LandscapeDundi >> averageGrass [
 	<probe> 
 
 	^ Cormas average: (self theLandUnits collect: [ :each | each grassCover amountOfGrass])
+
+
+]
+
+{ #category : #probes }
+LandscapeDundi >> cc_Cattle [ 
+
+	<probe> 
+
+	^ Cormas average: (self theCattles collect: [ :each | each corporalCondition ])
+
+
+]
+
+{ #category : #probes }
+LandscapeDundi >> cc_Sheep [ 
+
+	<probe> 
+
+	^ Cormas average: (self theSheeps collect: [ :each | each corporalCondition ])
+
+
+]
+
+{ #category : #probes }
+LandscapeDundi >> corporalCondition [ 
+
+	<probe> 
+
+	^ Cormas average: (self theHerds collect: [ :each | each corporalCondition])
 
 
 ]
@@ -260,11 +305,11 @@ LandscapeDundi >> init [
 	self createCamps.
 	self createFoyres.
 	
-	theCattleHerds := theFoyres collect: [ :foyre | foyre cattleHerd ].
-	theSheepHerds := theFoyres collect: [ :foyre | foyre sheepHerd ].
+	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
+	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
 
 	self
-		displayPov: #povSoil of: LandUnit;
+		displayPov: #povGrassCover of: LandUnit;
 		displayPov: #pov of: GroupOfLivings .
 		
 
@@ -295,8 +340,8 @@ LandscapeDundi >> initialize [
 	numberOfColumns := 30.
 
 	theLandUnits := OrderedCollection new.
-	theCattleHerds := OrderedCollection new.
-	theSheepHerds := OrderedCollection new.
+	theCattles := OrderedCollection new.
+	theSheeps := OrderedCollection new.
 	theFoyres := OrderedCollection new.
 	theTreeCovers := OrderedCollection new.
 	camps := OrderedCollection new.
@@ -342,17 +387,17 @@ LandscapeDundi >> step: t [
 		
 	season := season nextSeason.
 	
-	theCattleHerds do: #dailyStep.
-	theSheepHerds do: #dailyStep.
+	theCattles do: #dailyStep.
+	theSheeps do: #dailyStep.
 	theLandUnits do: #step.
 	
 ]
 
 { #category : #accessing }
-LandscapeDundi >> theCattleHerds [
+LandscapeDundi >> theCattles [
 
 	<getterFor: #Cattle>
-	^ theCattleHerds
+	^ theCattles
 ]
 
 { #category : #accessing }
@@ -360,6 +405,14 @@ LandscapeDundi >> theFoyres [
 
 	<getterFor: #Foyre>
 	^ theFoyres
+]
+
+{ #category : #accessing }
+LandscapeDundi >> theHerds [
+| herds |
+herds := self theCattles asOrderedCollection.
+herds addAll: self theSheeps.
+^herds
 ]
 
 { #category : #accessing }
@@ -376,10 +429,10 @@ LandscapeDundi >> theLandUnits: anObject [
 ]
 
 { #category : #accessing }
-LandscapeDundi >> theSheepHerds [
+LandscapeDundi >> theSheeps [
 
 	<getterFor: #Sheep>
-	^ theSheepHerds
+	^ theSheeps
 ]
 
 { #category : #accessing }
