@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 DabbuundeSeason >> durationOfSeason [
 
-	^ 60.
+	^ 90.
 ]
 
 { #category : #'as yet unclassified' }

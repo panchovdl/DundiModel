@@ -41,7 +41,7 @@ LandscapeDundi >> createCamps [
 	| potentialCampSites campSites campNames numberOfCamps campSite |
 	
 	
-	campNames := #('wendou Namari' 'Thiafaly' 'Sorro').
+	campNames := #('wendou Namari' 'Thiafaly' 'Sorro' 'Velingara' 'wendou ilo' 'Nieloumol' 'Koki').
 	numberOfCamps := campNames size.
 	
 	potentialCampSites := theLandUnits select: [ :each | each isPotentialCampSite ].
@@ -65,13 +65,13 @@ LandscapeDundi >> createFoyres [
 			           camp: camps first
 			           numberOfPeople: 4
 			           numberOfSheep: 400
-			           numberOfCattle: 50).
+			           numberOfCattle: 500).
 
 		          (Foyre
 			           camp: camps first
 			           numberOfPeople: 3
-			           numberOfSheep: 150
-			           numberOfCattle: 40).
+			           numberOfSheep: 1500
+			           numberOfCattle: 150).
 
 		          (Foyre
 			           camp: camps first
@@ -83,13 +83,13 @@ LandscapeDundi >> createFoyres [
 			           camp: camps second
 			           numberOfPeople: 5
 			           numberOfSheep: 160
-			           numberOfCattle: 75).
+			           numberOfCattle: 275).
 
 		          (Foyre
 			           camp: camps second
 			           numberOfPeople: 3
 			           numberOfSheep: 900
-			           numberOfCattle: 80).
+			           numberOfCattle: 600).
 
 		          (Foyre
 			           camp: camps third
@@ -99,6 +99,60 @@ LandscapeDundi >> createFoyres [
 
 		          (Foyre
 			           camp: camps third
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300). 
+			
+			  (Foyre
+			           camp: camps fourth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps fourth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+			  (Foyre
+			           camp: camps fourth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			 
+			  (Foyre
+			           camp: camps fifth 
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps fifth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps fifth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+		  (Foyre
+			           camp: camps sixth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps sixth
+			           numberOfPeople: 3
+			           numberOfSheep: 500
+			           numberOfCattle: 300).
+			
+					  (Foyre
+			           camp: camps sixth
 			           numberOfPeople: 3
 			           numberOfSheep: 500
 			           numberOfCattle: 300) } 

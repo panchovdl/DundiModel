@@ -8,7 +8,7 @@ Class {
 Sheep class >> dailyNeedsPerHead [ 
 
 
-	^ 17
+	^ 3.6
 ]
 
 { #category : #'as yet unclassified' }
