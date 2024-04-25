@@ -169,7 +169,8 @@ LandUnit >> parkRestriction: anObject [
 
 { #category : #pov }
 LandUnit >> povCamp [
-
+self hasWaterPoint
+		  ifTrue: [ ^Color blue ].
 	^ camp ifNil: [ self povSoilAndRestricted ] ifNotNil: [ Color black ]
 ]
 
@@ -222,12 +223,6 @@ LandUnit >> povSoilAndRestricted [
 	^ self isRestricted
 		ifTrue: [ Color gray ]
 		ifFalse: [ self povSoil ]
-]
-
-{ #category : #pov }
-LandUnit >> povWaterPoints [
-
-	^ self hasWaterPoint ifTrue: [ Color blue ] ifFalse: [ self povGrassCover ]
 ]
 
 { #category : #accessing }

@@ -254,16 +254,17 @@ LandscapeDundi >> createRandomFoyres: number [
 { #category : #initialization }
 LandscapeDundi >> createWaterPoints [
 
-	| listOfCells  cellsWithWater wp theCamps distanceMin dist nearestCell |
-	listOfCells := #( 1 2 3 ).
+	| listOfCells cellsWithWater wp theCamps distanceMin dist nearestCell |
+	listOfCells := #( 338 52 495 669 ).
 	theWaterPoints := OrderedCollection new.
 	cellsWithWater := self theLandUnits select: [ :c | 
 		                  listOfCells includes: c id ].
 	theCamps := self theLandUnits select: [ :c | c camp isNotNil ].
-	cellsWithWater do: [ :c | "look for nearest camp around each waterpoint"
+	cellsWithWater do: [ :c | 
 		wp := WaterPoint new.
 		wp moveTo: c.
 		theWaterPoints add: wp.
+		"look for nearest camp around each waterpoint"
 		distanceMin := 1000.
 		theCamps do: [ :cc | 
 			(dist := c distanceTo: cc) < distanceMin ifTrue: [ 
@@ -371,12 +372,38 @@ LandscapeDundi >> init [
 	self initializeParkStatus.
 	self initTreeCover.
 	self initGrass.
+	self createCamps: 14.
+	self createFoyres: 20.
+
+	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
+	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
+
+	self createWaterPoints.
+
+	self
+		displayPov: #povGrassCover of: LandUnit;
+		displayPov: #pov of: GroupOfLivings
+]
+
+{ #category : #init }
+LandscapeDundi >> init7 [
+
+	self
+		createGridLines: numberOfRows
+		columns: numberOfColumns
+		neighbourhood: 4
+		closed: true.
+
+	self initializeSoil.
+	self initializeParkStatus.
+	self initTreeCover.
+	self initGrass.
 	self createCamps: 7.
 	self createFoyres: 7.
 
 	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
 	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
-	
+
 	self createWaterPoints.
 
 	self
