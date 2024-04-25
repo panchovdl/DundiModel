@@ -3,7 +3,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'patch',
-		'amountOfGrass'
+		'amountOfGrass',
+		'minGrass'
 	],
 	#category : #IterationDundi
 }
@@ -38,11 +39,23 @@ GrassCover >> initGrass [
 { #category : #accessing }
 GrassCover >> initialize [ 
 
-	super initialize.
-	
-	amountOfGrass := 0.
+	super initialize. 
+	minGrass := 1000.
+	amountOfGrass := minGrass.
 
 	
+]
+
+{ #category : #accessing }
+GrassCover >> minGrass [
+
+	^ minGrass
+]
+
+{ #category : #accessing }
+GrassCover >> minGrass: anObject [
+
+	minGrass := anObject
 ]
 
 { #category : #accessing }

@@ -55,6 +55,12 @@ Herd >> corporalCondition: anObject [
 	corporalCondition := anObject
 ]
 
+{ #category : #accessing }
+Herd >> corporalConditionPercent [
+
+	^ (self corporalCondition / self class maxCorporalCondition) * 100
+]
+
 { #category : #'as yet unclassified' }
 Herd >> dailyBurnCorporalCondition [
 
@@ -63,19 +69,20 @@ Herd >> dailyBurnCorporalCondition [
 
 { #category : #'as yet unclassified' }
 Herd >> dailyConsume [
-	
+
 	| quantity |
 	patch ifNil: [ ^ nil ].
-	
 	size = 0 ifTrue: [ ^ nil ].
-	
-	self dailyBurnCorporalCondition. 
-	
-	quantity := self patch grassCover amountOfGrass min: (self class dailyNeedsPerHead * size).
-	
+
+	self dailyBurnCorporalCondition.
+
+	quantity := self patch grassCover amountOfGrass min:
+		            self class dailyNeedsPerHead * size.
+
 	self patch grassCover removeAmountOfGrass: quantity.
-	
-	self corporalCondition: (self class maxCorporalCondition min: ((self corporalCondition + quantity))/size).
+
+	self corporalCondition: (self class maxCorporalCondition min:
+			 self corporalCondition + quantity / size)
 ]
 
 { #category : #'as yet unclassified' }

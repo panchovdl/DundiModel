@@ -10,6 +10,19 @@ Class {
 	#category : #IterationDundi
 }
 
+{ #category : #accessing }
+GroupOfLivings >> asString [
+
+	" Private - See superimplementor's comment "
+
+	^ String streamContents: [ :stream | 
+		  stream
+			  << super asString;
+			  crtab;
+			  << 'size: ';
+			  << self size asString ]
+]
+
 { #category : #initialization }
 GroupOfLivings >> initialize [ 
 
@@ -33,7 +46,7 @@ GroupOfLivings >> isNotEmpty [
 { #category : #moving }
 GroupOfLivings >> rememberSpace [
 
-	knownSpace add: self patch. 
+	knownSpace add: self patch
 ]
 
 { #category : #accessing }
@@ -43,7 +56,7 @@ GroupOfLivings >> size [
 ]
 
 { #category : #accessing }
-GroupOfLivings >> size: anObject [
+GroupOfLivings >> size: anInteger [
 
-	size := anObject
+	size := anInteger
 ]
