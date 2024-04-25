@@ -62,23 +62,19 @@ LandscapeDundi >> averageGrass [
 ]
 
 { #category : #probes }
-LandscapeDundi >> cc_Cattle [ 
+LandscapeDundi >> cc_Cattle [
 
-	<probe> 
-
-	^ Cormas average: (self theCattles collect: [ :each | each corporalCondition ])
-
-
+	<probe>
+	^ Cormas average:
+		  (self theCattles collect: [ :each | each corporalConditionPercent ])
 ]
 
 { #category : #probes }
-LandscapeDundi >> cc_Sheep [ 
+LandscapeDundi >> cc_Sheep [
 
-	<probe> 
-
-	^ Cormas average: (self theSheeps collect: [ :each | each corporalCondition ])
-
-
+	<probe>
+	^ Cormas average:
+		  (self theSheeps collect: [ :each | each corporalConditionPercent ])
 ]
 
 { #category : #probes }

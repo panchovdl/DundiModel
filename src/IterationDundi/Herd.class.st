@@ -55,6 +55,12 @@ Herd >> corporalCondition: anObject [
 	corporalCondition := anObject
 ]
 
+{ #category : #accessing }
+Herd >> corporalConditionPercent [
+
+	^ (self corporalCondition / self class maxCorporalCondition) * 100
+]
+
 { #category : #'as yet unclassified' }
 Herd >> dailyBurnCorporalCondition [
 
