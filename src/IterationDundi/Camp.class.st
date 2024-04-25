@@ -6,7 +6,8 @@ Class {
 		'woodNeeds',
 		'inhabitants',
 		'landUnit',
-		'name'
+		'name',
+		'waterPoints'
 	],
 	#category : #IterationDundi
 }
@@ -30,14 +31,15 @@ Camp >> inhabitants: anObject [
 ]
 
 { #category : #initialization }
-Camp >> initialize [ 
+Camp >> initialize [
 
 	super initialize.
-	
+
 	woodQuantity := 0.
 	woodNeeds := 100.
 	inhabitants := OrderedCollection new.
-	name := 'no name'.
+	waterPoints := OrderedCollection new.
+	name := 'no name'
 ]
 
 { #category : #accessing }
@@ -72,6 +74,18 @@ Camp >> printOn: aStream [
 		nextPutAll: ' (';
 		nextPutAll: name;
 		nextPutAll: ')'
+]
+
+{ #category : #accessing }
+Camp >> waterPoints [
+
+	^ waterPoints
+]
+
+{ #category : #accessing }
+Camp >> waterPoints: anObject [
+
+	waterPoints := anObject
 ]
 
 { #category : #accessing }

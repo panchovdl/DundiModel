@@ -23,7 +23,7 @@ LandUnit >> camp: anObject [
 	camp := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialization }
 LandUnit >> createCampNamed: aString [
 	
 	camp := Camp named: aString.
@@ -42,10 +42,15 @@ LandUnit >> grassCover [
 	^ grassCover 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 LandUnit >> grassGrowthRate [ 
 
 	^ cormasModel season grassGrowthRate 
+]
+
+{ #category : #testing }
+LandUnit >> hasWaterPoint [
+	^self hasOccupantsOfClass: WaterPoint 
 ]
 
 { #category : #initialization }
@@ -138,10 +143,16 @@ LandUnit >> maxGrassAmount [
 	^ soil class maxGrass. 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 LandUnit >> maxGrassPotential [ 
 
 	^ (AbstractSoil allSubclasses collect: #maxGrass) max. 
+]
+
+{ #category : #accessing }
+LandUnit >> minGrass [
+
+	^ grassCover minGrass  
 ]
 
 { #category : #accessing }
@@ -165,14 +176,14 @@ LandUnit >> povCamp [
 { #category : #pov }
 LandUnit >> povGrassCover [
 
+	self grassAmount <= self minGrass ifTrue: [ ^ Color white ].
+	"^self povAttribute: #grassAmount min: self minGrass color: (Color yellow) max: (self  maxGrassPotential) color: Color green ."
 
-	"self grassAmount = 0 ifTrue:[ ^ self povSoil ]."
-	
 	^ self
-		povAttribute: #grassAmount
-		min: 0
-		max: self  maxGrassPotential 
-		color: Color green
+		  povAttribute: #grassAmount
+		  min: (self minGrass - 1)
+		  max: 3 * self maxGrassPotential
+		  color: Color green
 ]
 
 { #category : #pov }
@@ -211,6 +222,12 @@ LandUnit >> povSoilAndRestricted [
 	^ self isRestricted
 		ifTrue: [ Color gray ]
 		ifFalse: [ self povSoil ]
+]
+
+{ #category : #pov }
+LandUnit >> povWaterPoints [
+
+	^ self hasWaterPoint ifTrue: [ Color blue ] ifFalse: [ self povGrassCover ]
 ]
 
 { #category : #accessing }

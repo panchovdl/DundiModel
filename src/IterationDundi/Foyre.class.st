@@ -16,14 +16,14 @@ Class {
 
 { #category : #'as yet unclassified' }
 Foyre class >> camp: aCamp numberOfPeople: aNumberOfPeople numberOfSheep: aNumberOfSheep numberOfCattle: aNumberOfCattle [
-
+"Return a new instance of Foyre"
 	| foyre |
 	foyre := self new.
 	foyre camp: aCamp.
 	foyre size: aNumberOfPeople.
 	foyre sheepHerd size: aNumberOfSheep.
 	foyre cattleHerd size: aNumberOfCattle.
-	^ foyre.
+	^ foyre
 ]
 
 { #category : #accessing }
@@ -44,7 +44,8 @@ Foyre >> camp: anObject [
 	camp := anObject.
 	cattleHerd camp: camp.
 	sheepHerd camp: camp.
-	self moveHerdsToCamp.
+	self moveTo: camp landUnit.
+	self moveHerdsToCamp
 ]
 
 { #category : #accessing }
@@ -79,6 +80,12 @@ Foyre >> moveHerdsToCamp [
 
 	sheepHerd moveTo: camp landUnit.
 	cattleHerd moveTo: camp landUnit.
+]
+
+{ #category : #pov }
+Foyre >> povId [
+
+	^ super povId
 ]
 
 { #category : #accessing }

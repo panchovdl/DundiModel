@@ -10,14 +10,15 @@ Class {
 		'camps',
 		'theCattles',
 		'theSheeps',
-		'theFoyres'
+		'theFoyres',
+		'theWaterPoints'
 	],
 	#category : #IterationDundi
 }
 
 { #category : #'- probes' }
 LandscapeDundi class >> colorOfProbe_averageGrass [
-  ^ (Color r: 1.0 g: 0.6480938416422287 b: 0.0 alpha: 1.0)
+  ^ (Color r: 0.28934506353861195 g: 0.8719452590420332 b: 0.2561094819159335 alpha: 1.0)
 ]
 
 { #category : #'- probes' }
@@ -33,6 +34,16 @@ LandscapeDundi class >> colorOfProbe_cc_Sheep [
 { #category : #'- probes' }
 LandscapeDundi class >> colorOfProbe_corporalCondition [
   ^ (Color r: 0.08993157380254155 g: 0.08993157380254155 b: 0.520039100684262 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_grassGrowthRate [
+  ^ (Color r: 0.05278592375366569 g: 0.0 b: 1.0 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_rain [
+  ^ (Color r: 0.1681329423264907 g: 0.06647116324535679 b: 0.83088954056696 alpha: 1.0)
 ]
 
 { #category : #'- probes' }
@@ -81,7 +92,7 @@ LandscapeDundi >> corporalCondition [
 ]
 
 { #category : #initialization }
-LandscapeDundi >> createCamps [
+LandscapeDundi >> create7Camps [
 	
 	| potentialCampSites campSites campNames numberOfCamps campSite |
 	
@@ -103,7 +114,7 @@ LandscapeDundi >> createCamps [
 ]
 
 { #category : #initialization }
-LandscapeDundi >> createFoyres [
+LandscapeDundi >> create7Foyres [
 
 	theFoyres := { 
 		          (Foyre
@@ -203,6 +214,64 @@ LandscapeDundi >> createFoyres [
 			           numberOfCattle: 300) } 
 ]
 
+{ #category : #initialization }
+LandscapeDundi >> createCamps: numberOfCamps [
+
+	| potentialCampSites campSites campSite |
+	numberOfCamps = 7 ifTrue: [ ^self create7Camps ].
+	potentialCampSites := theLandUnits select: [ :each | 
+		                      each isPotentialCampSite ].
+	campSites := Cormas
+		             selectRandomlyFrom: potentialCampSites
+		             subCollectionSize: numberOfCamps.
+
+	camps := (1 to: numberOfCamps) collect: [ :i | 
+		         campSite := campSites at: i.
+		         campSite createCampNamed: campSite id asString.
+		         campSite camp ]
+]
+
+{ #category : #initialization }
+LandscapeDundi >> createFoyres: numberOfFoyres [
+
+	numberOfFoyres = 7 ifTrue: [ ^ self create7Foyres ].
+
+	self createRandomFoyres: numberOfFoyres
+]
+
+{ #category : #initialization }
+LandscapeDundi >> createRandomFoyres: number [
+
+	theFoyres := OrderedCollection new.
+	number timesRepeat: [ 
+		theFoyres add: (Foyre
+				 camp: (Cormas selectRandomlyFrom: camps)
+				 numberOfPeople: (Cormas randomIntegerFrom: 3 to: 6)
+				 numberOfSheep: (Cormas randomIntegerFrom: 40 to: 100) * 10
+				 numberOfCattle: (Cormas randomIntegerFrom: 15 to: 30) * 10) ]
+]
+
+{ #category : #initialization }
+LandscapeDundi >> createWaterPoints [
+
+	| listOfCells  cellsWithWater wp theCamps distanceMin dist nearestCell |
+	listOfCells := #( 1 2 3 ).
+	theWaterPoints := OrderedCollection new.
+	cellsWithWater := self theLandUnits select: [ :c | 
+		                  listOfCells includes: c id ].
+	theCamps := self theLandUnits select: [ :c | c camp isNotNil ].
+	cellsWithWater do: [ :c | "look for nearest camp around each waterpoint"
+		wp := WaterPoint new.
+		wp moveTo: c.
+		theWaterPoints add: wp.
+		distanceMin := 1000.
+		theCamps do: [ :cc | 
+			(dist := c distanceTo: cc) < distanceMin ifTrue: [ 
+				distanceMin := dist.
+				nearestCell := cc ] ].
+		nearestCell camp waterPoints add: wp ]
+]
+
 { #category : #'accessing - spatial grid' }
 LandscapeDundi >> gridParkMatrix [
 
@@ -297,22 +366,22 @@ LandscapeDundi >> init [
 		columns: numberOfColumns
 		neighbourhood: 4
 		closed: true.
-		
+
 	self initializeSoil.
 	self initializeParkStatus.
 	self initTreeCover.
 	self initGrass.
-	self createCamps.
-	self createFoyres.
-	
+	self createCamps: 7.
+	self createFoyres: 7.
+
 	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
 	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
+	
+	self createWaterPoints.
 
 	self
 		displayPov: #povGrassCover of: LandUnit;
-		displayPov: #pov of: GroupOfLivings .
-		
-
+		displayPov: #pov of: GroupOfLivings
 ]
 
 { #category : #initialization }
@@ -344,9 +413,10 @@ LandscapeDundi >> initialize [
 	theSheeps := OrderedCollection new.
 	theFoyres := OrderedCollection new.
 	theTreeCovers := OrderedCollection new.
+	theWaterPoints := OrderedCollection new.
 	camps := OrderedCollection new.
-	
-	season := NduunguSeason new.
+
+	season := NduunguSeason new
 ]
 
 { #category : #initialization }
@@ -373,6 +443,16 @@ LandscapeDundi >> initializeSoil [
 			matrixCellValue = 1 ifTrue: [ modelCell makeSeeno ].
 			matrixCellValue = 2 ifTrue: [ modelCell makeSangre ].
 			matrixCellValue = 3 ifTrue: [ modelCell makeCaangol ] ] ]
+
+]
+
+{ #category : #probes }
+LandscapeDundi >> rain [  
+
+	<probe>  
+
+	^ season grassGrowthRate 
+
 
 ]
 
@@ -448,10 +528,22 @@ LandscapeDundi >> theTreeCovers: anObject [
 	theTreeCovers := anObject
 ]
 
-{ #category : #probes }
+{ #category : #accessing }
+LandscapeDundi >> theWaterPoints [
+
+	^ theWaterPoints
+]
+
+{ #category : #accessing }
+LandscapeDundi >> theWaterPoints: anObject [
+
+	theWaterPoints := anObject
+]
+
+{ #category : #'probes-Old' }
 LandscapeDundi >> totalGrass [
 
-	<probe> 
+	"<probe>" 
 
 	^ Cormas sum: (self theLandUnits collect: [ :each | each grassCover amountOfGrass])
 
