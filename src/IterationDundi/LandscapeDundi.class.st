@@ -88,6 +88,29 @@ LandscapeDundi >> corporalCondition [
 ]
 
 { #category : #initialization }
+LandscapeDundi >> create1Foyre [
+
+	theFoyres := { 
+		             (Foyre
+			              camp: camps first
+			              numberOfPeople: 4
+			              numberOfSheep: 400
+			              numberOfCattle: 500).}
+]
+
+{ #category : #initialization }
+LandscapeDundi >> create1WaterPoint [
+
+	| theCampCell wp |
+	theCampCell := (self theLandUnits select: [ :c | c camp isNotNil ]) first.
+
+	wp := WaterPoint new.
+	theWaterPoints add: wp.
+	wp moveTo: theCampCell neighbourhood first.
+	theCampCell camp waterPoints add: wp
+]
+
+{ #category : #initialization }
 LandscapeDundi >> create7Camps [
 	
 	| potentialCampSites campSites campNames numberOfCamps campSite |
@@ -230,6 +253,7 @@ LandscapeDundi >> createCamps: numberOfCamps [
 { #category : #initialization }
 LandscapeDundi >> createFoyres: numberOfFoyres [
 
+	numberOfFoyres = 1 ifTrue: [ ^ self create1Foyre ].
 	numberOfFoyres = 7 ifTrue: [ ^ self create7Foyres ].
 
 	self createRandomFoyres: numberOfFoyres
@@ -423,6 +447,34 @@ LandscapeDundi >> initGrass [
 	self theLandUnits do: [ 
 			:c | c initGrass ]
 
+]
+
+{ #category : #init }
+LandscapeDundi >> initSmall [
+
+	numberOfRows := 10.
+	numberOfColumns := 10.
+	self
+		createGridLines: numberOfRows
+		columns: numberOfColumns
+		neighbourhood: 4
+		closed: true.
+
+	self initializeSoil.
+	"self initializeParkStatus."
+	self initTreeCover.
+	self initGrass.
+	self createCamps: 1.
+	self createFoyres: 1.
+
+	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
+	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
+
+	self create1WaterPoint.
+
+	self
+		displayPov: #povCamp of: LandUnit;
+		displayPov: #pov of: GroupOfLivings
 ]
 
 { #category : #initialization }
