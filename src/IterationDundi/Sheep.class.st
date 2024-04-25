@@ -5,10 +5,9 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Sheep class >> dailyNeedsPerHead [ 
+Sheep class >> dailyNeedsPerHead [
 
-
-	^ 3.6
+	^ 0.58 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année"
 ]
 
 { #category : #'as yet unclassified' }

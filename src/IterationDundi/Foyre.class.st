@@ -132,17 +132,22 @@ Foyre >> manageCattle [
 	cattleHerd corporalConditionPercent < 30 ifTrue: [ 
 		cattleHerd die.
 		^ cattleHerd := nil ].
-
+	
+LandscapeDundi season = CeeduSeason ifTrue: [ 
+		cattleHerd moveTowards:
+			(self getCellWithMaxGrassAmong:
+				 cattleHerd patch neighbourhoodAndSelf) ].
 	LandscapeDundi season = CeetceldeSeason ifTrue: [ 
 		cattleHerd moveTowards:
-			(self getCellWithMaxGrassAmong: cattleHerd patch neighbourhoodAndSelf) ].
+			(self getCellWithMaxGrassAmong:
+				 cattleHerd patch neighbourhoodAndSelf) ].
 	LandscapeDundi season = DabbuundeSeason ifTrue: [ 
 		cattleHerd moveTowards:
 			(self getCellWithMaxGrassAmong: self getBaldiols) ].
 	LandscapeDundi season = NduunguSeason ifTrue: [ 
 		cattleHerd moveTowards:
 			(self getCellWithMaxGrassAmong: self getSangres) ].
-		
+
 	cattleHerd dailyConsume
 ]
 
@@ -153,8 +158,15 @@ Foyre >> manageSheep [
 	sheepHerd corporalConditionPercent < 30 ifTrue: [ 
 		sheepHerd die.
 		^ sheepHerd := nil ].
-	LandscapeDundi season = CeetceldeSeason ifTrue: [ sheepHerd moveTowards:
-			(self getCellWithMaxGrassAmong: sheepHerd patch neighbourhoodAndSelf )].
+	
+	LandscapeDundi season = CeeduSeason ifTrue: [ 
+		sheepHerd moveTowards:
+			(self getCellWithMaxGrassAmong:
+				 sheepHerd patch neighbourhoodAndSelf) ].
+	LandscapeDundi season = CeetceldeSeason ifTrue: [ 
+		sheepHerd moveTowards:
+			(self getCellWithMaxGrassAmong:
+				 sheepHerd patch neighbourhoodAndSelf) ].
 	LandscapeDundi season = DabbuundeSeason ifTrue: [ 
 		sheepHerd moveTowards:
 			(self getCellWithMaxGrassAmong: self getBaldiols) ].

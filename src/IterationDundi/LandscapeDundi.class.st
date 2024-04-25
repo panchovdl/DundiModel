@@ -50,6 +50,16 @@ LandscapeDundi class >> colorOfProbe_rain [
 ]
 
 { #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_size_Cattle [
+  ^ (Color r: 0.6754643206256109 g: 0.36656891495601174 b: 0.07233626588465299 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_size_Sheep [
+  ^ (Color r: 1.0 g: 0.6891495601173021 b: 0.0 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
 LandscapeDundi class >> colorOfProbe_totalGrass [
   ^ (Color r: 0.0 g: 1.0 b: 0.18866080156402737 alpha: 1.0)
 ]
@@ -298,7 +308,7 @@ LandscapeDundi >> createWaterPoints [
 		                  listOfCells includes: c id ].
 	theCamps := self theLandUnits select: [ :c | c camp isNotNil ].
 	cellsWithWater do: [ :c | 
-		wp := WaterPoint new.
+		wp := WaterPoint new. 
 		theWaterPoints add: wp.
 		wp moveTo: c.
 		"look for nearest camp around each waterpoint"
@@ -576,6 +586,22 @@ LandscapeDundi >> setSeason [
 
 	season := season nextSeason.
 	self class season: season class
+]
+
+{ #category : #probes }
+LandscapeDundi >> size_Cattle [
+
+	<probe>
+	^ Cormas sum:
+		  (self theCattles collect: [ :each | each size ])
+]
+
+{ #category : #probes }
+LandscapeDundi >> size_Sheep [
+
+	<probe>
+	^ Cormas sum:
+		  (self theSheeps collect: [ :each | each size ])
 ]
 
 { #category : #accessing }
