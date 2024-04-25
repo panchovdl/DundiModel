@@ -33,7 +33,7 @@ GroupOfLivings >> isNotEmpty [
 { #category : #moving }
 GroupOfLivings >> rememberSpace [
 
-	knownSpace add: self patch. 
+	knownSpace add: self patch
 ]
 
 { #category : #accessing }
@@ -43,7 +43,7 @@ GroupOfLivings >> size [
 ]
 
 { #category : #accessing }
-GroupOfLivings >> size: anObject [
+GroupOfLivings >> size: anInteger [
 
-	size := anObject
+	size := anInteger
 ]

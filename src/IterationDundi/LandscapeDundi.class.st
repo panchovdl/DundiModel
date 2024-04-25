@@ -247,8 +247,8 @@ LandscapeDundi >> createRandomFoyres: number [
 		theFoyres add: (Foyre
 				 camp: (Cormas selectRandomlyFrom: camps)
 				 numberOfPeople: (Cormas randomIntegerFrom: 3 to: 6)
-				 numberOfSheep: (Cormas randomIntegerFrom: 40 to: 100) * 10
-				 numberOfCattle: (Cormas randomIntegerFrom: 15 to: 30) * 10) ]
+				 numberOfSheep: (Cormas randomIntegerFrom: 16 to: 500) * 10
+				 numberOfCattle: (Cormas randomIntegerFrom: 15 to: 60) * 10) ]
 ]
 
 { #category : #initialization }
@@ -521,10 +521,11 @@ LandscapeDundi >> theFoyres [
 
 { #category : #accessing }
 LandscapeDundi >> theHerds [
-| herds |
-herds := self theCattles asOrderedCollection.
-herds addAll: self theSheeps.
-^herds
+
+	| herds |
+	herds := self theCattles copy asOrderedCollection.
+	herds addAll: self theSheeps.
+	^ herds
 ]
 
 { #category : #accessing }

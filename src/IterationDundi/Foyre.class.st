@@ -14,7 +14,7 @@ Class {
 	#category : #IterationDundi
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 Foyre class >> camp: aCamp numberOfPeople: aNumberOfPeople numberOfSheep: aNumberOfSheep numberOfCattle: aNumberOfCattle [
 "Return a new instance of Foyre"
 	| foyre |
