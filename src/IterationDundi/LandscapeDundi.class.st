@@ -13,6 +13,9 @@ Class {
 		'theFoyres',
 		'theWaterPoints'
 	],
+	#classVars : [
+		'season'
+	],
 	#category : #IterationDundi
 }
 
@@ -49,6 +52,18 @@ LandscapeDundi class >> colorOfProbe_rain [
 { #category : #'- probes' }
 LandscapeDundi class >> colorOfProbe_totalGrass [
   ^ (Color r: 0.0 g: 1.0 b: 0.18866080156402737 alpha: 1.0)
+]
+
+{ #category : #accessing }
+LandscapeDundi class >> season [
+
+	^ season
+]
+
+{ #category : #accessing }
+LandscapeDundi class >> season: anObject [
+
+	season := anObject
 ]
 
 { #category : #probes }
@@ -90,19 +105,20 @@ LandscapeDundi >> corporalCondition [
 { #category : #initialization }
 LandscapeDundi >> create1Foyre [
 
-	theFoyres := { 
-		             (Foyre
-			              camp: camps first
-			              numberOfPeople: 4
-			              numberOfSheep: 400
-			              numberOfCattle: 500).}
+	theFoyres := { (Foyre
+		              camp: camps first
+		              numberOfPeople: 4
+		              numberOfSheep: 2000
+		              numberOfCattle: 1000) }
 ]
 
 { #category : #initialization }
 LandscapeDundi >> create1WaterPoint [
 
 	| theCampCell wp |
-	theCampCell := (self theLandUnits select: [ :c | c camp isNotNil ]) first.
+	theWaterPoints := OrderedCollection new.
+	theCampCell := (self theLandUnits select: [ :c | c camp isNotNil ])
+		               first.
 
 	wp := WaterPoint new.
 	theWaterPoints add: wp.
@@ -253,10 +269,11 @@ LandscapeDundi >> createCamps: numberOfCamps [
 { #category : #initialization }
 LandscapeDundi >> createFoyres: numberOfFoyres [
 
-	numberOfFoyres = 1 ifTrue: [ ^ self create1Foyre ].
-	numberOfFoyres = 7 ifTrue: [ ^ self create7Foyres ].
+	numberOfFoyres = 1 ifTrue: [ self create1Foyre ] ifFalse:[
+	numberOfFoyres = 7 ifTrue: [  self create7Foyres ] ifFalse: [  
 
-	self createRandomFoyres: numberOfFoyres
+	self createRandomFoyres: numberOfFoyres]].
+self theFoyres do: [ :f | f landscape: self theLandUnits ]
 ]
 
 { #category : #initialization }
@@ -296,10 +313,9 @@ LandscapeDundi >> createWaterPoints [
 { #category : #control }
 LandscapeDundi >> dailyStep: t [
 
-	season := season nextSeason.
+	self setSeason.
 
-	theCattles do: #dailyStep.
-	theSheeps do: #dailyStep.
+	theFoyres do: #step.
 	theLandUnits do: #step
 ]
 
@@ -395,7 +411,7 @@ LandscapeDundi >> init [
 	self
 		createGridLines: numberOfRows
 		columns: numberOfColumns
-		neighbourhood: 4
+		neighbourhood: 8
 		closed: true.
 
 	self initializeSoil.
@@ -412,7 +428,8 @@ LandscapeDundi >> init [
 
 	self
 		displayPov: #povGrassCover of: LandUnit;
-		displayPov: #pov of: GroupOfLivings
+		displayPov: #pov of: GroupOfLivings;
+		displayPov: #pov of: WaterPoint
 ]
 
 { #category : #init }
@@ -421,7 +438,7 @@ LandscapeDundi >> init7 [
 	self
 		createGridLines: numberOfRows
 		columns: numberOfColumns
-		neighbourhood: 4
+		neighbourhood: 8
 		closed: true.
 
 	self initializeSoil.
@@ -457,7 +474,7 @@ LandscapeDundi >> initSmall [
 	self
 		createGridLines: numberOfRows
 		columns: numberOfColumns
-		neighbourhood: 4
+		neighbourhood: 8
 		closed: true.
 
 	self initializeSoil.
@@ -465,7 +482,7 @@ LandscapeDundi >> initSmall [
 	self initTreeCover.
 	self initGrass.
 	self createCamps: 1.
-	self createFoyres: 1.
+	self createFoyres: 2.
 
 	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
 	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
@@ -473,8 +490,9 @@ LandscapeDundi >> initSmall [
 	self create1WaterPoint.
 
 	self
-		displayPov: #povCamp of: LandUnit;
-		displayPov: #pov of: GroupOfLivings
+		displayPov: #povGrassCover of: LandUnit;
+		displayPov: #pov of: GroupOfLivings;
+		displayPov: #pov of: WaterPoint
 ]
 
 { #category : #initialization }
@@ -551,6 +569,13 @@ LandscapeDundi >> rain [
 LandscapeDundi >> season [
 
 	^ season
+]
+
+{ #category : #controling }
+LandscapeDundi >> setSeason [
+
+	season := season nextSeason.
+	self class season: season class
 ]
 
 { #category : #accessing }

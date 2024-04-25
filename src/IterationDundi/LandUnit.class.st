@@ -177,12 +177,14 @@ self hasWaterPoint
 { #category : #pov }
 LandUnit >> povGrassCover [
 
+	self hasWaterPoint ifTrue: [ ^ Color blue ].
+	camp ifNotNil: [ ^Color black ].
 	self grassAmount <= self minGrass ifTrue: [ ^ Color white ].
 	"^self povAttribute: #grassAmount min: self minGrass color: (Color yellow) max: (self  maxGrassPotential) color: Color green ."
 
 	^ self
 		  povAttribute: #grassAmount
-		  min: (self minGrass - 1)
+		  min: self minGrass - 1
 		  max: 3 * self maxGrassPotential
 		  color: Color green
 ]

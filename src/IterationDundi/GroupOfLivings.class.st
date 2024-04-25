@@ -10,6 +10,19 @@ Class {
 	#category : #IterationDundi
 }
 
+{ #category : #accessing }
+GroupOfLivings >> asString [
+
+	" Private - See superimplementor's comment "
+
+	^ String streamContents: [ :stream | 
+		  stream
+			  << super asString;
+			  crtab;
+			  << 'size: ';
+			  << self size asString ]
+]
+
 { #category : #initialization }
 GroupOfLivings >> initialize [ 
 
