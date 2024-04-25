@@ -28,5 +28,5 @@ Sheep >> acceptableDistanceFromCamp [
 { #category : #pov }
 Sheep >> pov [
 
-	^ Color white
+	^ Color orange 
 ]

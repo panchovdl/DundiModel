@@ -262,8 +262,8 @@ LandscapeDundi >> createWaterPoints [
 	theCamps := self theLandUnits select: [ :c | c camp isNotNil ].
 	cellsWithWater do: [ :c | 
 		wp := WaterPoint new.
-		wp moveTo: c.
 		theWaterPoints add: wp.
+		wp moveTo: c.
 		"look for nearest camp around each waterpoint"
 		distanceMin := 1000.
 		theCamps do: [ :cc | 
@@ -271,6 +271,16 @@ LandscapeDundi >> createWaterPoints [
 				distanceMin := dist.
 				nearestCell := cc ] ].
 		nearestCell camp waterPoints add: wp ]
+]
+
+{ #category : #control }
+LandscapeDundi >> dailyStep: t [
+
+	season := season nextSeason.
+
+	theCattles do: #dailyStep.
+	theSheeps do: #dailyStep.
+	theLandUnits do: #step
 ]
 
 { #category : #'accessing - spatial grid' }
@@ -473,6 +483,12 @@ LandscapeDundi >> initializeSoil [
 
 ]
 
+{ #category : #control }
+LandscapeDundi >> monthlyStep: t [
+
+	30 timesRepeat: [ self dailyStep: t ]
+]
+
 { #category : #probes }
 LandscapeDundi >> rain [  
 
@@ -487,17 +503,6 @@ LandscapeDundi >> rain [
 LandscapeDundi >> season [
 
 	^ season
-]
-
-{ #category : #control }
-LandscapeDundi >> step: t [
-		
-	season := season nextSeason.
-	
-	theCattles do: #dailyStep.
-	theSheeps do: #dailyStep.
-	theLandUnits do: #step.
-	
 ]
 
 { #category : #accessing }

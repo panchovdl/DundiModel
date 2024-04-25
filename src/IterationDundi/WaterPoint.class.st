@@ -1,8 +1,6 @@
 Class {
 	#name : #WaterPoint,
-	#superclass : #CMAgent,
-	#traits : 'TCMLocated',
-	#classTraits : 'TCMLocated classTrait',
+	#superclass : #CMLocatedObject,
 	#instVars : [
 		'waterAmount'
 	],
@@ -14,6 +12,15 @@ WaterPoint >> initialize [
 
 	super initialize.
 	waterAmount := 1000
+]
+
+{ #category : #moving }
+WaterPoint >> moveTo: aSpatialEntity [
+
+	aSpatialEntity isSpatialEntity ifFalse: [ ^ nil ].
+	self leaveWhileMoving: true.
+	self patch: aSpatialEntity.
+	self patch addOccupant: self
 ]
 
 { #category : #pov }
