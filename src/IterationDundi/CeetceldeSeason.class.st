@@ -17,7 +17,13 @@ CeetceldeSeason >> followingSeason [
 ]
 
 { #category : #'as yet unclassified' }
-CeetceldeSeason >> grassGrowthRate [ 
+CeetceldeSeason >> grassGrowthRate [
 
-	^ 0.00001
+	^ 0.000001
+]
+
+{ #category : #'as yet unclassified' }
+CeetceldeSeason >> index [
+
+	^ 4
 ]

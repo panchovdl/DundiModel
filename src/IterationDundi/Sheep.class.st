@@ -4,13 +4,13 @@ Class {
 	#category : #IterationDundi
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Sheep class >> dailyNeedsPerHead [
 
 	^ 0.58 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année"
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Sheep class >> maxCorporalCondition [
 
 	^ 5.

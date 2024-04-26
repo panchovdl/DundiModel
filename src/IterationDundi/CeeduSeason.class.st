@@ -17,8 +17,13 @@ CeeduSeason >> followingSeason [
 ]
 
 { #category : #'as yet unclassified' }
-CeeduSeason >> grassGrowthRate [ 
+CeeduSeason >> grassGrowthRate [
 
+	^ 0.001
+]
 
-	^ 0.000001
+{ #category : #'as yet unclassified' }
+CeeduSeason >> index [
+
+	^ 3
 ]

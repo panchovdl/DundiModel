@@ -70,17 +70,15 @@ Herd >> dailyBurnCorporalCondition [
 { #category : #control }
 Herd >> dailyConsume [
 
-	| quantity |
-	patch ifNil: [ ^ nil ].
-	size = 0 ifTrue: [ ^ nil ].
+	| quantity needs |
+	(patch isNil or: [ size = 0 ]) ifTrue: [ ^ nil ].
 
-	self dailyBurnCorporalCondition. 
-
-	quantity := self patch grassCover amountOfGrass min:
-		            self class dailyNeedsPerHead * size.
+	self dailyBurnCorporalCondition.
+	needs := self class dailyNeedsPerHead * size.
+	needs := needs * 100 / (self corporalConditionPercent max: 0.1). "plus la vache est maigre, plus elle a faim"
+	quantity := self patch grassCover amountOfGrass min: needs.
 
 	self patch grassCover removeAmountOfGrass: quantity.
-
 	self corporalCondition: (self class maxCorporalCondition min:
 			 self corporalCondition + (quantity / size))
 ]

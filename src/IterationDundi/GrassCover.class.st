@@ -21,14 +21,15 @@ GrassCover >> amountOfGrass [
 	^ amountOfGrass
 ]
 
-{ #category : #accessing }
+{ #category : #control }
 GrassCover >> growGrass [
 
 	amountOfGrass = 0 ifTrue: [ amountOfGrass := 1000 ].
-	
-	amountOfGrass := Cormas logisticGrowth: amountOfGrass r: patch grassGrowthRate K: patch maxGrassAmount 
-
-	
+	"LandscapeDundi season = DabbuundeSeason ifTrue: [ "
+		amountOfGrass := Cormas
+			                 logisticGrowth: amountOfGrass
+			                 r: patch grassGrowthRate
+			                 K: patch maxGrassAmount 
 ]
 
 { #category : #initialization }
@@ -36,7 +37,7 @@ GrassCover >> initGrass [
 	amountOfGrass := patch maxGrassAmount / 2
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GrassCover >> initialize [ 
 
 	super initialize. 
@@ -64,10 +65,8 @@ GrassCover >> patch: anObject [
 	patch := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #control }
 GrassCover >> removeAmountOfGrass: aNumber [
 
-	amountOfGrass := amountOfGrass - aNumber 
-
-	
+	amountOfGrass := 0 max: (amountOfGrass - aNumber)
 ]
