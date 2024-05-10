@@ -23,6 +23,16 @@ LandUnit >> camp: anObject [
 	camp := anObject
 ]
 
+{ #category : #stepping }
+LandUnit >> copy [
+
+	| cop |
+	cop := super copy.
+	cop grassCover: self grassCover copy.
+	cop grassCover patch: cop.
+ 	^ cop
+]
+
 { #category : #initialization }
 LandUnit >> createCampNamed: aString [
 	
@@ -40,6 +50,12 @@ LandUnit >> grassAmount [
 LandUnit >> grassCover [
 
 	^ grassCover 
+]
+
+{ #category : #accessing }
+LandUnit >> grassCover: anObject [
+
+	grassCover := anObject
 ]
 
 { #category : #accessing }
@@ -178,15 +194,15 @@ self hasWaterPoint
 LandUnit >> povGrassCover [
 
 	self hasWaterPoint ifTrue: [ ^ Color blue ].
-	camp ifNotNil: [ ^Color black ].
+	camp ifNotNil: [ ^ Color black ].
 	self grassAmount <= self minGrass ifTrue: [ ^ Color white ].
 	"^self povAttribute: #grassAmount min: self minGrass color: (Color yellow) max: (self  maxGrassPotential) color: Color green ."
 
 	^ self
 		  povAttribute: #grassAmount
 		  min: self minGrass - 1
-		  max: 3 * self maxGrassPotential
-		  color: Color green
+		  max: 2 * self maxGrassPotential
+		  color: Color green ""
 ]
 
 { #category : #pov }
@@ -255,4 +271,48 @@ LandUnit >> treeCover [
 LandUnit >> treeCover: anObject [
 
 	treeCover := anObject
+]
+
+{ #category : #stepping }
+LandUnit >> wayTo: anotherCell constraint: aBlock [
+	"Purpose: gets the shortest way satisfying a constraint to anotherCell 
+Arguments: anotherCell = <SpatialEntityElement>
+			aBlock = <BlockClosure>
+Return value: <Collection(SpatialEntityElement)>
+Example: self wayTo: self spaceModel centralLocation constraint: [:c | c isClosed not]"
+	
+	| distance newRound road step alreadyComputed newRound2 |
+	road := OrderedCollection new.
+	(self neighbourhood includes: anotherCell) ifTrue: [ road add: anotherCell.^road ].
+	self spaceModel elementaryEntities do: [:c | c resetFlag].
+	alreadyComputed := Set new.
+	alreadyComputed add: anotherCell.
+	distance := 0.
+	anotherCell flag: 0.
+	newRound := anotherCell neighbourhood select: [:c | aBlock value: c].
+	[newRound isEmpty not and: [(newRound includes: self) not]]
+		whileTrue:
+			[distance := distance + 1.
+			newRound do: [:c | c flag: distance].
+			alreadyComputed addAll: newRound.
+			newRound2 := Set new.
+			newRound
+				do:
+					[:c | 
+					newRound2
+						addAll:
+							(c neighbourhood
+								select:
+									[:cc | (aBlock value: cc) and: [(alreadyComputed includes: cc) not]])].
+			newRound := newRound2].	"S'il y a un chemin possible, on le reconstruit en remontant le gradient, a partir de l'origine"
+	(newRound includes: self)
+		ifTrue:
+			[step := self.
+			[step = anotherCell]
+				whileFalse:
+					[road add: step.
+					step := ((step neighbourhood select: [:c | c flag isNil not])
+						asSortedCollection: [:p :s | p flag < s flag]) first].
+			road add: step].
+	^road
 ]

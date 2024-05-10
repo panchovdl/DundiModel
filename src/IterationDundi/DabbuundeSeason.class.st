@@ -17,7 +17,13 @@ DabbuundeSeason >> followingSeason [
 ]
 
 { #category : #'as yet unclassified' }
-DabbuundeSeason >> grassGrowthRate [ 
+DabbuundeSeason >> grassGrowthRate [
 
-	^ 0.001
+	^ 0.04
+]
+
+{ #category : #'as yet unclassified' }
+DabbuundeSeason >> index [
+
+	^ 2
 ]

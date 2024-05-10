@@ -56,6 +56,31 @@ Foyre >> cattleHerd [
 ]
 
 { #category : #access }
+Foyre >> cellWithMaxGrassAmong: listOfCells [
+
+	"return a cell with maximum of grass among listOfCells. listOfCells excludes the protected cells. If several cells with max, return one randomly"
+
+	| max authorizedCells |
+	authorizedCells := listOfCells select: [ :c | c isRestricted not].
+	max := Cormas maxOf: #grassAmount amongObjects: authorizedCells.
+	^ Cormas selectRandomlyFrom:
+		  (authorizedCells select: [ :c | c grassAmount = max ])
+]
+
+{ #category : #control }
+Foyre >> checkKnownSpace [
+| set |
+knownSpace size >= 100 ifTrue: [ self halt]. 
+set := Set withAll: knownSpace  values.
+set size = knownSpace size ifFalse: [ self halt]. 
+]
+
+{ #category : #control }
+Foyre >> forgetCell: aCell [
+knownSpace removeKey:	(knownSpace keyAtValue: aCell ifAbsent: [^nil])
+]
+
+{ #category : #access }
 Foyre >> getBaldiols [
 
 	"Return a list of cells on Baldiol"
@@ -69,18 +94,6 @@ Foyre >> getCaangols [
 	"Return a list of cells on Caangol"
 
 	^ self getSoilType: Caangol
-]
-
-{ #category : #access }
-Foyre >> getCellWithMaxGrassAmong: listOfCells [
-
-	"return a cell with maximum of grass among listOfCells. listOfCells excludes the protected cells. If several cells with max, return one randomly"
-
-	| max authorizedCells |
-	authorizedCells := listOfCells select: [ :c | c isRestricted not].
-	max := Cormas maxOf: #grassAmount amongObjects: authorizedCells.
-	^ Cormas selectRandomlyFrom:
-		  (authorizedCells select: [ :c | c grassAmount = max ])
 ]
 
 { #category : #access }
@@ -105,12 +118,13 @@ Foyre >> getSoilType: aClassOfSoil [
 ]
 
 { #category : #initialization }
-Foyre >> initialize [ 
+Foyre >> initialize [
 
-	super initialize. 
-	
+	super initialize.
+
 	cattleHerd := Cattle new.
 	sheepHerd := Sheep new.
+	knownSpace := Dictionary new
 ]
 
 { #category : #accessing }
@@ -133,17 +147,44 @@ Foyre >> manageCattle [
 		cattleHerd die.
 		^ cattleHerd := nil ].
 
+	LandscapeDundi season = CeeduSeason ifTrue: [ 
+		cattleHerd moveTo:
+			(self cellWithMaxGrassAmong:
+				 cattleHerd patch neighbourhoodAndSelf) ].
 	LandscapeDundi season = CeetceldeSeason ifTrue: [ 
 		cattleHerd moveTowards:
-			(self getCellWithMaxGrassAmong: cattleHerd patch neighbourhoodAndSelf) ].
+			(self cellWithMaxGrassAmong:
+				 cattleHerd patch neighbourhoodAndSelf) ].
 	LandscapeDundi season = DabbuundeSeason ifTrue: [ 
 		cattleHerd moveTowards:
-			(self getCellWithMaxGrassAmong: self getBaldiols) ].
+			(self cellWithMaxGrassAmong: self getBaldiols) ].
 	LandscapeDundi season = NduunguSeason ifTrue: [ 
 		cattleHerd moveTowards:
-			(self getCellWithMaxGrassAmong: self getSangres) ].
-		
+			(self cellWithMaxGrassAmong: self getSangres) ].
+
 	cattleHerd dailyConsume
+]
+
+{ #category : #control }
+Foyre >> manageHerdMemory: aHerd [
+
+	| bestGrass bestGrassMem targetCell |
+	targetCell := self cellWithMaxGrassAmong:
+		              aHerd patch neighbourhoodAndSelf.
+	bestGrass := targetCell grassAmount. 
+	knownSpace isEmpty ifFalse: [ 
+		bestGrassMem := knownSpace keys max.
+		bestGrass >= bestGrassMem ifFalse: [ 
+			targetCell := knownSpace at: bestGrassMem ] ].
+	"on oublie la cell sur laquelle le troupeau va aller aujourd'hui"
+	self forgetCell: targetCell.
+	aHerd
+		moveTowards: targetCell
+		constraintOnPath: [ :c | c isRestricted not ].
+	"aHerd moveTo: targetCell."
+	self rememberSpace: aHerd patch.
+
+	aHerd dailyConsume
 ]
 
 { #category : #control }
@@ -153,14 +194,21 @@ Foyre >> manageSheep [
 	sheepHerd corporalConditionPercent < 30 ifTrue: [ 
 		sheepHerd die.
 		^ sheepHerd := nil ].
-	LandscapeDundi season = CeetceldeSeason ifTrue: [ sheepHerd moveTowards:
-			(self getCellWithMaxGrassAmong: sheepHerd patch neighbourhoodAndSelf )].
+	
+	LandscapeDundi season = CeeduSeason ifTrue: [ 
+		sheepHerd moveTowards:
+			(self cellWithMaxGrassAmong:
+				 sheepHerd patch neighbourhoodAndSelf) ].
+	LandscapeDundi season = CeetceldeSeason ifTrue: [ 
+		sheepHerd moveTowards:
+			(self cellWithMaxGrassAmong:
+				 sheepHerd patch neighbourhoodAndSelf) ].
 	LandscapeDundi season = DabbuundeSeason ifTrue: [ 
 		sheepHerd moveTowards:
-			(self getCellWithMaxGrassAmong: self getBaldiols) ].
+			(self cellWithMaxGrassAmong: self getBaldiols) ].
 	LandscapeDundi season = NduunguSeason ifTrue: [ 
 		sheepHerd moveTowards:
-			(self getCellWithMaxGrassAmong: self getSangres) ].
+			(self cellWithMaxGrassAmong: self getSangres) ].
 
 	sheepHerd dailyConsume
 ]
@@ -170,12 +218,22 @@ Foyre >> moveHerdsToCamp [
 
 	sheepHerd moveTo: camp landUnit.
 	cattleHerd moveTo: camp landUnit.
+	self rememberSpace: camp landUnit
 ]
 
 { #category : #pov }
 Foyre >> povId [
 
 	^ super povId
+]
+
+{ #category : #control }
+Foyre >> rememberSpace: aCell [
+
+	"la clé est la valeur du grass au moment de l'enregistrement"
+
+	knownSpace at: aCell grassAmount put: aCell "copy"
+	"self checkKnownSpace"
 ]
 
 { #category : #accessing }
@@ -189,4 +247,19 @@ Foyre >> step [
 
 	self manageCattle.
 	self manageSheep
+]
+
+{ #category : #control }
+Foyre >> stepMemory [
+
+	cattleHerd isNil ifFalse: [ 
+		cattleHerd corporalConditionPercent < 30
+			ifTrue: [ cattleHerd die ]
+			ifFalse: [ self manageHerdMemory: cattleHerd] ].
+
+
+	sheepHerd isNil ifFalse: [ 
+		sheepHerd corporalConditionPercent < 30
+			ifTrue: [ sheepHerd die ]
+			ifFalse: [ self manageHerdMemory: sheepHerd ] ]
 ]
