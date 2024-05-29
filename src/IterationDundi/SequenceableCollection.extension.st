@@ -64,6 +64,15 @@ SequenceableCollection >> sixteenth [
 ]
 
 { #category : #'*IterationDundi' }
+SequenceableCollection >> tenth [
+	"Answer the ninth element of the receiver.
+	Raise an error if there are not enough elements."
+	"#(a b c d e f g h i j ) tenth >>> #i"
+
+	^ self at: 10
+]
+
+{ #category : #'*IterationDundi' }
 SequenceableCollection >> thirteenth [
 	"Answer the ninth element of the receiver.
 	Raise an error if there are not enough elements."
