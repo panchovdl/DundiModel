@@ -4,13 +4,13 @@ Class {
 	#category : #IterationDundi
 }
 
-{ #category : #'as yet unclassified' }
-Cattle class >> dailyNeedsPerHead [ 
+{ #category : #accessing }
+Cattle class >> dailyNeedsPerHead [
 
-	^ 3.6 "kg DM/TLU calculé sur la moyenne des consommation sur l'année"
+	^ 3.6 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année"
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Cattle class >> maxCorporalCondition [
 
 	^ 10.

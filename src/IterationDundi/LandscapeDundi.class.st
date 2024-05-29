@@ -45,8 +45,28 @@ LandscapeDundi class >> colorOfProbe_grassGrowthRate [
 ]
 
 { #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_knownSpace [
+  ^ (Color r: 0.17790811339198437 g: 0.17790811339198437 b: 0.19550342130987292 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
 LandscapeDundi class >> colorOfProbe_rain [
   ^ (Color r: 0.1681329423264907 g: 0.06647116324535679 b: 0.83088954056696 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_seasonIndex [
+  ^ (Color r: 0.07135874877810362 g: 0.07135874877810362 b: 0.44574780058651026 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_size_Cattle [
+  ^ (Color r: 0.6754643206256109 g: 0.36656891495601174 b: 0.07233626588465299 alpha: 1.0)
+]
+
+{ #category : #'- probes' }
+LandscapeDundi class >> colorOfProbe_size_Sheep [
+  ^ (Color r: 1.0 g: 0.6891495601173021 b: 0.0 alpha: 1.0)
 ]
 
 { #category : #'- probes' }
@@ -696,8 +716,8 @@ LandscapeDundi >> createRandomFoyres: number [
 		theFoyres add: (Foyre
 				 camp: (Cormas selectRandomlyFrom: camps)
 				 numberOfPeople: (Cormas randomIntegerFrom: 3 to: 6)
-				 numberOfSheep: (Cormas randomIntegerFrom: 16 to: 500) * 10
-				 numberOfCattle: (Cormas randomIntegerFrom: 15 to: 60) * 10) ]
+				 numberOfSheep: (Cormas randomIntegerFrom: 30 to: 500) * 10
+				 numberOfCattle: (Cormas randomIntegerFrom: 20 to: 80) * 10) ]
 ]
 
 { #category : #initialization }
@@ -710,7 +730,7 @@ LandscapeDundi >> createWaterPoints [
 		                  listOfCells includes: c id ].
 	theCamps := self theLandUnits select: [ :c | c camp isNotNil ].
 	cellsWithWater do: [ :c | 
-		wp := WaterPoint new.
+		wp := WaterPoint new. 
 		theWaterPoints add: wp.
 		wp moveTo: c.
 		"look for nearest camp around each waterpoint"
@@ -728,6 +748,15 @@ LandscapeDundi >> dailyStep: t [
 	self setSeason.
 
 	theFoyres do: #step.
+	theLandUnits do: #step
+]
+
+{ #category : #control }
+LandscapeDundi >> dailyStepMemory: t [
+
+	self setSeason.
+
+	theFoyres do: #stepMemory.
 	theLandUnits do: #step
 ]
 
@@ -820,6 +849,7 @@ LandscapeDundi >> gridSoilMatrix [
 { #category : #init }
 LandscapeDundi >> init [
 
+	"self initialize."
 	self
 		createGridLines: numberOfRows
 		columns: numberOfColumns
@@ -831,7 +861,7 @@ LandscapeDundi >> init [
 	self initTreeCover.
 	self initGrass.
 	self createCamps: 14.
-	self createFoyres: 20.
+	self createFoyres: 60.
 
 	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
 	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
@@ -894,7 +924,7 @@ LandscapeDundi >> initSmall [
 	self initTreeCover.
 	self initGrass.
 	self createCamps: 1.
-	self createFoyres: 2.
+	self createFoyres: 16.
 
 	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
 	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
@@ -961,10 +991,31 @@ LandscapeDundi >> initializeSoil [
 
 ]
 
+{ #category : #probes }
+LandscapeDundi >> knownSpace [
+
+	<probe>
+	^ Cormas average:
+		  (self theFoyres collect: [ :each | each knownSpace size ])
+]
+
+{ #category : #probes }
+LandscapeDundi >> knownSpace_1 [
+
+	<probe>
+	^ (self theFoyres at: 1) knownSpace size
+]
+
 { #category : #control }
 LandscapeDundi >> monthlyStep: t [
 
 	30 timesRepeat: [ self dailyStep: t ]
+]
+
+{ #category : #control }
+LandscapeDundi >> monthlyStepMemory: t [
+
+	30 timesRepeat: [ self dailyStepMemory: t ]
 ]
 
 { #category : #probes }
@@ -983,11 +1034,34 @@ LandscapeDundi >> season [
 	^ season
 ]
 
+{ #category : #probes }
+LandscapeDundi >> seasonIndex [
+
+	<probe>
+	^ season index
+]
+
 { #category : #controling }
 LandscapeDundi >> setSeason [
 
 	season := season nextSeason.
 	self class season: season class
+]
+
+{ #category : #probes }
+LandscapeDundi >> size_Cattle [
+
+	<probe>
+	^ Cormas sum:
+		  (self theCattles collect: [ :each | each size ])
+]
+
+{ #category : #probes }
+LandscapeDundi >> size_Sheep [
+
+	<probe>
+	^ Cormas sum:
+		  (self theSheeps collect: [ :each | each size ])
 ]
 
 { #category : #accessing }

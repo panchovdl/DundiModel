@@ -23,7 +23,7 @@ Herd class >> maxCorporalCondition [
 	self subclassResponsibility. 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #control }
 Herd >> acceptableDistanceFromCamp [
 
 "number of cell away from camp the Herd can travel"
@@ -61,31 +61,29 @@ Herd >> corporalConditionPercent [
 	^ (self corporalCondition / self class maxCorporalCondition) * 100
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #control }
 Herd >> dailyBurnCorporalCondition [
 
 	self corporalCondition: (0 max: self corporalCondition - self class dailyNeedsPerHead)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #control }
 Herd >> dailyConsume [
 
-	| quantity |
-	patch ifNil: [ ^ nil ].
-	size = 0 ifTrue: [ ^ nil ].
+	| quantity needs |
+	(patch isNil or: [ size = 0 ]) ifTrue: [ ^ nil ].
 
 	self dailyBurnCorporalCondition.
-
-	quantity := self patch grassCover amountOfGrass min:
-		            self class dailyNeedsPerHead * size.
+	needs := self class dailyNeedsPerHead * size.
+	needs := needs * 100 / (self corporalConditionPercent max: 0.1). "plus la vache est maigre, plus elle a faim"
+	quantity := self patch grassCover amountOfGrass min: needs.
 
 	self patch grassCover removeAmountOfGrass: quantity.
-
 	self corporalCondition: (self class maxCorporalCondition min:
-			 self corporalCondition + quantity / size)
+			 self corporalCondition + (quantity / size))
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #control }
 Herd >> dailyMove [
 
 	self randomWalkConstrainedBy: [ :cell | cell isRestricted not and: [ 
@@ -93,7 +91,7 @@ Herd >> dailyMove [
 	self rememberSpace.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #control }
 Herd >> dailyStep [
 
 	self 	dailyMove; 

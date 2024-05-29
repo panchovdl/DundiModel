@@ -43,6 +43,18 @@ GroupOfLivings >> isNotEmpty [
 	^ self isEmpty not.
 ]
 
+{ #category : #accessing }
+GroupOfLivings >> knownSpace [
+
+	^ knownSpace
+]
+
+{ #category : #accessing }
+GroupOfLivings >> knownSpace: anObject [
+
+	knownSpace := anObject
+]
+
 { #category : #moving }
 GroupOfLivings >> leaveWhileMoving: isMoving [
 	"isMoving = <Boolean>"
