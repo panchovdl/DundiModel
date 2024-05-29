@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 Cattle class >> dailyNeedsPerHead [ 
 
-	^ 17 "kg DM/TLU calculé sur la moyenne des consommation sur l'année"
+	^ 3.6 "kg DM/TLU calculé sur la moyenne des consommation sur l'année"
 ]
 
 { #category : #'as yet unclassified' }

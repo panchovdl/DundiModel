@@ -1048,7 +1048,7 @@ LandscapeDundi >> theTreeCovers: anObject [
 
 { #category : #accessing }
 LandscapeDundi >> theWaterPoints [
-
+	<getterFor: #WaterPoint>
 	^ theWaterPoints
 ]
 
