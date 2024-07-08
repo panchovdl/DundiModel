@@ -14,6 +14,6 @@ Metacello new
 
 ## Screenshots
 
-![img/screenshot1.png]()
+![img/screenshot1.jpg]()
 ![img/screenshot2.png]()
 ![img/screenshot3.png]()
