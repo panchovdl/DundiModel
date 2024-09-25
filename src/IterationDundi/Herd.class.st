@@ -68,6 +68,7 @@ Herd >> dailyBurnCorporalCondition [
 { #category : 'as yet unclassified' }
 Herd >> dailyConsume [
 
+	<action>
 	| quantity needs |
 	(patch isNil or: [ size = 0 ]) ifTrue: [ ^ nil ].
 
@@ -84,6 +85,7 @@ Herd >> dailyConsume [
 { #category : 'as yet unclassified' }
 Herd >> dailyMove [
 
+	<action>
 	self randomWalkConstrainedBy: [ :cell | cell isRestricted not and: [ 
 			self isNotTooFarFromCamp: cell ] ].
 	self rememberSpace.
