@@ -1,48 +1,48 @@
 Class {
-	#name : #GroupOfLivings,
-	#superclass : #CMAgent,
+	#name : 'GroupOfLivings',
+	#superclass : 'CMAgent',
 	#traits : 'TCMLocated',
 	#classTraits : 'TCMLocated classTrait',
 	#instVars : [
 		'knownSpace',
 		'size'
 	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GroupOfLivings >> initialize [ 
 
 	super initialize.
-	
-	knownSpace := IndexedSet new.
+	knownSpace := Set new.
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GroupOfLivings >> isEmpty [
 
 	^ size = 0.
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GroupOfLivings >> isNotEmpty [
 
 	^ self isEmpty not.
 ]
 
-{ #category : #moving }
+{ #category : 'moving' }
 GroupOfLivings >> rememberSpace [
 
 	knownSpace add: self patch. 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GroupOfLivings >> size [
 
 	^ size
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GroupOfLivings >> size: anObject [
 
 	size := anObject

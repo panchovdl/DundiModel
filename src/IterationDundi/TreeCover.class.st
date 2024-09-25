@@ -1,6 +1,6 @@
 Class {
-	#name : #TreeCover,
-	#superclass : #CMLocatedObject,
+	#name : 'TreeCover',
+	#superclass : 'CMLocatedObject',
 	#instVars : [
 		'treesNumber',
 		'ownedTreesNumber',
@@ -12,10 +12,11 @@ Class {
 		'accessibleLeaves',
 		'proprietaries'
 	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 TreeCover >> initialize [ 
 
 	treesNumber := 0.
@@ -33,7 +34,7 @@ TreeCover >> initialize [
 	proprietaries := OrderedCollection new.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 TreeCover >> moveTo:  aSpatialEntity [
 	aSpatialEntity 	isSpatialEntity ifFalse: [ ^ nil ].
 	self leaveWhileMoving: true.
@@ -41,12 +42,10 @@ TreeCover >> moveTo:  aSpatialEntity [
 	self patch addOccupant: self.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 TreeCover >> setTreesNumber [
 	
-	|max|
-	
+	| max |
 	max := self patch soil class maxTrees.
-	
-	treesNumber := Cormas randomIntegerFrom: 3 to: max.
+	treesNumber := self randomIntegerBetween: 3 and: max.
 ]

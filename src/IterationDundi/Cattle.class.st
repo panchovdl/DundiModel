@@ -1,22 +1,23 @@
 Class {
-	#name : #Cattle,
-	#superclass : #Herd,
-	#category : #IterationDundi
+	#name : 'Cattle',
+	#superclass : 'Herd',
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Cattle class >> dailyNeedsPerHead [ 
 
 	^ 3.6 "kg DM/TLU calculé sur la moyenne des consommation sur l'année"
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Cattle class >> maxCorporalCondition [
 
 	^ 10.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Cattle >> acceptableDistanceFromCamp [
 
 "number of cell away from camp the Herd can travel"
@@ -24,8 +25,9 @@ Cattle >> acceptableDistanceFromCamp [
 	^ 10
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 Cattle >> pov [
 
-	^ Color brown
+	<pov>
+	^ CMPointOfView color: Color brown
 ]

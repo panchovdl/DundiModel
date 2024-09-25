@@ -1,6 +1,6 @@
 Class {
-	#name : #Foyre,
-	#superclass : #GroupOfLivings,
+	#name : 'Foyre',
+	#superclass : 'GroupOfLivings',
 	#instVars : [
 		'woodAmount',
 		'woodBasketSize',
@@ -11,10 +11,11 @@ Class {
 	#classVars : [
 		'distancePerception'
 	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Foyre class >> camp: aCamp numberOfPeople: aNumberOfPeople numberOfSheep: aNumberOfSheep numberOfCattle: aNumberOfCattle [
 
 	| foyre |
@@ -26,19 +27,19 @@ Foyre class >> camp: aCamp numberOfPeople: aNumberOfPeople numberOfSheep: aNumbe
 	^ foyre.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Foyre class >> distancePerception [
 
 	^ distancePerception ifNil: [ distancePerception := 3 ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Foyre >> camp [
 
 	^ camp
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Foyre >> camp: anObject [
 
 	camp := anObject.
@@ -47,31 +48,31 @@ Foyre >> camp: anObject [
 	self moveHerdsToCamp.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Foyre >> cattleHerd [
 
 	^ cattleHerd
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Foyre >> cattleHerd: anObject [
 
 	cattleHerd := anObject
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 Foyre >> hasCattle [
 
 	^ cattleHerd isNotEmpty.
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 Foyre >> hasSheep [
 
 	^ sheepHerd isNotEmpty.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Foyre >> manageCattle [
 
 	cattleHerd ifNil: [ ^ self ].
@@ -85,7 +86,7 @@ Foyre >> manageCattle [
 	cattleHerd dailyConsume.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Foyre >> manageSheep [
 
 	sheepHerd ifNil: [ ^ self ].
@@ -99,26 +100,26 @@ Foyre >> manageSheep [
 	sheepHerd dailyConsume
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Foyre >> moveHerdsToCamp [
 
 	sheepHerd moveTo: camp landUnit.
 	cattleHerd moveTo: camp landUnit.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Foyre >> sheepHerd [
 
 	^ sheepHerd
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Foyre >> sheepHerd: anObject [
 
 	sheepHerd := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Foyre >> step [
 
 	self manageCattle.

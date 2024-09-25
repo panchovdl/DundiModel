@@ -1,41 +1,44 @@
 Class {
-	#name : #GrassCover,
-	#superclass : #Object,
+	#name : 'GrassCover',
+	#superclass : 'Object',
+	#traits : 'TCMMath',
+	#classTraits : 'TCMMath classTrait',
 	#instVars : [
 		'patch',
 		'amountOfGrass'
 	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GrassCover class >> for: aPatch [
 
 	 ^self new patch: aPatch ; yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GrassCover >> amountOfGrass [
 
 	^ amountOfGrass
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GrassCover >> growGrass [
 
 	amountOfGrass = 0 ifTrue: [ amountOfGrass := 1000 ].
 	
-	amountOfGrass := Cormas logisticGrowth: amountOfGrass r: patch grassGrowthRate K: patch maxGrassAmount 
+	amountOfGrass := self logisticGrowth: amountOfGrass r: patch grassGrowthRate k: patch maxGrassAmount 
 
 	
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GrassCover >> initGrass [ 
 	amountOfGrass := patch maxGrassAmount / 2
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GrassCover >> initialize [ 
 
 	super initialize.
@@ -45,13 +48,13 @@ GrassCover >> initialize [
 	
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GrassCover >> patch: anObject [
 
 	patch := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GrassCover >> removeAmountOfGrass: aNumber [
 
 	amountOfGrass := amountOfGrass - aNumber 

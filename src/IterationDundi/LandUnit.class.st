@@ -1,6 +1,6 @@
 Class {
-	#name : #LandUnit,
-	#superclass : #CMSpatialEntityElement,
+	#name : 'LandUnit',
+	#superclass : 'CMSpatialEntityElement',
 	#instVars : [
 		'soil',
 		'parkRestriction',
@@ -8,62 +8,62 @@ Class {
 		'grassCover',
 		'camp'
 	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> camp [
 
 	^ camp
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> camp: anObject [
 
 	camp := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 LandUnit >> createCampNamed: aString [
 	
 	camp := Camp named: aString.
 	camp landUnit: self. 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> grassAmount [
 
 	^ grassCover amountOfGrass 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> grassCover [
 
 	^ grassCover 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 LandUnit >> grassGrowthRate [ 
 
 	^ cormasModel season grassGrowthRate 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> initGrass [ 
 
 	grassCover initGrass
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> initTreeCover [
 
-	|tc|
-	tc := TreeCover new. 
-	tc moveTo: self.
-	tc setTreesNumber.
+	treeCover := cormasModel newEntity: TreeCover. 
+	treeCover moveTo: self.
+	treeCover setTreesNumber.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> initialize [
 
 	super initialize.
@@ -71,7 +71,7 @@ LandUnit >> initialize [
 	grassCover := GrassCover for: self.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> initializeRandomSoil [
 
 	| blocks |
@@ -82,162 +82,170 @@ LandUnit >> initializeRandomSoil [
 		[ self makeSangre ].
 		[ self makeCaangol ] }.
 	
-	(Cormas selectRandomlyFrom: blocks) value
+	(self selectRandomlyFrom: blocks) value
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 LandUnit >> isPotentialCampSite [
 
 	^ soil isCaangol not and: [ 
 		  self neighbourhood anySatisfy: [ :each | each soil isCaangol ] ]
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 LandUnit >> isRestricted [
 
 	^ self parkRestriction
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> makeBaldiol [ 
 
 	soil := Baldiol new.
 	soil landUnit: self.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> makeCaangol [ 
 
 	soil := Caangol new.
 	soil landUnit: self.
 ]
 
-{ #category : #'setting category' }
+{ #category : 'setting category' }
 LandUnit >> makeRestricted [
 
 	parkRestriction := true 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> makeSangre [ 
 
 	soil := Sangre new.
 	soil landUnit: self.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 LandUnit >> makeSeeno [ 
 
 	soil := Seeno new.
 	soil landUnit: self.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> maxGrassAmount [ 
 
 	^ soil class maxGrass. 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 LandUnit >> maxGrassPotential [ 
 
 	^ (AbstractSoil allSubclasses collect: #maxGrass) max. 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> parkRestriction [
 
 	^ parkRestriction
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> parkRestriction: anObject [
 
 	parkRestriction := anObject
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 LandUnit >> povCamp [
-
-	^ camp ifNil: [ self povSoilAndRestricted ] ifNotNil: [ Color black ]
+	
+	<pov>
+	^ camp
+		ifNil: [ self povSoilAndRestricted ]
+		ifNotNil: [ CMPointOfView color: Color black ]
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 LandUnit >> povGrassCover [
 
-
-	"self grassAmount = 0 ifTrue:[ ^ self povSoil ]."
-	
-	^ self
-		povAttribute: #grassAmount
+	<pov>
+	^ CMPointOfView color: (self
+		colorAttribute: #grassAmount
 		min: 0
 		max: self  maxGrassPotential 
-		color: Color green
+		color: Color green)
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 LandUnit >> povGrassCoverSoilType [
 
-	^ self
-		povAttribute: #grassAmount
+	<pov>
+	^ CMPointOfView color: (self
+		colorAttribute: #grassAmount
 		min: 0
 		max: self maxGrassPotential 
-		color: soil color 
+		color: soil color)
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 LandUnit >> povPotentialCampSites [
 
-	^ self isPotentialCampSite ifTrue: [ Color white ] ifFalse: [ Color black ]. 
+	<pov>
+	^ CMPointOfView color: (self isPotentialCampSite
+		ifTrue: [ Color white ]
+		ifFalse: [ Color black ]). 
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 LandUnit >> povRestricted [
 
-	^ self isRestricted
+	<pov>
+	^ CMPointOfView color: (self isRestricted
 		ifTrue: [ Color gray ]
-		ifFalse: [ Color veryVeryLightGray ]
+		ifFalse: [ Color veryVeryLightGray ])
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 LandUnit >> povSoil [
 
-	^ soil color
+	<pov>
+	^ CMPointOfView color: soil color
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 LandUnit >> povSoilAndRestricted [
 
-	^ self isRestricted
+	<pov>
+	^ CMPointOfView color: (self isRestricted
 		ifTrue: [ Color gray ]
-		ifFalse: [ self povSoil ]
+		ifFalse: [ soil color ])
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> soil [
 
 	^ soil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> soil: anObject [
 
 	soil := anObject
 ]
 
-{ #category : #stepping }
+{ #category : 'stepping' }
 LandUnit >> step [
 
 	grassCover growGrass.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> treeCover [
 
 	^ treeCover
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 LandUnit >> treeCover: anObject [
 
 	treeCover := anObject

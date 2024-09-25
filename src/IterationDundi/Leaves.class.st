@@ -1,52 +1,53 @@
 Class {
-	#name : #Leaves,
-	#superclass : #Object,
+	#name : 'Leaves',
+	#superclass : 'Object',
 	#instVars : [
 		'treeCover',
 		'leavesAmount',
 		'maxLeaves'
 	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Leaves >> initialize [ 
 
 	maxLeaves := 1000. "kilograms".
 	leavesAmount := 0.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Leaves >> leavesAmount [
 
 	^ leavesAmount
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Leaves >> leavesAmount: anObject [
 
 	leavesAmount := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Leaves >> maxLeaves [
 
 	^ maxLeaves
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Leaves >> maxLeaves: anObject [
 
 	maxLeaves := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Leaves >> treeCover [
 
 	^ treeCover
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Leaves >> treeCover: anObject [
 
 	treeCover := anObject

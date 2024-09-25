@@ -1,6 +1,6 @@
 Class {
-	#name : #AbstractSoil,
-	#superclass : #Object,
+	#name : 'AbstractSoil',
+	#superclass : 'Object',
 	#instVars : [
 		'soilDegradation',
 		'landUnit'
@@ -9,58 +9,59 @@ Class {
 		'maxGrass',
 		'maxTrees'
 	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AbstractSoil class >> maxGrass [
 
 	self subclassResponsibility 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AbstractSoil class >> maxTrees [
 
 	self subclassResponsibility 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 AbstractSoil >> initialize [ 
 
 	soilDegradation := 0.
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 AbstractSoil >> isBaldiol [
 
 	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 AbstractSoil >> isCaangol [
 
 	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 AbstractSoil >> isSangre [
 
 	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 AbstractSoil >> isSeeno [
 
 	^ false
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AbstractSoil >> landUnit [
 
 	^ landUnit
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AbstractSoil >> landUnit: anObject [
 
 	landUnit := anObject
