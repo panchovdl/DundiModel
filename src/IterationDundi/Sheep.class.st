@@ -1,23 +1,48 @@
 Class {
-	#name : #Sheep,
-	#superclass : #Herd,
-	#category : #IterationDundi
+	#name : 'Sheep',
+	#superclass : 'Herd',
+	#classInstVars : [
+		'maxCorporalCondition',
+		'dailyNeedsPerHead'
+	],
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Sheep class >> dailyNeedsPerHead [ 
 
 
-	^ 0.58 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année"
+	^ dailyNeedsPerHead
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'accessing' }
+Sheep class >> dailyNeedsPerHead: anObject [
+
+	dailyNeedsPerHead := anObject
+]
+
+{ #category : 'initialization' }
+Sheep class >> initializeParameters [
+
+	super initializeParameters.
+	dailyNeedsPerHead := 0.58 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année".
+	maxCorporalCondition := 5.
+]
+
+{ #category : 'as yet unclassified' }
 Sheep class >> maxCorporalCondition [
 
-	^ 5.
+	^ maxCorporalCondition
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'accessing' }
+Sheep class >> maxCorporalCondition: anObject [
+
+	maxCorporalCondition := anObject
+]
+
+{ #category : 'as yet unclassified' }
 Sheep >> acceptableDistanceFromCamp [
 
 "number of cell away from camp the Herd can travel"
@@ -25,8 +50,9 @@ Sheep >> acceptableDistanceFromCamp [
 	^ 5
 ]
 
-{ #category : #pov }
+{ #category : 'pov' }
 Sheep >> pov [
 
-	^ Color white
+	<pov>
+	^ CMPointOfView color: Color white
 ]

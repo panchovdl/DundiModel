@@ -1,28 +1,29 @@
 Class {
-	#name : #Sangre,
-	#superclass : #AbstractSoil,
-	#category : #IterationDundi
+	#name : 'Sangre',
+	#superclass : 'AbstractSoil',
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Sangre class >> maxGrass [
 
 	^ 90000
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Sangre class >> maxTrees [
 
 	^ 15000
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Sangre >> color [
 
 	^ (Color red mixed: 0.1 with: Color brown) quiteBlacker quiteBlacker
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 Sangre >> isSangre [ 
 
 	^ true

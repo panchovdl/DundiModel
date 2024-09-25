@@ -1,22 +1,23 @@
 Class {
-	#name : #CeeduSeason,
-	#superclass : #Season,
-	#category : #IterationDundi
+	#name : 'CeeduSeason',
+	#superclass : 'Season',
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 CeeduSeason >> durationOfSeason [
 
  ^ 120
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 CeeduSeason >> followingSeason [
 
 	^ CeetceldeSeason new
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 CeeduSeason >> grassGrowthRate [ 
 
 

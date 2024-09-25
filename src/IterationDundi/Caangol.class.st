@@ -1,28 +1,29 @@
 Class {
-	#name : #Caangol,
-	#superclass : #AbstractSoil,
-	#category : #IterationDundi
+	#name : 'Caangol',
+	#superclass : 'AbstractSoil',
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Caangol class >> maxGrass [
 
 	^ 120000
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Caangol class >> maxTrees [
 
 	^ 10000
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Caangol >> color [
 
 	^ Color paleGreen
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 Caangol >> isCaangol [ 
 
 	^ true

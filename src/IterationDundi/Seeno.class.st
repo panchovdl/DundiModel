@@ -1,28 +1,29 @@
 Class {
-	#name : #Seeno,
-	#superclass : #AbstractSoil,
-	#category : #IterationDundi
+	#name : 'Seeno',
+	#superclass : 'AbstractSoil',
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Seeno class >> maxGrass [
 
 	^ 200000
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Seeno class >> maxTrees [
 
 	^ 5000
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Seeno >> color [
 
 	^ Color yellow
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 Seeno >> isSeeno [ 
 
 	^ true

@@ -1,29 +1,27 @@
 Class {
-	#name : #Herd,
-	#superclass : #GroupOfLivings,
+	#name : 'Herd',
+	#superclass : 'GroupOfLivings',
 	#instVars : [
 		'corporalCondition',
 		'camp'
 	],
-	#classVars : [
-		'dailyNeedsPerHead'
-	],
-	#category : #IterationDundi
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd class >> dailyNeedsPerHead [
 
 	self subclassResponsibility 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd class >> maxCorporalCondition [
 
 	self subclassResponsibility. 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd >> acceptableDistanceFromCamp [
 
 "number of cell away from camp the Herd can travel"
@@ -31,45 +29,46 @@ Herd >> acceptableDistanceFromCamp [
 	self subclassResponsibility 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Herd >> camp [
 
 	^ camp
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Herd >> camp: anObject [
 
 	camp := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Herd >> corporalCondition [
 
 	^ corporalCondition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Herd >> corporalCondition: anObject [
 
 	corporalCondition := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd >> corporalConditionPercent [
 
 	^ (self corporalCondition / self class maxCorporalCondition) * 100
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd >> dailyBurnCorporalCondition [
 
 	self corporalCondition: (0 max: self corporalCondition - self class dailyNeedsPerHead)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd >> dailyConsume [
 
+	<action>
 	| quantity needs |
 	(patch isNil or: [ size = 0 ]) ifTrue: [ ^ nil ].
 
@@ -83,22 +82,23 @@ Herd >> dailyConsume [
 			 self corporalCondition + (quantity / size))
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd >> dailyMove [
 
+	<action>
 	self randomWalkConstrainedBy: [ :cell | cell isRestricted not and: [ 
 			self isNotTooFarFromCamp: cell ] ].
 	self rememberSpace.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Herd >> dailyStep [
 
 	self 	dailyMove; 
 			dailyConsume.	
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Herd >> initialize [ 
 
 	super initialize.
@@ -108,7 +108,7 @@ Herd >> initialize [
 	size :=0. 
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 Herd >> isNotTooFarFromCamp: aCell [
 
 	^ (aCell distanceTo: camp landUnit) <= self acceptableDistanceFromCamp. 

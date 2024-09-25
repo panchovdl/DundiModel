@@ -1,22 +1,23 @@
 Class {
-	#name : #DabbuundeSeason,
-	#superclass : #Season,
-	#category : #IterationDundi
+	#name : 'DabbuundeSeason',
+	#superclass : 'Season',
+	#category : 'IterationDundi',
+	#package : 'IterationDundi'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 DabbuundeSeason >> durationOfSeason [
 
 	^ 90.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 DabbuundeSeason >> followingSeason [
 
 	^ CeeduSeason new.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 DabbuundeSeason >> grassGrowthRate [ 
 
 	^ 0.001
