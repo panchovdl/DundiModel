@@ -10,7 +10,9 @@ Class {
 		'camps',
 		'theCattles',
 		'theSheeps',
-		'theFoyres'
+		'theFoyres',
+		'initialNumberOfSheep',
+		'initialNumberOfCattle'
 	],
 	#category : 'IterationDundi',
 	#package : 'IterationDundi'
@@ -20,7 +22,7 @@ Class {
 LandscapeDundi >> averageCorporalCondition [ 
 
 	<probeNamed: 'Average corporal condition' color: '171785'> 
-	^ (self theHerds collect: #corporalCondition) average
+	^ (self theHerds collect: #corporalConditionPercent) average
 
 
 ]
@@ -36,7 +38,7 @@ LandscapeDundi >> averageCorporalConditionCattle [
 LandscapeDundi >> averageCorporalConditionSheep [
 
 	<probeNamed: 'Average corporal condition of sheep' color: '5CB8D6'>
-	^ (self theSheeps collect: [ :each | each corporalConditionPercent ]) average
+	^ (self theSheeps collect: #corporalConditionPercent) average
 ]
 
 { #category : 'probes' }
@@ -86,406 +88,15 @@ LandscapeDundi >> createFoyreCamp: aCamp numberOfPeople: aNumberOfPeople numberO
 	^ foyre.
 ]
 
-{ #category : 'initialization' }
-LandscapeDundi >> createFoyres [
-
-	theFoyres := { 
-		          (Foyre
-			           camp: camps first
-			           numberOfPeople: 4
-			           numberOfSheep: 400
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps first
-			           numberOfPeople: 3
-			           numberOfSheep: 1500
-			           numberOfCattle: 150).
-
-		          (Foyre
-			           camp: camps first
-			           numberOfPeople: 6
-			           numberOfSheep: 1300
-			           numberOfCattle: 280).
-
-		          (Foyre
-			           camp: camps second
-			           numberOfPeople: 5
-			           numberOfSheep: 160
-			           numberOfCattle: 275).
-
-		          (Foyre
-			           camp: camps second
-			           numberOfPeople: 3
-			           numberOfSheep: 900
-			           numberOfCattle: 600).
-
-		          (Foyre
-			           camp: camps third
-			           numberOfPeople: 6
-			           numberOfSheep: 5000
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps third
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300). 
-			
-			  (Foyre
-			           camp: camps fourth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps fourth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-			  (Foyre
-			           camp: camps fourth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps fifth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps fifth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps fifth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps sixth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps sixth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps sixth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-						(Foyre
-			           camp: camps seventh 
-			           numberOfPeople: 4
-			           numberOfSheep: 400
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps seventh
-			           numberOfPeople: 3
-			           numberOfSheep: 1500
-			           numberOfCattle: 150).
-
-		          (Foyre
-			           camp: camps eighth 
-			           numberOfPeople: 6
-			           numberOfSheep: 1300
-			           numberOfCattle: 280).
-
-		          (Foyre
-			           camp: camps eighth 
-			           numberOfPeople: 5
-			           numberOfSheep: 160
-			           numberOfCattle: 275).
-
-		          (Foyre
-			           camp: camps eighth
-			           numberOfPeople: 3
-			           numberOfSheep: 900
-			           numberOfCattle: 600).
-
-		          (Foyre
-			           camp: camps ninth 
-			           numberOfPeople: 6
-			           numberOfSheep: 5000
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps ninth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300). 
-			
-			  (Foyre
-			           camp: camps ninth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps tenth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-			  (Foyre
-			           camp: camps eleventh 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps fifth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps eleventh 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps twelfth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps twelfth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps thirteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps thirteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					    (Foyre
-							
-			           camp: camps fourteenth 
-			           numberOfPeople: 4
-			           numberOfSheep: 400
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps fourteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 1500
-			           numberOfCattle: 150).
-
-		          (Foyre
-			           camp: camps fifteenth 
-			           numberOfPeople: 6
-			           numberOfSheep: 1300
-			           numberOfCattle: 280).
-
-		          (Foyre
-			           camp: camps fifteenth 
-			           numberOfPeople: 5
-			           numberOfSheep: 160
-			           numberOfCattle: 275).
-
-		          (Foyre
-			           camp: camps sixteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 900
-			           numberOfCattle: 600).
-
-		          (Foyre
-			           camp: camps third
-			           numberOfPeople: 6
-			           numberOfSheep: 5000
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps sixteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300). 
-			
-			  (Foyre
-			           camp: camps seventeenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps seventeenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-			  (Foyre
-			           camp: camps seventeenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps eighteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps eighteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps nineteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps nineteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps twentith 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps twentith 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-						(Foyre
-			           camp: camps twentith 
-			           numberOfPeople: 4
-			           numberOfSheep: 400
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps twentyFirst 
-			           numberOfPeople: 3
-			           numberOfSheep: 1500
-			           numberOfCattle: 150).
-
-		          (Foyre
-			           camp: camps twentyFirst  
-			           numberOfPeople: 6
-			           numberOfSheep: 1300
-			           numberOfCattle: 280).
-
-		          (Foyre
-			           camp: camps twentyFirst  
-			           numberOfPeople: 5
-			           numberOfSheep: 160
-			           numberOfCattle: 275).
-
-		          (Foyre
-			           camp: camps eighth
-			           numberOfPeople: 3
-			           numberOfSheep: 900
-			           numberOfCattle: 600).
-
-		          (Foyre
-			           camp: camps ninth 
-			           numberOfPeople: 6
-			           numberOfSheep: 5000
-			           numberOfCattle: 500).
-
-		          (Foyre
-			           camp: camps ninth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300). 
-			
-			  (Foyre
-			           camp: camps ninth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps tenth
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-			  (Foyre
-			           camp: camps eleventh 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			 
-			  (Foyre
-			           camp: camps fifth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps eleventh 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps twelfth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-		  (Foyre
-			           camp: camps twelfth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps thirteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300).
-			
-					  (Foyre
-			           camp: camps thirteenth 
-			           numberOfPeople: 3
-			           numberOfSheep: 500
-			           numberOfCattle: 300) } 
-]
-
 { #category : 'as yet unclassified' }
 LandscapeDundi >> createRandomFoyres: number [
 
-	theFoyres := OrderedCollection new.
 	number timesRepeat: [ 
-		theFoyres add: (self
-				 createFoyreCamp: (self selectRandomlyFrom: camps)
-				 numberOfPeople: (self randomIntegerBetween: 3 and: 6)
-				 numberOfSheep: (self randomIntegerBetween: 30 and: 500) * 10
-				 numberOfCattle: (self randomIntegerBetween: 20 and: 80) * 10) ]
+		self
+			createFoyreCamp: (self selectRandomlyFrom: camps)
+			numberOfPeople: (self randomIntegerBetween: 3 and: 6)
+			numberOfSheep: (self randomIntegerBetween: 30 and: 500) * 10
+			numberOfCattle: (self randomIntegerBetween: 20 and: 80) * 10 ]
 ]
 
 { #category : 'accessing - spatial grid' }
@@ -591,8 +202,8 @@ LandscapeDundi >> init [
 	self createCamps.
 	self createRandomFoyres: 150.
 	
-	theCattles := theFoyres collect: [ :foyre | foyre cattleHerd ].
-	theSheeps := theFoyres collect: [ :foyre | foyre sheepHerd ].
+	initialNumberOfSheep := self theSheeps sum: #size.
+	initialNumberOfCattle := self theCattles sum: #size.
 	
 	LandUnit activePovSelector: #povGrassCover.
 ]
@@ -658,6 +269,24 @@ LandscapeDundi >> initializeSoil [
 
 ]
 
+{ #category : 'probes' }
+LandscapeDundi >> percentageOfRemainingCattle [
+
+	<probeNamed: 'Percentage of remaining cattle' color: 'AC5D12'>
+	^ (self theCattles sum: #size) / initialNumberOfCattle * 100
+
+
+]
+
+{ #category : 'probes' }
+LandscapeDundi >> percentageOfRemainingSheep [
+
+	<probeNamed: 'Percentage of remaining sheep' color: 'FFB000'> 
+	^ (self theSheeps sum: #size) / initialNumberOfSheep * 100
+
+
+]
+
 { #category : 'accessing' }
 LandscapeDundi >> season [
 
@@ -692,7 +321,7 @@ LandscapeDundi >> theFoyres [
 { #category : 'accessing' }
 LandscapeDundi >> theHerds [
 | herds |
-herds := self theCattles asOrderedCollection.
+herds := self theCattles copy.
 herds addAll: self theSheeps.
 ^herds
 ]

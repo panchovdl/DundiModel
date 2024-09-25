@@ -78,7 +78,6 @@ Foyre >> manageCattle [
 	cattleHerd ifNil: [ ^ self ].
 	cattleHerd corporalConditionPercent < 30 ifTrue: [ 
 		cattleHerd die.
-		cattleHerd := nil. 
 		^ self].
 
 	cattleHerd dailyMove.
@@ -92,7 +91,6 @@ Foyre >> manageSheep [
 	sheepHerd ifNil: [ ^ self ].
 	sheepHerd corporalConditionPercent < 30 ifTrue: [ 
 		sheepHerd die.
-		sheepHerd := nil.
 		^ self ].
 	
 	sheepHerd dailyMove .
