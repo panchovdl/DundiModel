@@ -53,6 +53,12 @@ Foyre >> cattleHerd [
 	^ cattleHerd
 ]
 
+{ #category : #accessing }
+Foyre >> cattleHerd: anObject [
+
+	cattleHerd := anObject
+]
+
 { #category : #testing }
 Foyre >> hasCattle [
 
@@ -65,13 +71,32 @@ Foyre >> hasSheep [
 	^ sheepHerd isNotEmpty.
 ]
 
-{ #category : #initialization }
-Foyre >> initialize [ 
+{ #category : #'as yet unclassified' }
+Foyre >> manageCattle [
 
-	super initialize. 
+	cattleHerd ifNil: [ ^ self ].
+	cattleHerd corporalConditionPercent < 30 ifTrue: [ 
+		cattleHerd die.
+		cattleHerd := nil. 
+		^ self].
+
+	cattleHerd dailyMove.
+
+	cattleHerd dailyConsume.
+]
+
+{ #category : #'as yet unclassified' }
+Foyre >> manageSheep [
+
+	sheepHerd ifNil: [ ^ self ].
+	sheepHerd corporalConditionPercent < 30 ifTrue: [ 
+		sheepHerd die.
+		sheepHerd := nil.
+		^ self ].
 	
-	cattleHerd := Cattle new.
-	sheepHerd := Sheep new.
+	sheepHerd dailyMove .
+
+	sheepHerd dailyConsume
 ]
 
 { #category : #initialization }
@@ -85,4 +110,17 @@ Foyre >> moveHerdsToCamp [
 Foyre >> sheepHerd [
 
 	^ sheepHerd
+]
+
+{ #category : #accessing }
+Foyre >> sheepHerd: anObject [
+
+	sheepHerd := anObject
+]
+
+{ #category : #'as yet unclassified' }
+Foyre >> step [
+
+	self manageCattle.
+	self manageSheep
 ]

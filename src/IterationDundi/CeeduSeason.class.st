@@ -20,5 +20,5 @@ CeeduSeason >> followingSeason [
 CeeduSeason >> grassGrowthRate [ 
 
 
-	^ 0.000001
+	^ 0.05
 ]

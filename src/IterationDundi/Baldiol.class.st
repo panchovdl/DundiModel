@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 Baldiol class >> maxGrass [
 
-	^ 150000
+	^ 186700
 ]
 
 { #category : #accessing }

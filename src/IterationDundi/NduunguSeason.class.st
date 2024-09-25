@@ -19,5 +19,5 @@ NduunguSeason >> followingSeason [
 { #category : #'as yet unclassified' }
 NduunguSeason >> grassGrowthRate [ 
 
-	^ 0.2
+	^ 0.04
 ]

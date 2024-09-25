@@ -8,7 +8,7 @@ Class {
 Sheep class >> dailyNeedsPerHead [ 
 
 
-	^ 3.6
+	^ 0.58 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année"
 ]
 
 { #category : #'as yet unclassified' }
@@ -22,7 +22,7 @@ Sheep >> acceptableDistanceFromCamp [
 
 "number of cell away from camp the Herd can travel"
 
-	^ 3
+	^ 5
 ]
 
 { #category : #pov }
