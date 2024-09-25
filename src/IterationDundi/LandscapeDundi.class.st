@@ -14,15 +14,39 @@ Class {
 		'initialNumberOfSheep',
 		'initialNumberOfCattle'
 	],
+	#classInstVars : [
+		'numberOfFoyres'
+	],
 	#category : 'IterationDundi',
 	#package : 'IterationDundi'
 }
+
+{ #category : 'initialization' }
+LandscapeDundi class >> initializeParameters [
+
+	super initializeParameters.
+	numberOfFoyres := 150
+]
+
+{ #category : 'accessing' }
+LandscapeDundi class >> numberOfFoyres [
+
+	^ numberOfFoyres
+]
+
+{ #category : 'accessing' }
+LandscapeDundi class >> numberOfFoyres: anObject [
+
+	numberOfFoyres := anObject
+]
 
 { #category : 'probes' }
 LandscapeDundi >> averageCorporalCondition [ 
 
 	<probeNamed: 'Average corporal condition' color: '171785'> 
-	^ (self theHerds collect: #corporalConditionPercent) average
+	^ (self theHerds collect: #corporalConditionPercent)
+		ifEmpty: [ 0 ]
+		ifNotEmpty: #average
 
 
 ]
@@ -31,14 +55,18 @@ LandscapeDundi >> averageCorporalCondition [
 LandscapeDundi >> averageCorporalConditionCattle [
 
 	<probeNamed: 'Average corporal condition of cattle' color: '8A5D22'>
-	^ (self theCattles collect: #corporalConditionPercent) average
+	^ (self theCattles collect: #corporalConditionPercent) 
+		ifEmpty: [ 0 ]
+		ifNotEmpty: #average
 ]
 
 { #category : 'probes' }
 LandscapeDundi >> averageCorporalConditionSheep [
 
 	<probeNamed: 'Average corporal condition of sheep' color: '5CB8D6'>
-	^ (self theSheeps collect: #corporalConditionPercent) average
+	^ (self theSheeps collect: #corporalConditionPercent) 
+		ifEmpty: [ 0 ]
+		ifNotEmpty: #average
 ]
 
 { #category : 'probes' }
@@ -200,7 +228,7 @@ LandscapeDundi >> init [
 	self initTreeCover.
 	self initGrass.
 	self createCamps.
-	self createRandomFoyres: 150.
+	self createRandomFoyres: self class numberOfFoyres.
 	
 	initialNumberOfSheep := self theSheeps sum: #size.
 	initialNumberOfCattle := self theCattles sum: #size.

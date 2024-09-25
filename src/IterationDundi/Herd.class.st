@@ -5,9 +5,6 @@ Class {
 		'corporalCondition',
 		'camp'
 	],
-	#classVars : [
-		'dailyNeedsPerHead'
-	],
 	#category : 'IterationDundi',
 	#package : 'IterationDundi'
 }

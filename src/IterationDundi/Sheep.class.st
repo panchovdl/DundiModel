@@ -1,6 +1,10 @@
 Class {
 	#name : 'Sheep',
 	#superclass : 'Herd',
+	#classInstVars : [
+		'maxCorporalCondition',
+		'dailyNeedsPerHead'
+	],
 	#category : 'IterationDundi',
 	#package : 'IterationDundi'
 }
@@ -9,13 +13,33 @@ Class {
 Sheep class >> dailyNeedsPerHead [ 
 
 
-	^ 0.58 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année"
+	^ dailyNeedsPerHead
+]
+
+{ #category : 'accessing' }
+Sheep class >> dailyNeedsPerHead: anObject [
+
+	dailyNeedsPerHead := anObject
+]
+
+{ #category : 'initialization' }
+Sheep class >> initializeParameters [
+
+	super initializeParameters.
+	dailyNeedsPerHead := 0.58 "kg DM/TLU/day calculé sur la moyenne des consommation sur l'année".
+	maxCorporalCondition := 5.
 ]
 
 { #category : 'as yet unclassified' }
 Sheep class >> maxCorporalCondition [
 
-	^ 5.
+	^ maxCorporalCondition
+]
+
+{ #category : 'accessing' }
+Sheep class >> maxCorporalCondition: anObject [
+
+	maxCorporalCondition := anObject
 ]
 
 { #category : 'as yet unclassified' }
